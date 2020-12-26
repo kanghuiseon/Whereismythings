@@ -11,7 +11,7 @@
         <!--Chatting-->
         <scene sceneID="0T6-KI-emO">
             <objects>
-                <viewController id="5Uu-Up-a0g" sceneMemberID="viewController">
+                <viewController id="5Uu-Up-a0g" customClass="ChattingViewController" customModule="Whereismythings" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o6U-DN-WfD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -9,20 +9,23 @@
 /* Begin PBXBuildFile section */
 		253D29DC25973B1700ED0FC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D29DB25973B1700ED0FC6 /* AppDelegate.swift */; };
 		253D29DE25973B1700ED0FC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D29DD25973B1700ED0FC6 /* SceneDelegate.swift */; };
-		253D29E025973B1700ED0FC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D29DF25973B1700ED0FC6 /* ViewController.swift */; };
+		253D29E025973B1700ED0FC6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D29DF25973B1700ED0FC6 /* MapViewController.swift */; };
 		253D29E325973B1700ED0FC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 253D29E125973B1700ED0FC6 /* Main.storyboard */; };
 		253D29E525973B1800ED0FC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 253D29E425973B1800ED0FC6 /* Assets.xcassets */; };
 		253D29E825973B1800ED0FC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 253D29E625973B1800ED0FC6 /* LaunchScreen.storyboard */; };
 		253D29F8259774B000ED0FC6 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 253D29F7259774B000ED0FC6 /* Search.storyboard */; };
 		253D29FD259775A400ED0FC6 /* Chatting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 253D29FC259775A400ED0FC6 /* Chatting.storyboard */; };
 		253D2A00259779DB00ED0FC6 /* FindOrRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 253D29FF259779DB00ED0FC6 /* FindOrRegister.storyboard */; };
+		253D2A0325977B4400ED0FC6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D2A0225977B4400ED0FC6 /* SearchViewController.swift */; };
+		253D2A0625977B4D00ED0FC6 /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D2A0525977B4D00ED0FC6 /* ChattingViewController.swift */; };
+		253D2A0925977B5F00ED0FC6 /* FindOrRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D2A0825977B5F00ED0FC6 /* FindOrRegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		253D29D825973B1700ED0FC6 /* Whereismythings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whereismythings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		253D29DB25973B1700ED0FC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		253D29DD25973B1700ED0FC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		253D29DF25973B1700ED0FC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		253D29DF25973B1700ED0FC6 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		253D29E225973B1700ED0FC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		253D29E425973B1800ED0FC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		253D29E725973B1800ED0FC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +33,9 @@
 		253D29F7259774B000ED0FC6 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		253D29FC259775A400ED0FC6 /* Chatting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chatting.storyboard; sourceTree = "<group>"; };
 		253D29FF259779DB00ED0FC6 /* FindOrRegister.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FindOrRegister.storyboard; sourceTree = "<group>"; };
+		253D2A0225977B4400ED0FC6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		253D2A0525977B4D00ED0FC6 /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
+		253D2A0825977B5F00ED0FC6 /* FindOrRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindOrRegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,10 +71,13 @@
 				253D29FA259774D900ED0FC6 /* Views */,
 				253D29DB25973B1700ED0FC6 /* AppDelegate.swift */,
 				253D29DD25973B1700ED0FC6 /* SceneDelegate.swift */,
-				253D29DF25973B1700ED0FC6 /* ViewController.swift */,
+				253D29DF25973B1700ED0FC6 /* MapViewController.swift */,
 				253D29E425973B1800ED0FC6 /* Assets.xcassets */,
 				253D29E625973B1800ED0FC6 /* LaunchScreen.storyboard */,
 				253D29E925973B1800ED0FC6 /* Info.plist */,
+				253D2A0225977B4400ED0FC6 /* SearchViewController.swift */,
+				253D2A0525977B4D00ED0FC6 /* ChattingViewController.swift */,
+				253D2A0825977B5F00ED0FC6 /* FindOrRegisterViewController.swift */,
 			);
 			path = Whereismythings;
 			sourceTree = "<group>";
@@ -157,8 +166,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				253D29E025973B1700ED0FC6 /* ViewController.swift in Sources */,
+				253D29E025973B1700ED0FC6 /* MapViewController.swift in Sources */,
+				253D2A0925977B5F00ED0FC6 /* FindOrRegisterViewController.swift in Sources */,
+				253D2A0625977B4D00ED0FC6 /* ChattingViewController.swift in Sources */,
 				253D29DC25973B1700ED0FC6 /* AppDelegate.swift in Sources */,
+				253D2A0325977B4400ED0FC6 /* SearchViewController.swift in Sources */,
 				253D29DE25973B1700ED0FC6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
