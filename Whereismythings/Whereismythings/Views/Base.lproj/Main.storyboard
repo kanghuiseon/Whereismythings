@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jex-ko-0jR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Whereismythings" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="mappin.and.ellipse" catalog="system" id="1g3-GV-wSR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039.1304347826087" y="102.45535714285714"/>
+        </scene>
+        <!--SearchViewController-->
+        <scene sceneID="t7W-Wr-gsF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" referencedIdentifier="SearchViewController" id="NiX-yg-fPW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="YXX-VY-6b2"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zm0-Za-ZTF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1062" y="496"/>
+        </scene>
+        <!--ChattingViewController-->
+        <scene sceneID="AXi-qO-pKF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chatting" referencedIdentifier="ChattingViewController" id="JhW-jd-dUQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="dxY-r4-iE7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nuy-cX-LAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1062" y="628"/>
+        </scene>
+        <!--FindOrRegisterViewController-->
+        <scene sceneID="7S9-12-atQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FindOrRegister" referencedIdentifier="FindOrRegisterViewController" id="1Ng-ls-wxA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="mRe-hd-PcZ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EnO-1p-a5C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1045" y="718"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="MZ8-1K-mh2">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="jex-ko-0jR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nQk-06-dWN">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="c7A-Ty-nTS"/>
+                        <segue destination="NiX-yg-fPW" kind="relationship" relationship="viewControllers" id="PnJ-RJ-zgQ"/>
+                        <segue destination="1Ng-ls-wxA" kind="relationship" relationship="viewControllers" id="q1i-Ir-d06"/>
+                        <segue destination="JhW-jd-dUQ" kind="relationship" relationship="viewControllers" id="9bE-7D-Rd5"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="guP-SV-Cih" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.98550724637681" y="102.45535714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
