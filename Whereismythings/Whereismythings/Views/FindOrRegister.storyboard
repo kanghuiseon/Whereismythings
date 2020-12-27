@@ -11,7 +11,7 @@
         <!--find or register-->
         <scene sceneID="Kd3-qT-dQi">
             <objects>
-                <viewController storyboardIdentifier="FindOrRegisterViewController" id="XPy-pz-ljh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FindOrRegisterViewController" id="XPy-pz-ljh" customClass="FindOrRegisterViewController" customModule="Whereismythings" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ul6-aZ-TMK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
