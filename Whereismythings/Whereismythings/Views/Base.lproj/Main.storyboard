@@ -25,6 +25,10 @@
                                     <segment title="주운 사람"/>
                                     <segment title="찾는 사람"/>
                                 </segments>
+                                <connections>
+                                    <action selector="clickedSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="4aJ-sf-nRh"/>
+                                    <action selector="setSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="J3T-if-xm9"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -43,6 +47,7 @@
                     <tabBarItem key="tabBarItem" title="Map" image="mappin.and.ellipse" catalog="system" id="1g3-GV-wSR"/>
                     <connections>
                         <outlet property="mainMap" destination="CbO-Eb-9Pz" id="Rag-1B-foH"/>
+                        <outlet property="segmentedControl" destination="eKS-Q0-m21" id="ToR-mP-ydw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
