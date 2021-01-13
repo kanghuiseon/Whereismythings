@@ -24,6 +24,7 @@ struct MainMapModel{
         self.stuffLatitudePosition = stuffLatitudePosition
         self.stuffLongitudePosition = stuffLongitudePosition
         self.stuffKoreanPosition = stuffKoreanPosition
-        self.stuffImage = stuffImage!
+        guard let image = stuffImage else { return }
+        self.stuffImage = image
     }
 }
