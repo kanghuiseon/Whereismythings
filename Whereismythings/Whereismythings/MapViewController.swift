@@ -10,9 +10,13 @@ import MapKit
 class MapViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var mainMap: MKMapView!
     let locationManager = CLLocationManager()
+    var stuffs:[MainMapModel] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        stuffs.append(MainMapModel(id: 1, stuffName: "맥미니", stuffCharacteristic: "새제품", stuffLatitudePosition: "37.5630725", stuffLongitudePosition: "127.0366688",stuffKoreanPosition: "성동구청", stuffImage: nil))
+        stuffs.append(MainMapModel(id: 2, stuffName: "맥북프로2020", stuffCharacteristic: nil, stuffLatitudePosition: "37.5112348", stuffLongitudePosition: "127.0980274", stuffKoreanPosition: "롯데월드", stuffImage: nil))
+        stuffs.append(MainMapModel(id: 3, stuffName: "에어팟", stuffCharacteristic: nil, stuffLatitudePosition: "37.5121422", stuffLongitudePosition: "126.9954074", stuffKoreanPosition: "세빛섬", stuffImage: nil))
         locationManager.delegate = self // delegate 현재 뷰로 설정
         locationManager.desiredAccuracy = kCLLocationAccuracyBest // 정확도 최고
         locationManager.requestWhenInUseAuthorization() //사용자 인증 요청
