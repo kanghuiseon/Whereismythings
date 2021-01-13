@@ -26,14 +26,22 @@
                                     <segment title="찾는 사람"/>
                                 </segments>
                                 <connections>
-                                    <action selector="clickedSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="4aJ-sf-nRh"/>
-                                    <action selector="setSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="J3T-if-xm9"/>
+                                    <action selector="clickedSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="K94-5K-B5o"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qqy-fG-S4G">
+                                <rect key="frame" x="328" y="727" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="kCB-qW-Ll3"/>
+                                    <constraint firstAttribute="width" constant="56" id="wdZ-5r-1gL"/>
+                                </constraints>
+                                <state key="normal" image="iconfinder_gps_position_tracking_positioning_navigation_3994368"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qqy-fG-S4G" secondAttribute="trailing" constant="30" id="5vU-5E-Txd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CbO-Eb-9Pz" secondAttribute="bottom" id="Dxg-1f-g1e"/>
                             <constraint firstItem="eKS-Q0-m21" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KWY-Kt-R7s"/>
                             <constraint firstItem="eKS-Q0-m21" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="Kce-Wq-gnA"/>
@@ -42,6 +50,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CbO-Eb-9Pz" secondAttribute="trailing" id="cSj-H3-2Gp"/>
                             <constraint firstItem="eKS-Q0-m21" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="epP-Vu-QTB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eKS-Q0-m21" secondAttribute="trailing" constant="100" id="ev8-XS-zjw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qqy-fG-S4G" secondAttribute="bottom" constant="30" id="jc6-lz-UV6"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="mappin.and.ellipse" catalog="system" id="1g3-GV-wSR"/>
@@ -53,6 +62,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1039.1304347826087" y="102.45535714285714"/>
+        </scene>
+        <!--Detail Stuff View Controller-->
+        <scene sceneID="DVM-9S-e0K">
+            <objects>
+                <viewController id="uG8-u8-3s8" customClass="DetailStuffViewController" customModule="Whereismythings" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zKl-jE-6JH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="L4W-I3-6oJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EcG-eZ-eiA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1894" y="102"/>
         </scene>
         <!--SearchViewController-->
         <scene sceneID="t7W-Wr-gsF">
@@ -107,6 +131,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="iconfinder_gps_position_tracking_positioning_navigation_3994368" width="96" height="96"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

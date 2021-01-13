@@ -28,6 +28,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation() // 위치 업데이트 시작
         mainMap.showsUserLocation = true
     }
+    
+
     @IBAction func clickedSegmentedControl(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex{
         case 0:
@@ -48,7 +50,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let coordinateLocation = CLLocationCoordinate2DMake(latitude, longitude)
         let spanValue = MKCoordinateSpan(latitudeDelta: delta, longitudeDelta: delta)
         let locationRegion = MKCoordinateRegion(center: coordinateLocation, span: spanValue)
-//        mainMap.setRegion(locationRegion, animated: true)
+        mainMap.setRegion(locationRegion, animated: true)
         return coordinateLocation
     }
     

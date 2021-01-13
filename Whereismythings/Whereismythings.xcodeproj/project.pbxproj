@@ -20,6 +20,7 @@
 		253D2A0625977B4D00ED0FC6 /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D2A0525977B4D00ED0FC6 /* ChattingViewController.swift */; };
 		253D2A0925977B5F00ED0FC6 /* FindOrRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D2A0825977B5F00ED0FC6 /* FindOrRegisterViewController.swift */; };
 		25967E6025AF2BF900415C1A /* MainMapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25967E5F25AF2BF900415C1A /* MainMapModel.swift */; };
+		25967E6B25AF550600415C1A /* DetailStuffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25967E6A25AF550600415C1A /* DetailStuffViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		253D2A0525977B4D00ED0FC6 /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
 		253D2A0825977B5F00ED0FC6 /* FindOrRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindOrRegisterViewController.swift; sourceTree = "<group>"; };
 		25967E5F25AF2BF900415C1A /* MainMapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMapModel.swift; sourceTree = "<group>"; };
+		25967E6A25AF550600415C1A /* DetailStuffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStuffViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				253D29DB25973B1700ED0FC6 /* AppDelegate.swift */,
 				253D29DD25973B1700ED0FC6 /* SceneDelegate.swift */,
 				253D29DF25973B1700ED0FC6 /* MapViewController.swift */,
+				25967E6A25AF550600415C1A /* DetailStuffViewController.swift */,
 				253D29E425973B1800ED0FC6 /* Assets.xcassets */,
 				253D29E625973B1800ED0FC6 /* LaunchScreen.storyboard */,
 				253D29E925973B1800ED0FC6 /* Info.plist */,
@@ -181,6 +184,7 @@
 				25967E6025AF2BF900415C1A /* MainMapModel.swift in Sources */,
 				253D2A0925977B5F00ED0FC6 /* FindOrRegisterViewController.swift in Sources */,
 				253D2A0625977B4D00ED0FC6 /* ChattingViewController.swift in Sources */,
+				25967E6B25AF550600415C1A /* DetailStuffViewController.swift in Sources */,
 				253D29DC25973B1700ED0FC6 /* AppDelegate.swift in Sources */,
 				253D2A0325977B4400ED0FC6 /* SearchViewController.swift in Sources */,
 				253D29DE25973B1700ED0FC6 /* SceneDelegate.swift in Sources */,
