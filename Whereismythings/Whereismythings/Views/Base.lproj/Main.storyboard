@@ -15,10 +15,35 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CbO-Eb-9Pz">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </mapView>
+                            <segmentedControl opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eKS-Q0-m21">
+                                <rect key="frame" x="100" y="110" width="214" height="32"/>
+                                <segments>
+                                    <segment title="주운 사람"/>
+                                    <segment title="찾는 사람"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CbO-Eb-9Pz" secondAttribute="bottom" id="Dxg-1f-g1e"/>
+                            <constraint firstItem="eKS-Q0-m21" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KWY-Kt-R7s"/>
+                            <constraint firstItem="eKS-Q0-m21" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="Kce-Wq-gnA"/>
+                            <constraint firstItem="CbO-Eb-9Pz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MrQ-Tm-7nI"/>
+                            <constraint firstItem="CbO-Eb-9Pz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WgC-gw-MCp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CbO-Eb-9Pz" secondAttribute="trailing" id="cSj-H3-2Gp"/>
+                            <constraint firstItem="eKS-Q0-m21" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="epP-Vu-QTB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eKS-Q0-m21" secondAttribute="trailing" constant="100" id="ev8-XS-zjw"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="mappin.and.ellipse" catalog="system" id="1g3-GV-wSR"/>
+                    <connections>
+                        <outlet property="mainMap" destination="CbO-Eb-9Pz" id="Rag-1B-foH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -19,6 +19,7 @@
 		253D2A0325977B4400ED0FC6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D2A0225977B4400ED0FC6 /* SearchViewController.swift */; };
 		253D2A0625977B4D00ED0FC6 /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D2A0525977B4D00ED0FC6 /* ChattingViewController.swift */; };
 		253D2A0925977B5F00ED0FC6 /* FindOrRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D2A0825977B5F00ED0FC6 /* FindOrRegisterViewController.swift */; };
+		25967E6025AF2BF900415C1A /* MainMapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25967E5F25AF2BF900415C1A /* MainMapModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		253D2A0225977B4400ED0FC6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		253D2A0525977B4D00ED0FC6 /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
 		253D2A0825977B5F00ED0FC6 /* FindOrRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindOrRegisterViewController.swift; sourceTree = "<group>"; };
+		25967E5F25AF2BF900415C1A /* MainMapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMapModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		253D29DA25973B1700ED0FC6 /* Whereismythings */ = {
 			isa = PBXGroup;
 			children = (
+				25967E5E25AF2BE800415C1A /* Model */,
 				253D29FA259774D900ED0FC6 /* Views */,
 				253D29DB25973B1700ED0FC6 /* AppDelegate.swift */,
 				253D29DD25973B1700ED0FC6 /* SceneDelegate.swift */,
@@ -91,6 +94,14 @@
 				253D29FF259779DB00ED0FC6 /* FindOrRegister.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		25967E5E25AF2BE800415C1A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				25967E5F25AF2BF900415C1A /* MainMapModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				253D29E025973B1700ED0FC6 /* MapViewController.swift in Sources */,
+				25967E6025AF2BF900415C1A /* MainMapModel.swift in Sources */,
 				253D2A0925977B5F00ED0FC6 /* FindOrRegisterViewController.swift in Sources */,
 				253D2A0625977B4D00ED0FC6 /* ChattingViewController.swift in Sources */,
 				253D29DC25973B1700ED0FC6 /* AppDelegate.swift in Sources */,
@@ -319,6 +331,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S8NMR642D4;
 				INFOPLIST_FILE = Whereismythings/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -337,6 +350,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S8NMR642D4;
 				INFOPLIST_FILE = Whereismythings/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
