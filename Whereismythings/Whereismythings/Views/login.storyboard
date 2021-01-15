@@ -208,7 +208,7 @@
         <!--Complete Log In View Controller-->
         <scene sceneID="xCp-if-lN6">
             <objects>
-                <viewController storyboardIdentifier="completeLogIn" id="d6k-qm-6OG" customClass="completeLogInViewController" customModule="Whereismythings" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cptLogIn" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d6k-qm-6OG" customClass="completeLogInViewController" customModule="Whereismythings" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v4O-Mf-hgg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -227,7 +227,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iKL-CZ-XoB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3175" y="232"/>
+            <point key="canvasLocation" x="3072" y="199"/>
         </scene>
     </scenes>
     <resources>

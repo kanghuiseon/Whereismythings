@@ -34,10 +34,12 @@ class LogInViewController: UIViewController {
         
         if loginData[0].email == emailTextField.text && loginData[0].password == passwordTextField.text {
             
-            present(completeLogInViewController(), animated: true)
-        //여기는 왜 프린트가 안될까요
-            print(loginData[0].email)
-            
+            guard let vc = self.storyboard?.instantiateViewController(identifier: "cptLogIn") as? completeLogInViewController else{
+                return
+            }
+            self.present(vc, animated: true)
+                    
+           
         }
      
     }
