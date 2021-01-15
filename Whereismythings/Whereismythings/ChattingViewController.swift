@@ -13,7 +13,7 @@ class ChattingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("test3 1017")
+        
         // Do any additional setup after loading the view.
     }
     

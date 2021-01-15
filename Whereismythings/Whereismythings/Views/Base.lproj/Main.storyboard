@@ -34,10 +34,10 @@
             </objects>
             <point key="canvasLocation" x="1062" y="496"/>
         </scene>
-        <!--ChattingViewController-->
+        <!--SignLoginSelectViewController-->
         <scene sceneID="AXi-qO-pKF">
             <objects>
-                <viewControllerPlaceholder storyboardName="Chatting" referencedIdentifier="ChattingViewController" id="JhW-jd-dUQ" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="login" referencedIdentifier="SignLoginSelectViewController" id="JhW-jd-dUQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="dxY-r4-iE7"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nuy-cX-LAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
