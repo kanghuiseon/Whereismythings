@@ -40,6 +40,8 @@ extension MapViewController: MKMapViewDelegate{
             markerAnnotationView.image = #imageLiteral(resourceName: "baseline_location_on_black_18dp")
             markerAnnotationView.canShowCallout = true
             markerAnnotationView.detailCalloutAccessoryView = UIImageView(image: #imageLiteral(resourceName: "IMG_0256"))
+            let rightButton = UIButton(type: .detailDisclosure)
+            markerAnnotationView.rightCalloutAccessoryView = rightButton
             return markerAnnotationView
         }
         else{
@@ -47,17 +49,23 @@ extension MapViewController: MKMapViewDelegate{
             markerAnnotationView?.image = #imageLiteral(resourceName: "baseline_location_on_black_18dp")
             markerAnnotationView?.canShowCallout = true
             markerAnnotationView?.detailCalloutAccessoryView = UIImageView(image: #imageLiteral(resourceName: "IMG_0256"))
+            let rightButton = UIButton(type: .detailDisclosure)
+            markerAnnotationView?.rightCalloutAccessoryView = rightButton
 
             return markerAnnotationView
         }
     }
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        if let annotation = view.annotation{
-            if let detailStuffVC = storyboard?.instantiateViewController(withIdentifier: "DetailStuffViewController"){
-                detailStuffVC.modalPresentationStyle = .popover
-                present(detailStuffVC, animated: true, completion: nil)
-                
-            }
+        guard view.annotation != nil else { return }
+        if let detailStuffVC = storyboard?.instantiateViewController(withIdentifier: "DetailStuffViewController"){
+            detailStuffVC.modalPresentationStyle = .popover
+            let presentationController = detailStuffVC.popoverPresentationController
+            presentationController?.permittedArrowDirections = .any
+            
+            // Anchor the popover to the button that triggered the popover.
+            presentationController?.sourceRect = control.frame
+            presentationController?.sourceView = control
+            present(detailStuffVC, animated: true, completion: nil)
         }
     }
 }
