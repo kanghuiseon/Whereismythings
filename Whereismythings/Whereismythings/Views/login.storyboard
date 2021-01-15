@@ -161,6 +161,9 @@
                                             <constraint firstAttribute="height" constant="45" id="z1N-Mw-gRL"/>
                                         </constraints>
                                         <state key="normal" title="로그인"/>
+                                        <connections>
+                                            <action selector="loginButtonTapped:" destination="WZg-zo-xNw" eventType="touchUpInside" id="1C0-59-Pnn"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -174,6 +177,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HmM-LT-85p"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="a7S-gZ-C0C" id="fLd-38-1j1"/>
+                        <outlet property="loginButton" destination="dl4-Ry-itz" id="zUb-0N-sPQ"/>
+                        <outlet property="passwordTextField" destination="nev-Dg-dXv" id="Gdg-PD-k8r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QWI-cX-s8A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -197,10 +205,10 @@
             </objects>
             <point key="canvasLocation" x="286.95652173913044" y="87.723214285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Complete Log In View Controller-->
         <scene sceneID="xCp-if-lN6">
             <objects>
-                <viewController id="d6k-qm-6OG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="completeLogIn" id="d6k-qm-6OG" customClass="completeLogInViewController" customModule="Whereismythings" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v4O-Mf-hgg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

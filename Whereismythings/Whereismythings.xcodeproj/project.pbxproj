@@ -11,6 +11,7 @@
 		201850C725B11E86005FBF3E /* SignLoginSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201850C625B11E86005FBF3E /* SignLoginSelectViewController.swift */; };
 		201850CA25B11F02005FBF3E /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201850C925B11F01005FBF3E /* LogInViewController.swift */; };
 		201850D725B155B0005FBF3E /* Informations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201850D625B155B0005FBF3E /* Informations.swift */; };
+		2042E18825B1769B006DA999 /* completeLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2042E18725B1769B006DA999 /* completeLogInViewController.swift */; };
 		253D29DC25973B1700ED0FC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D29DB25973B1700ED0FC6 /* AppDelegate.swift */; };
 		253D29DE25973B1700ED0FC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D29DD25973B1700ED0FC6 /* SceneDelegate.swift */; };
 		253D29E025973B1700ED0FC6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D29DF25973B1700ED0FC6 /* MapViewController.swift */; };
@@ -30,6 +31,7 @@
 		201850C625B11E86005FBF3E /* SignLoginSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignLoginSelectViewController.swift; sourceTree = "<group>"; };
 		201850C925B11F01005FBF3E /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		201850D625B155B0005FBF3E /* Informations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Informations.swift; sourceTree = "<group>"; };
+		2042E18725B1769B006DA999 /* completeLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = completeLogInViewController.swift; sourceTree = "<group>"; };
 		253D29D825973B1700ED0FC6 /* Whereismythings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whereismythings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		253D29DB25973B1700ED0FC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		253D29DD25973B1700ED0FC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				201850C925B11F01005FBF3E /* LogInViewController.swift */,
 				201850C325B11E3E005FBF3E /* SignUpViewController.swift */,
 				201850C625B11E86005FBF3E /* SignLoginSelectViewController.swift */,
+				2042E18725B1769B006DA999 /* completeLogInViewController.swift */,
 			);
 			path = LogInViewController;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				201850C725B11E86005FBF3E /* SignLoginSelectViewController.swift in Sources */,
 				253D2A0325977B4400ED0FC6 /* SearchViewController.swift in Sources */,
 				201850CA25B11F02005FBF3E /* LogInViewController.swift in Sources */,
+				2042E18825B1769B006DA999 /* completeLogInViewController.swift in Sources */,
 				253D29DE25973B1700ED0FC6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
