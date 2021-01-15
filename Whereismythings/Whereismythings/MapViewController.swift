@@ -35,15 +35,20 @@ extension MapViewController: MKMapViewDelegate{
             return nil
         }
         let identifier = "annotation"
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-        if let annotationView = annotationView{
-            annotationView.image = #imageLiteral(resourceName: "baseline_location_on_black_18dp")
-            return annotationView
+        var markerAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView
+        if let markerAnnotationView = markerAnnotationView{
+            markerAnnotationView.image = #imageLiteral(resourceName: "baseline_location_on_black_18dp")
+            markerAnnotationView.canShowCallout = true
+            markerAnnotationView.detailCalloutAccessoryView = UIImageView(image: #imageLiteral(resourceName: "IMG_0256"))
+            return markerAnnotationView
         }
         else{
-            annotationView = MKPinAnnotationView()
-            annotationView?.image = #imageLiteral(resourceName: "baseline_location_on_black_18dp")
-            return annotationView
+            markerAnnotationView = MKMarkerAnnotationView()
+            markerAnnotationView?.image = #imageLiteral(resourceName: "baseline_location_on_black_18dp")
+            markerAnnotationView?.canShowCallout = true
+            markerAnnotationView?.detailCalloutAccessoryView = UIImageView(image: #imageLiteral(resourceName: "IMG_0256"))
+
+            return markerAnnotationView
         }
     }
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
