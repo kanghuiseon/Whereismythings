@@ -68,7 +68,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="6ib-e8-g7X">
                                 <rect key="frame" x="40" y="128" width="334" height="267"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pc6-1D-JIG">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pc6-1D-JIG">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="NWM-hB-6dj"/>
@@ -98,6 +98,9 @@
                                             <constraint firstAttribute="height" constant="45" id="Lvf-Q6-sOz"/>
                                         </constraints>
                                         <state key="normal" title="가입"/>
+                                        <connections>
+                                            <action selector="signUpButtonTapped:" destination="Eej-UO-QWJ" eventType="touchUpInside" id="9C0-t2-OCP"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -111,6 +114,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ctk-9L-fpl"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="1tJ-H0-Gwu" id="Zjd-Hd-jfc"/>
+                        <outlet property="idTextField" destination="pc6-1D-JIG" id="vMI-vU-Jgo"/>
+                        <outlet property="passwordTextField" destination="3Gn-yz-7Wa" id="2VC-St-stE"/>
+                        <outlet property="signUpButton" destination="ba2-GZ-gJs" id="HW1-If-mTp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fQA-oB-1R1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
