@@ -37,15 +37,22 @@ extension MapViewController: MKMapViewDelegate{
         let identifier = "annotation"
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
         if let annotationView = annotationView{
-            annotationView.annotation = annotation
             annotationView.image = #imageLiteral(resourceName: "baseline_location_on_black_18dp")
             return annotationView
         }
         else{
             annotationView = MKPinAnnotationView()
-            annotationView?.annotation = annotation
             annotationView?.image = #imageLiteral(resourceName: "baseline_location_on_black_18dp")
             return annotationView
+        }
+    }
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if let annotation = view.annotation{
+            if let detailStuffVC = storyboard?.instantiateViewController(withIdentifier: "DetailStuffViewController"){
+                detailStuffVC.modalPresentationStyle = .popover
+                present(detailStuffVC, animated: true, completion: nil)
+                
+            }
         }
     }
 }

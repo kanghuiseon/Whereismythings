@@ -66,7 +66,7 @@
         <!--Detail Stuff View Controller-->
         <scene sceneID="DVM-9S-e0K">
             <objects>
-                <viewController id="uG8-u8-3s8" customClass="DetailStuffViewController" customModule="Whereismythings" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailStuffViewController" id="uG8-u8-3s8" customClass="DetailStuffViewController" customModule="Whereismythings" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zKl-jE-6JH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
