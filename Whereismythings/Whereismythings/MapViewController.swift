@@ -35,22 +35,22 @@ extension MapViewController: MKMapViewDelegate{
             return nil
         }
         let identifier = "annotation"
-        var markerAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView
+        var markerAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MapAnnotationView
         if let markerAnnotationView = markerAnnotationView{
-            markerAnnotationView.image = #imageLiteral(resourceName: "baseline_location_on_black_18dp")
-            markerAnnotationView.canShowCallout = true
-            markerAnnotationView.detailCalloutAccessoryView = UIImageView(image: #imageLiteral(resourceName: "IMG_0256"))
-            let rightButton = UIButton(type: .detailDisclosure)
-            markerAnnotationView.rightCalloutAccessoryView = rightButton
+//            markerAnnotationView.image = #imageLiteral(resourceName: "baseline_location_on_black_18dp")
+//            markerAnnotationView.canShowCallout = true
+//            markerAnnotationView.detailCalloutAccessoryView = UIImageView(image: #imageLiteral(resourceName: "IMG_0256"))
+//            let rightButton = UIButton(type: .detailDisclosure)
+//            markerAnnotationView.rightCalloutAccessoryView = rightButton
             return markerAnnotationView
         }
         else{
-            markerAnnotationView = MKMarkerAnnotationView()
-            markerAnnotationView?.image = #imageLiteral(resourceName: "baseline_location_on_black_18dp")
-            markerAnnotationView?.canShowCallout = true
-            markerAnnotationView?.detailCalloutAccessoryView = UIImageView(image: #imageLiteral(resourceName: "IMG_0256"))
-            let rightButton = UIButton(type: .detailDisclosure)
-            markerAnnotationView?.rightCalloutAccessoryView = rightButton
+            markerAnnotationView = MapAnnotationView()
+//            markerAnnotationView?.image = #imageLiteral(resourceName: "baseline_location_on_black_18dp")
+//            markerAnnotationView?.canShowCallout = true
+//            markerAnnotationView?.detailCalloutAccessoryView = UIImageView(image: #imageLiteral(resourceName: "IMG_0256"))
+//            let rightButton = UIButton(type: .detailDisclosure)
+//            markerAnnotationView?.rightCalloutAccessoryView = rightButton
 
             return markerAnnotationView
         }
