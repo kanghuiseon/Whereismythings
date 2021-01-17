@@ -34,7 +34,7 @@ class SignUpViewController: UIViewController {
 
     @IBAction func signUpButtonTapped(_ sender: Any) {
     
-        if idTextField != nil || emailTextField != nil || passwordTextField != nil {
+        if idTextField != nil && emailTextField != nil && passwordTextField != nil {
 //            var id:String? = idTextField.text
 //            var email:String? = emailTextField.text
 //            var passworld:String? = passwordTextField.text

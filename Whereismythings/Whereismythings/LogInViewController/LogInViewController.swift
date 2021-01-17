@@ -31,7 +31,8 @@ class LogInViewController: UIViewController {
     @IBAction func loginButtonTapped(_ sender: Any) {
         
         //로그인 데이터랑 텍스트필드 데이터가 트루이면 프린트핼
-        
+        //for 돌리면 되는건가
+        //prepare 사용해서도 해보자
         if loginData[0].email == emailTextField.text && loginData[0].password == passwordTextField.text {
             
             guard let vc = self.storyboard?.instantiateViewController(identifier: "cptLogIn") as? completeLogInViewController else{

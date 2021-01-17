@@ -37,3 +37,4 @@ struct ItemInfo {
 //enum TypeOfItem {
 //    case lost, found, wish
 //}
+
