@@ -6,18 +6,20 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseFirestore
+
+
 
 
 
 class SignUpViewController: UIViewController {
 
-    var loginData : [LoginInformations] = [
-        LoginInformations(id: "0524snh", email: "0524snh@coders.com", password: "0524snh1"),
-        LoginInformations(id: "0821yjh", email: "0821yjh@coders.com", password: "0821yjh1"),
-        LoginInformations(id: "0807khs", email: "0807khs@coders.com", password: "0807khs1")
-        
-    ]
+    
     @IBOutlet weak var idTextField: UITextField!
+    
+    @IBOutlet weak var ageTextField: UITextField!
     
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -26,28 +28,85 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var signUpButton: UIButton!
     
-
+    @IBOutlet weak var errorLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    
+    func validateFields() -> String? {
+        
+
+        if  idTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+              
+        {
+            
+            return "전부 안채우는 애러"
+        }
+        
+     
+            
+        return nil
+    }
+    
+    
 
     @IBAction func signUpButtonTapped(_ sender: Any) {
     
-        if idTextField != nil && emailTextField != nil && passwordTextField != nil {
-//            var id:String? = idTextField.text
-//            var email:String? = emailTextField.text
-//            var passworld:String? = passwordTextField.text
-//
-            loginData.append(LoginInformations(id: idTextField.text!, email: emailTextField!.text!, password: passwordTextField!.text!))
+        let error = validateFields()
+        
+        if error != nil {
+    
+            showError(error!)
+        }
+        else {
             
-            print(loginData)
-            }
+            let id = idTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+          
+            Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
+                
+             
+                if err != nil {
+    
+                    self.showError("유저생성에러")
+                    
+                }
+                else {
+                                    
+                    let db = Firestore.firestore()
+                  
+                    db.collection("users").addDocument(data: ["id":id, "uid":result!.user.uid]) { (error) in
+                        if error != nil {
+                            self.showError("유저데이터 세이브에러")
+
+                
+                    
+                        }
+                    }
+                    
+                    // 로긴화면으로 전환함수
+                    
+                }
+          }
+            
+            
+            
+     }
+  }
         
         
+    
+    func showError(_ message:String) {
         
-        
+        errorLabel.text = message
+        errorLabel.alpha = 1
     }
+        
     
     
 }

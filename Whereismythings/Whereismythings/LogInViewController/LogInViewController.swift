@@ -6,15 +6,10 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LogInViewController: UIViewController {
     
-    
-    var loginData : [LoginInformations] = [
-        LoginInformations(id: "0524snh", email: "0524snh@coders.com", password: "0524snh1"),
-        LoginInformations(id: "0821yjh", email: "0821yjh@coders.com", password: "0821yjh1"),
-        LoginInformations(id: "0807khs", email: "0807khs@coders.com", password: "0807khs1")
-    ]
 
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -23,27 +18,56 @@ class LogInViewController: UIViewController {
     
     @IBOutlet weak var loginButton: UIButton!
     
+    @IBOutlet weak var errorLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+   
+        
     }
+    
+    
     
     
     @IBAction func loginButtonTapped(_ sender: Any) {
         
-        //로그인 데이터랑 텍스트필드 데이터가 트루이면 프린트핼
-        //for 돌리면 되는건가
-        //prepare 사용해서도 해보자
-        if loginData[0].email == emailTextField.text && loginData[0].password == passwordTextField.text {
+//        //로그인 데이터랑 텍스트필드 데이터가 트루이면 프린트핼
+//        //for 돌리면 되는건가
+//        //prepare 사용해서도 해보자
+//        if loginData[0].email == emailTextField.text && loginData[0].password == passwordTextField.text {
+//
+        
+        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+   
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             
-            guard let vc = self.storyboard?.instantiateViewController(identifier: "cptLogIn") as? completeLogInViewController else{
-                return
+            if error != nil {
+                // Couldn't sign in
+                self.errorLabel.text = error!.localizedDescription
+                self.errorLabel.alpha = 1
             }
-            self.present(vc, animated: true)
-                    
-           
-        }
+            else {
+                
+                guard let vc = self.storyboard?.instantiateViewController(identifier: "cptLogIn") as? completeLogInViewController else{
+                    return
+                }
+                self.present(vc, animated: true)
+                
+                
+//                
+//                guard let vc = self.storyboard?.instantiateViewController(identifier: "cptLogIn") as? completeLogInViewController else{
+//                        return
+//           
+                }
      
-    }
+            }
     
     
+        }
 }
+    
+    
+

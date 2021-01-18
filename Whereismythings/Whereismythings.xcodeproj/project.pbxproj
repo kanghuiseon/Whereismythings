@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		201850C725B11E86005FBF3E /* SignLoginSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201850C625B11E86005FBF3E /* SignLoginSelectViewController.swift */; };
 		201850CA25B11F02005FBF3E /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201850C925B11F01005FBF3E /* LogInViewController.swift */; };
 		201850D725B155B0005FBF3E /* Informations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201850D625B155B0005FBF3E /* Informations.swift */; };
+		2035176A25B4223C00F5D528 /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2035176925B4223C00F5D528 /* Setup.swift */; };
 		2042E18825B1769B006DA999 /* completeLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2042E18725B1769B006DA999 /* completeLogInViewController.swift */; };
 		207ACD9425B410E400FE4BDA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 207ACD9325B410E400FE4BDA /* GoogleService-Info.plist */; };
 		253D29DC25973B1700ED0FC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D29DB25973B1700ED0FC6 /* AppDelegate.swift */; };
@@ -33,6 +34,7 @@
 		201850C625B11E86005FBF3E /* SignLoginSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignLoginSelectViewController.swift; sourceTree = "<group>"; };
 		201850C925B11F01005FBF3E /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		201850D625B155B0005FBF3E /* Informations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Informations.swift; sourceTree = "<group>"; };
+		2035176925B4223C00F5D528 /* Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setup.swift; sourceTree = "<group>"; };
 		2042E18725B1769B006DA999 /* completeLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = completeLogInViewController.swift; sourceTree = "<group>"; };
 		207ACD9325B410E400FE4BDA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		253D29D825973B1700ED0FC6 /* Whereismythings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whereismythings.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,7 +74,6 @@
 				BA758A8250FD97815A7CF79C /* Pods-Whereismythings.debug.xcconfig */,
 				9E926ABA202F0007697645E0 /* Pods-Whereismythings.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -116,10 +117,11 @@
 				253D29E625973B1800ED0FC6 /* LaunchScreen.storyboard */,
 				253D29E925973B1800ED0FC6 /* Info.plist */,
 				253D2A0225977B4400ED0FC6 /* SearchViewController.swift */,
-				201850D625B155B0005FBF3E /* Informations.swift */,
-				201850D425B11F91005FBF3E /* LogInViewController */,
-				253D2A0525977B4D00ED0FC6 /* ChattingViewController.swift */,
 				253D2A0825977B5F00ED0FC6 /* FindOrRegisterViewController.swift */,
+				253D2A0525977B4D00ED0FC6 /* ChattingViewController.swift */,
+				201850D625B155B0005FBF3E /* Informations.swift */,
+				2035176925B4223C00F5D528 /* Setup.swift */,
+				201850D425B11F91005FBF3E /* LogInViewController */,
 			);
 			path = Whereismythings;
 			sourceTree = "<group>";
@@ -156,6 +158,7 @@
 				253D29D525973B1700ED0FC6 /* Frameworks */,
 				253D29D625973B1700ED0FC6 /* Resources */,
 				031E2159E2B2A16D37622689 /* [CP] Embed Pods Frameworks */,
+				ECB428654B72A1EC3A2EA5A3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -255,6 +258,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		ECB428654B72A1EC3A2EA5A3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Whereismythings/Pods-Whereismythings-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Whereismythings/Pods-Whereismythings-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Whereismythings/Pods-Whereismythings-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -269,6 +289,7 @@
 				201850D725B155B0005FBF3E /* Informations.swift in Sources */,
 				253D29DC25973B1700ED0FC6 /* AppDelegate.swift in Sources */,
 				201850C725B11E86005FBF3E /* SignLoginSelectViewController.swift in Sources */,
+				2035176A25B4223C00F5D528 /* Setup.swift in Sources */,
 				253D2A0325977B4400ED0FC6 /* SearchViewController.swift in Sources */,
 				201850CA25B11F02005FBF3E /* LogInViewController.swift in Sources */,
 				2042E18825B1769B006DA999 /* completeLogInViewController.swift in Sources */,

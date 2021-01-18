@@ -66,7 +66,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="6ib-e8-g7X">
-                                <rect key="frame" x="40" y="128" width="334" height="267"/>
+                                <rect key="frame" x="40" y="128" width="334" height="316.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pc6-1D-JIG">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="45"/>
@@ -102,6 +102,12 @@
                                             <action selector="signUpButtonTapped:" destination="Eej-UO-QWJ" eventType="touchUpInside" id="9C0-t2-OCP"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="에러(알림창을아직못함)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ah-D2-HOI">
+                                        <rect key="frame" x="0.0" y="296" width="334" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -116,6 +122,7 @@
                     <navigationItem key="navigationItem" id="ctk-9L-fpl"/>
                     <connections>
                         <outlet property="emailTextField" destination="1tJ-H0-Gwu" id="Zjd-Hd-jfc"/>
+                        <outlet property="errorLabel" destination="3ah-D2-HOI" id="I4M-ck-RXp"/>
                         <outlet property="idTextField" destination="pc6-1D-JIG" id="vMI-vU-Jgo"/>
                         <outlet property="passwordTextField" destination="3Gn-yz-7Wa" id="2VC-St-stE"/>
                         <outlet property="signUpButton" destination="ba2-GZ-gJs" id="HW1-If-mTp"/>
@@ -134,7 +141,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="PRU-k8-nvP">
-                                <rect key="frame" x="40" y="128" width="334" height="193"/>
+                                <rect key="frame" x="40" y="128" width="334" height="242.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a7S-gZ-C0C">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="45"/>
@@ -165,6 +172,12 @@
                                             <action selector="loginButtonTapped:" destination="WZg-zo-xNw" eventType="touchUpInside" id="1C0-59-Pnn"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="에러" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gqe-z4-2Fs">
+                                        <rect key="frame" x="0.0" y="222" width="334" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -179,6 +192,7 @@
                     <navigationItem key="navigationItem" id="HmM-LT-85p"/>
                     <connections>
                         <outlet property="emailTextField" destination="a7S-gZ-C0C" id="fLd-38-1j1"/>
+                        <outlet property="errorLabel" destination="Gqe-z4-2Fs" id="jwr-iB-5ou"/>
                         <outlet property="loginButton" destination="dl4-Ry-itz" id="zUb-0N-sPQ"/>
                         <outlet property="passwordTextField" destination="nev-Dg-dXv" id="Gdg-PD-k8r"/>
                     </connections>
@@ -234,6 +248,9 @@
         <image name="paperplane" catalog="system" width="128" height="118"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
