@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		125D37FB25B2D50500A319AD /* MapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D37FA25B2D50500A319AD /* MapAnnotationView.swift */; };
-		125D37FE25B2D71D00A319AD /* MapTagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125D37FD25B2D71D00A319AD /* MapTagView.xib */; };
 		253D29DC25973B1700ED0FC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D29DB25973B1700ED0FC6 /* AppDelegate.swift */; };
 		253D29DE25973B1700ED0FC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D29DD25973B1700ED0FC6 /* SceneDelegate.swift */; };
 		253D29E025973B1700ED0FC6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D29DF25973B1700ED0FC6 /* MapViewController.swift */; };
@@ -23,11 +21,10 @@
 		253D2A0925977B5F00ED0FC6 /* FindOrRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D2A0825977B5F00ED0FC6 /* FindOrRegisterViewController.swift */; };
 		25967E6025AF2BF900415C1A /* MainMapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25967E5F25AF2BF900415C1A /* MainMapModel.swift */; };
 		25967E6B25AF550600415C1A /* DetailStuffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25967E6A25AF550600415C1A /* DetailStuffViewController.swift */; };
+		25A4514625B73F9A00BC7E28 /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4514525B73F9A00BC7E28 /* MapAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		125D37FA25B2D50500A319AD /* MapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationView.swift; sourceTree = "<group>"; };
-		125D37FD25B2D71D00A319AD /* MapTagView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapTagView.xib; sourceTree = "<group>"; };
 		253D29D825973B1700ED0FC6 /* Whereismythings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whereismythings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		253D29DB25973B1700ED0FC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		253D29DD25973B1700ED0FC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +41,7 @@
 		253D2A0825977B5F00ED0FC6 /* FindOrRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindOrRegisterViewController.swift; sourceTree = "<group>"; };
 		25967E5F25AF2BF900415C1A /* MainMapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMapModel.swift; sourceTree = "<group>"; };
 		25967E6A25AF550600415C1A /* DetailStuffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStuffViewController.swift; sourceTree = "<group>"; };
+		25A4514525B73F9A00BC7E28 /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,13 +74,11 @@
 		253D29DA25973B1700ED0FC6 /* Whereismythings */ = {
 			isa = PBXGroup;
 			children = (
+				25A4513C25B7196D00BC7E28 /* Map */,
 				25967E5E25AF2BE800415C1A /* Model */,
 				253D29FA259774D900ED0FC6 /* Views */,
 				253D29DB25973B1700ED0FC6 /* AppDelegate.swift */,
 				253D29DD25973B1700ED0FC6 /* SceneDelegate.swift */,
-				253D29DF25973B1700ED0FC6 /* MapViewController.swift */,
-				125D37FA25B2D50500A319AD /* MapAnnotationView.swift */,
-				125D37FD25B2D71D00A319AD /* MapTagView.xib */,
 				25967E6A25AF550600415C1A /* DetailStuffViewController.swift */,
 				253D29E425973B1800ED0FC6 /* Assets.xcassets */,
 				253D29E625973B1800ED0FC6 /* LaunchScreen.storyboard */,
@@ -111,6 +107,15 @@
 				25967E5F25AF2BF900415C1A /* MainMapModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		25A4513C25B7196D00BC7E28 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				253D29DF25973B1700ED0FC6 /* MapViewController.swift */,
+				25A4514525B73F9A00BC7E28 /* MapAnnotation.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,7 +176,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				253D29E825973B1800ED0FC6 /* LaunchScreen.storyboard in Resources */,
-				125D37FE25B2D71D00A319AD /* MapTagView.xib in Resources */,
 				253D29E525973B1800ED0FC6 /* Assets.xcassets in Resources */,
 				253D29F8259774B000ED0FC6 /* Search.storyboard in Resources */,
 				253D29E325973B1700ED0FC6 /* Main.storyboard in Resources */,
@@ -189,11 +193,11 @@
 			files = (
 				253D29E025973B1700ED0FC6 /* MapViewController.swift in Sources */,
 				25967E6025AF2BF900415C1A /* MainMapModel.swift in Sources */,
+				25A4514625B73F9A00BC7E28 /* MapAnnotation.swift in Sources */,
 				253D2A0925977B5F00ED0FC6 /* FindOrRegisterViewController.swift in Sources */,
 				253D2A0625977B4D00ED0FC6 /* ChattingViewController.swift in Sources */,
 				25967E6B25AF550600415C1A /* DetailStuffViewController.swift in Sources */,
 				253D29DC25973B1700ED0FC6 /* AppDelegate.swift in Sources */,
-				125D37FB25B2D50500A319AD /* MapAnnotationView.swift in Sources */,
 				253D2A0325977B4400ED0FC6 /* SearchViewController.swift in Sources */,
 				253D29DE25973B1700ED0FC6 /* SceneDelegate.swift in Sources */,
 			);
@@ -350,7 +354,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Whereismythings;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Whereismything;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -370,7 +374,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Whereismythings;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Whereismything;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
