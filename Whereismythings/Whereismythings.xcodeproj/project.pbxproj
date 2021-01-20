@@ -41,6 +41,7 @@
 		25A4517325B88CF200BC7E28 /* FontAwesomeStateRequirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4516325B88CF200BC7E28 /* FontAwesomeStateRequirement.swift */; };
 		25A4517425B88CF200BC7E28 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4516425B88CF200BC7E28 /* Enum.swift */; };
 		25A4517525B88CF200BC7E28 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 25A4516525B88CF200BC7E28 /* README.md */; };
+		25A4518325B8937700BC7E28 /* MapPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4518225B8937700BC7E28 /* MapPinView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		25A4516325B88CF200BC7E28 /* FontAwesomeStateRequirement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeStateRequirement.swift; sourceTree = "<group>"; };
 		25A4516425B88CF200BC7E28 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		25A4516525B88CF200BC7E28 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		25A4518225B8937700BC7E28 /* MapPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPinView.swift; sourceTree = "<group>"; };
 		4D81D6BC70C75BDA983086CC /* Pods-Whereismythings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whereismythings.release.xcconfig"; path = "Target Support Files/Pods-Whereismythings/Pods-Whereismythings.release.xcconfig"; sourceTree = "<group>"; };
 		6FB8F83313FF1F380195A2BC /* Pods_Whereismythings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whereismythings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		870BC92F0A64580FBA201E79 /* Pods-Whereismythings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whereismythings.debug.xcconfig"; path = "Target Support Files/Pods-Whereismythings/Pods-Whereismythings.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				25A4514525B73F9A00BC7E28 /* MapAnnotation.swift */,
 				25A4514825B8467600BC7E28 /* MapAnnotationView.swift */,
 				25A4514B25B84A9300BC7E28 /* MapImageView.xib */,
+				25A4518225B8937700BC7E28 /* MapPinView.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				253D2A0325977B4400ED0FC6 /* SearchViewController.swift in Sources */,
 				253D29DE25973B1700ED0FC6 /* SceneDelegate.swift in Sources */,
 				25A4516D25B88CF200BC7E28 /* FontAwesomeImageView.swift in Sources */,
+				25A4518325B8937700BC7E28 /* MapPinView.swift in Sources */,
 				25A4516C25B88CF200BC7E28 /* FontAwesomeImageRepresentable.swift in Sources */,
 				25A4517225B88CF200BC7E28 /* FontAwesome.swift in Sources */,
 				25A4516725B88CF200BC7E28 /* FontAwesomeBarButtonItem.swift in Sources */,

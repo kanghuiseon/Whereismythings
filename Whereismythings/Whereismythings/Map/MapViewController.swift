@@ -26,6 +26,12 @@ class MapViewController: UIViewController{
         }
         
     }
+    @objc func btnDetailView(){
+        let detailVC = storyboard?.instantiateViewController(identifier: "DetailStuffViewController")
+        self.present(detailVC!, animated: true, completion: nil)
+        print("tap")
+    }
+
 }
 
 extension MapViewController: MKMapViewDelegate{
@@ -35,6 +41,12 @@ extension MapViewController: MKMapViewDelegate{
             exit(0)
         }
         let mapAnnotationView = MapAnnotationView(annotation: annotation, reuseIdentifier: nil)
+        let detail = mapAnnotationView.detailCalloutAccessoryView as! MapPinView
+        detail.btnPin.addTarget(self, action: #selector(btnDetailView), for: .touchUpInside)
         return mapAnnotationView
     }
+//    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+//        let detailVC = storyboard?.instantiateViewController(identifier: "DetailStuffViewController")
+//        present(detailVC!, animated: true, completion: nil)
+//    }
 }
