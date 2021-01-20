@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		165277AA648D88D884BBCE06 /* Pods_Whereismythings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB8F83313FF1F380195A2BC /* Pods_Whereismythings.framework */; };
 		253D29DC25973B1700ED0FC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D29DB25973B1700ED0FC6 /* AppDelegate.swift */; };
 		253D29DE25973B1700ED0FC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D29DD25973B1700ED0FC6 /* SceneDelegate.swift */; };
 		253D29E025973B1700ED0FC6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D29DF25973B1700ED0FC6 /* MapViewController.swift */; };
@@ -22,6 +23,24 @@
 		25967E6025AF2BF900415C1A /* MainMapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25967E5F25AF2BF900415C1A /* MainMapModel.swift */; };
 		25967E6B25AF550600415C1A /* DetailStuffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25967E6A25AF550600415C1A /* DetailStuffViewController.swift */; };
 		25A4514625B73F9A00BC7E28 /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4514525B73F9A00BC7E28 /* MapAnnotation.swift */; };
+		25A4514925B8467600BC7E28 /* MapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4514825B8467600BC7E28 /* MapAnnotationView.swift */; };
+		25A4514C25B84A9300BC7E28 /* MapImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A4514B25B84A9300BC7E28 /* MapImageView.xib */; };
+		25A4516625B88CF200BC7E28 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 25A4515525B88CF200BC7E28 /* LICENSE */; };
+		25A4516725B88CF200BC7E28 /* FontAwesomeBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4515725B88CF200BC7E28 /* FontAwesomeBarButtonItem.swift */; };
+		25A4516825B88CF200BC7E28 /* FontAwesomeSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4515825B88CF200BC7E28 /* FontAwesomeSegmentedControl.swift */; };
+		25A4516925B88CF200BC7E28 /* FontAwesomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4515925B88CF200BC7E28 /* FontAwesomeView.swift */; };
+		25A4516A25B88CF200BC7E28 /* FontAwesomeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4515A25B88CF200BC7E28 /* FontAwesomeExtension.swift */; };
+		25A4516B25B88CF200BC7E28 /* FontAwesomeTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4515B25B88CF200BC7E28 /* FontAwesomeTabBarItem.swift */; };
+		25A4516C25B88CF200BC7E28 /* FontAwesomeImageRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4515C25B88CF200BC7E28 /* FontAwesomeImageRepresentable.swift */; };
+		25A4516D25B88CF200BC7E28 /* FontAwesomeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4515D25B88CF200BC7E28 /* FontAwesomeImageView.swift */; };
+		25A4516E25B88CF200BC7E28 /* Font Awesome 5 Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 25A4515E25B88CF200BC7E28 /* Font Awesome 5 Brands-Regular-400.otf */; };
+		25A4516F25B88CF200BC7E28 /* Font Awesome 5 Free-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 25A4515F25B88CF200BC7E28 /* Font Awesome 5 Free-Solid-900.otf */; };
+		25A4517025B88CF200BC7E28 /* FontAwesomeTextRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4516025B88CF200BC7E28 /* FontAwesomeTextRepresentable.swift */; };
+		25A4517125B88CF200BC7E28 /* Font Awesome 5 Free-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 25A4516125B88CF200BC7E28 /* Font Awesome 5 Free-Regular-400.otf */; };
+		25A4517225B88CF200BC7E28 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4516225B88CF200BC7E28 /* FontAwesome.swift */; };
+		25A4517325B88CF200BC7E28 /* FontAwesomeStateRequirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4516325B88CF200BC7E28 /* FontAwesomeStateRequirement.swift */; };
+		25A4517425B88CF200BC7E28 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4516425B88CF200BC7E28 /* Enum.swift */; };
+		25A4517525B88CF200BC7E28 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 25A4516525B88CF200BC7E28 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +61,27 @@
 		25967E5F25AF2BF900415C1A /* MainMapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMapModel.swift; sourceTree = "<group>"; };
 		25967E6A25AF550600415C1A /* DetailStuffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStuffViewController.swift; sourceTree = "<group>"; };
 		25A4514525B73F9A00BC7E28 /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
+		25A4514825B8467600BC7E28 /* MapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationView.swift; sourceTree = "<group>"; };
+		25A4514B25B84A9300BC7E28 /* MapImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapImageView.xib; sourceTree = "<group>"; };
+		25A4515525B88CF200BC7E28 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		25A4515725B88CF200BC7E28 /* FontAwesomeBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeBarButtonItem.swift; sourceTree = "<group>"; };
+		25A4515825B88CF200BC7E28 /* FontAwesomeSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeSegmentedControl.swift; sourceTree = "<group>"; };
+		25A4515925B88CF200BC7E28 /* FontAwesomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeView.swift; sourceTree = "<group>"; };
+		25A4515A25B88CF200BC7E28 /* FontAwesomeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeExtension.swift; sourceTree = "<group>"; };
+		25A4515B25B88CF200BC7E28 /* FontAwesomeTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeTabBarItem.swift; sourceTree = "<group>"; };
+		25A4515C25B88CF200BC7E28 /* FontAwesomeImageRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeImageRepresentable.swift; sourceTree = "<group>"; };
+		25A4515D25B88CF200BC7E28 /* FontAwesomeImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeImageView.swift; sourceTree = "<group>"; };
+		25A4515E25B88CF200BC7E28 /* Font Awesome 5 Brands-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Brands-Regular-400.otf"; sourceTree = "<group>"; };
+		25A4515F25B88CF200BC7E28 /* Font Awesome 5 Free-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Solid-900.otf"; sourceTree = "<group>"; };
+		25A4516025B88CF200BC7E28 /* FontAwesomeTextRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeTextRepresentable.swift; sourceTree = "<group>"; };
+		25A4516125B88CF200BC7E28 /* Font Awesome 5 Free-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Regular-400.otf"; sourceTree = "<group>"; };
+		25A4516225B88CF200BC7E28 /* FontAwesome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesome.swift; sourceTree = "<group>"; };
+		25A4516325B88CF200BC7E28 /* FontAwesomeStateRequirement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeStateRequirement.swift; sourceTree = "<group>"; };
+		25A4516425B88CF200BC7E28 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		25A4516525B88CF200BC7E28 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4D81D6BC70C75BDA983086CC /* Pods-Whereismythings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whereismythings.release.xcconfig"; path = "Target Support Files/Pods-Whereismythings/Pods-Whereismythings.release.xcconfig"; sourceTree = "<group>"; };
+		6FB8F83313FF1F380195A2BC /* Pods_Whereismythings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whereismythings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		870BC92F0A64580FBA201E79 /* Pods-Whereismythings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whereismythings.debug.xcconfig"; path = "Target Support Files/Pods-Whereismythings/Pods-Whereismythings.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				165277AA648D88D884BBCE06 /* Pods_Whereismythings.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +101,8 @@
 			children = (
 				253D29DA25973B1700ED0FC6 /* Whereismythings */,
 				253D29D925973B1700ED0FC6 /* Products */,
+				AA6E892409BF9F1B0F3C257A /* Pods */,
+				74BB6EB29B0F945253354CE9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,18 +117,17 @@
 		253D29DA25973B1700ED0FC6 /* Whereismythings */ = {
 			isa = PBXGroup;
 			children = (
+				253D29E925973B1800ED0FC6 /* Info.plist */,
 				25A4513C25B7196D00BC7E28 /* Map */,
 				25967E5E25AF2BE800415C1A /* Model */,
 				253D29FA259774D900ED0FC6 /* Views */,
 				253D29DB25973B1700ED0FC6 /* AppDelegate.swift */,
 				253D29DD25973B1700ED0FC6 /* SceneDelegate.swift */,
 				25967E6A25AF550600415C1A /* DetailStuffViewController.swift */,
-				253D29E425973B1800ED0FC6 /* Assets.xcassets */,
-				253D29E625973B1800ED0FC6 /* LaunchScreen.storyboard */,
-				253D29E925973B1800ED0FC6 /* Info.plist */,
 				253D2A0225977B4400ED0FC6 /* SearchViewController.swift */,
 				253D2A0525977B4D00ED0FC6 /* ChattingViewController.swift */,
 				253D2A0825977B5F00ED0FC6 /* FindOrRegisterViewController.swift */,
+				25A4515325B88CCF00BC7E28 /* Resource */,
 			);
 			path = Whereismythings;
 			sourceTree = "<group>";
@@ -114,8 +156,69 @@
 			children = (
 				253D29DF25973B1700ED0FC6 /* MapViewController.swift */,
 				25A4514525B73F9A00BC7E28 /* MapAnnotation.swift */,
+				25A4514825B8467600BC7E28 /* MapAnnotationView.swift */,
+				25A4514B25B84A9300BC7E28 /* MapImageView.xib */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		25A4515325B88CCF00BC7E28 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				253D29E625973B1800ED0FC6 /* LaunchScreen.storyboard */,
+				253D29E425973B1800ED0FC6 /* Assets.xcassets */,
+				25A4515425B88CF200BC7E28 /* FontAwesome.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		25A4515425B88CF200BC7E28 /* FontAwesome.swift */ = {
+			isa = PBXGroup;
+			children = (
+				25A4515525B88CF200BC7E28 /* LICENSE */,
+				25A4515625B88CF200BC7E28 /* FontAwesome */,
+				25A4516525B88CF200BC7E28 /* README.md */,
+			);
+			name = FontAwesome.swift;
+			path = Pods/FontAwesome.swift;
+			sourceTree = SOURCE_ROOT;
+		};
+		25A4515625B88CF200BC7E28 /* FontAwesome */ = {
+			isa = PBXGroup;
+			children = (
+				25A4515725B88CF200BC7E28 /* FontAwesomeBarButtonItem.swift */,
+				25A4515825B88CF200BC7E28 /* FontAwesomeSegmentedControl.swift */,
+				25A4515925B88CF200BC7E28 /* FontAwesomeView.swift */,
+				25A4515A25B88CF200BC7E28 /* FontAwesomeExtension.swift */,
+				25A4515B25B88CF200BC7E28 /* FontAwesomeTabBarItem.swift */,
+				25A4515C25B88CF200BC7E28 /* FontAwesomeImageRepresentable.swift */,
+				25A4515D25B88CF200BC7E28 /* FontAwesomeImageView.swift */,
+				25A4515E25B88CF200BC7E28 /* Font Awesome 5 Brands-Regular-400.otf */,
+				25A4515F25B88CF200BC7E28 /* Font Awesome 5 Free-Solid-900.otf */,
+				25A4516025B88CF200BC7E28 /* FontAwesomeTextRepresentable.swift */,
+				25A4516125B88CF200BC7E28 /* Font Awesome 5 Free-Regular-400.otf */,
+				25A4516225B88CF200BC7E28 /* FontAwesome.swift */,
+				25A4516325B88CF200BC7E28 /* FontAwesomeStateRequirement.swift */,
+				25A4516425B88CF200BC7E28 /* Enum.swift */,
+			);
+			path = FontAwesome;
+			sourceTree = "<group>";
+		};
+		74BB6EB29B0F945253354CE9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FB8F83313FF1F380195A2BC /* Pods_Whereismythings.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA6E892409BF9F1B0F3C257A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				870BC92F0A64580FBA201E79 /* Pods-Whereismythings.debug.xcconfig */,
+				4D81D6BC70C75BDA983086CC /* Pods-Whereismythings.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +228,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 253D29EC25973B1800ED0FC6 /* Build configuration list for PBXNativeTarget "Whereismythings" */;
 			buildPhases = (
+				4EFBC5EA04E859EF25981524 /* [CP] Check Pods Manifest.lock */,
 				253D29D425973B1700ED0FC6 /* Sources */,
 				253D29D525973B1700ED0FC6 /* Frameworks */,
 				253D29D625973B1700ED0FC6 /* Resources */,
+				3B953F342F0771F7DBC79F40 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -175,31 +280,91 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25A4517125B88CF200BC7E28 /* Font Awesome 5 Free-Regular-400.otf in Resources */,
 				253D29E825973B1800ED0FC6 /* LaunchScreen.storyboard in Resources */,
 				253D29E525973B1800ED0FC6 /* Assets.xcassets in Resources */,
+				25A4516625B88CF200BC7E28 /* LICENSE in Resources */,
 				253D29F8259774B000ED0FC6 /* Search.storyboard in Resources */,
 				253D29E325973B1700ED0FC6 /* Main.storyboard in Resources */,
+				25A4517525B88CF200BC7E28 /* README.md in Resources */,
+				25A4514C25B84A9300BC7E28 /* MapImageView.xib in Resources */,
 				253D29FD259775A400ED0FC6 /* Chatting.storyboard in Resources */,
+				25A4516E25B88CF200BC7E28 /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
 				253D2A00259779DB00ED0FC6 /* FindOrRegister.storyboard in Resources */,
+				25A4516F25B88CF200BC7E28 /* Font Awesome 5 Free-Solid-900.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B953F342F0771F7DBC79F40 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Whereismythings/Pods-Whereismythings-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Whereismythings/Pods-Whereismythings-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Whereismythings/Pods-Whereismythings-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4EFBC5EA04E859EF25981524 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Whereismythings-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		253D29D425973B1700ED0FC6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25A4516A25B88CF200BC7E28 /* FontAwesomeExtension.swift in Sources */,
+				25A4514925B8467600BC7E28 /* MapAnnotationView.swift in Sources */,
+				25A4517325B88CF200BC7E28 /* FontAwesomeStateRequirement.swift in Sources */,
 				253D29E025973B1700ED0FC6 /* MapViewController.swift in Sources */,
+				25A4516925B88CF200BC7E28 /* FontAwesomeView.swift in Sources */,
 				25967E6025AF2BF900415C1A /* MainMapModel.swift in Sources */,
 				25A4514625B73F9A00BC7E28 /* MapAnnotation.swift in Sources */,
+				25A4516B25B88CF200BC7E28 /* FontAwesomeTabBarItem.swift in Sources */,
 				253D2A0925977B5F00ED0FC6 /* FindOrRegisterViewController.swift in Sources */,
 				253D2A0625977B4D00ED0FC6 /* ChattingViewController.swift in Sources */,
 				25967E6B25AF550600415C1A /* DetailStuffViewController.swift in Sources */,
+				25A4517425B88CF200BC7E28 /* Enum.swift in Sources */,
 				253D29DC25973B1700ED0FC6 /* AppDelegate.swift in Sources */,
 				253D2A0325977B4400ED0FC6 /* SearchViewController.swift in Sources */,
 				253D29DE25973B1700ED0FC6 /* SceneDelegate.swift in Sources */,
+				25A4516D25B88CF200BC7E28 /* FontAwesomeImageView.swift in Sources */,
+				25A4516C25B88CF200BC7E28 /* FontAwesomeImageRepresentable.swift in Sources */,
+				25A4517225B88CF200BC7E28 /* FontAwesome.swift in Sources */,
+				25A4516725B88CF200BC7E28 /* FontAwesomeBarButtonItem.swift in Sources */,
+				25A4517025B88CF200BC7E28 /* FontAwesomeTextRepresentable.swift in Sources */,
+				25A4516825B88CF200BC7E28 /* FontAwesomeSegmentedControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +508,7 @@
 		};
 		253D29ED25973B1800ED0FC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 870BC92F0A64580FBA201E79 /* Pods-Whereismythings.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -363,6 +529,7 @@
 		};
 		253D29EE25973B1800ED0FC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D81D6BC70C75BDA983086CC /* Pods-Whereismythings.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

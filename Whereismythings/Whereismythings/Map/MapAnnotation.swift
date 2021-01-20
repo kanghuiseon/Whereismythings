@@ -8,6 +8,9 @@
 import Foundation
 import MapKit
 
-class MapAnnotation{
-   
+class MapAnnotation: NSObject, MKAnnotation{
+    var coordinate: CLLocationCoordinate2D
+    init(_ coordinate: CLLocationCoordinate2D){
+        self.coordinate = coordinate
+    }
 }
