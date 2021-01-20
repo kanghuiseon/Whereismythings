@@ -118,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				253D29E925973B1800ED0FC6 /* Info.plist */,
+				253D29E625973B1800ED0FC6 /* LaunchScreen.storyboard */,
+				253D29E425973B1800ED0FC6 /* Assets.xcassets */,
 				25A4513C25B7196D00BC7E28 /* Map */,
 				25967E5E25AF2BE800415C1A /* Model */,
 				253D29FA259774D900ED0FC6 /* Views */,
@@ -165,8 +167,6 @@
 		25A4515325B88CCF00BC7E28 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				253D29E625973B1800ED0FC6 /* LaunchScreen.storyboard */,
-				253D29E425973B1800ED0FC6 /* Assets.xcassets */,
 				25A4515425B88CF200BC7E28 /* FontAwesome.swift */,
 			);
 			path = Resource;
