@@ -18,8 +18,8 @@ class MapViewController: UIViewController{
         super.viewDidLoad()
         
         locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
         mainMap.showsUserLocation = true
         
         stuffs.append(MainMapModel(id: 1, stuffName: "맥미니", stuffCharacteristic: "새제품", stuffLatitudePosition: "37.5630725", stuffLongitudePosition: "127.0366688",stuffKoreanPosition: "성동구청", stuffImage: nil))
@@ -36,7 +36,12 @@ class MapViewController: UIViewController{
     }
     // gps, 현재 위치 주변 확대
     @IBAction func btnCurrentPosition(_ sender: UIButton) {
-        
+        let userCurrentPosition = locationManager.location
+        let currentCoordinate = CLLocationCoordinate2DMake(CLLocationDegrees((userCurrentPosition?.coordinate.latitude)!), CLLocationDegrees((userCurrentPosition?.coordinate.longitude)!))
+        let spanValue = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        let currentRegion = MKCoordinateRegion(center: currentCoordinate, span: spanValue)
+        locationManager.startUpdatingLocation()
+        mainMap.setRegion(currentRegion, animated: true)
     }
     @objc func btnDetailView(){
         let detailVC = storyboard?.instantiateViewController(identifier: "DetailStuffViewController")
