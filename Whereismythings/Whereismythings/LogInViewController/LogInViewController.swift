@@ -51,7 +51,7 @@ class LogInViewController: UIViewController {
             }
             else {
                 
-                guard let vc = self.storyboard?.instantiateViewController(identifier: "cptLogIn") as? completeLogInViewController else{
+                guard let vc = self.storyboard?.instantiateViewController(identifier: "chatStart") as? ChatGroupViewController else{
                     return
                 }
                 self.present(vc, animated: true)
