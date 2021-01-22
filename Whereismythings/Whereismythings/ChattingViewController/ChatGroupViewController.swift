@@ -1,8 +1,8 @@
 //
-//  ChattingViewController.swift
+//  ChatGroupViewController.swift
 //  Whereismythings
 //
-//  Created by 강희선 on 2020/12/26.
+//  Created by 송낙현 on 2021/01/22.
 //
 
 import UIKit

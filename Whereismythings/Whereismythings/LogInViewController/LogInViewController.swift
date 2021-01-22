@@ -50,12 +50,17 @@ class LogInViewController: UIViewController {
                 self.errorLabel.alpha = 1
             }
             else {
-                
-                guard let vc = self.storyboard?.instantiateViewController(identifier: "chatStart") as? ChatGroupViewController else{
-                    return
-                }
-                self.present(vc, animated: true)
-                
+                let chatboard = UIStoryboard(name: "Chat", bundle: nil)
+                guard let vc = chatboard.instantiateViewController(identifier: "chattingStart") as? ChatGroupViewController else{
+                                 return
+                             }
+                             self.present(vc, animated: true)
+             //
+//                guard let vc = self.storyboard?.instantiateViewController(identifier: "chattingStart") as? ChatGroupViewController else{
+//                    return
+//                }
+//                self.present(vc, animated: true)
+//
                 
 //                
 //                guard let vc = self.storyboard?.instantiateViewController(identifier: "cptLogIn") as? completeLogInViewController else{

@@ -28,20 +28,4 @@ class FirebaseDataService {
         }
     }
     
-    // 신규 유저 만들기
-    func createUserInfoFromAuth(uid:String, userData: Dictionary<String, String>) {
-        userRef.child(uid).updateChildValues(userData)
-    }
-    
-    // 사용자 로그인 하기
-    func signIn(email withEmail: String, password: String, completion: @escaping () -> Void) {
-        Auth.auth().signIn(withEmail: withEmail, password: password, completion: { (user, error) in
-            guard error == nil else {
-                print("Error Occurred during Sign In")
-                return
-            }
-            completion()
-        })
-    }
 }
-

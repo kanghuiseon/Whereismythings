@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0M5-1i-bvY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cO8-bd-fy7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,52 +8,62 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Chat Group View Contoller-->
-        <scene sceneID="1QH-xr-xxO">
+        <!--Chat Group View Controller-->
+        <scene sceneID="NE2-Bc-2R0">
             <objects>
-                <tableViewController storyboardIdentifier="chatStart" id="TfD-5N-tMC" customClass="ChatGroupViewContoller" customModule="Whereismythings" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9Bo-xp-6XO">
+                <viewController storyboardIdentifier="chattingStart" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cO8-bd-fy7" customClass="ChatGroupViewController" customModule="Whereismythings" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Ds-ma-iWf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dqw-dI-Iut">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupCell" id="3dO-Vt-26o">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3dO-Vt-26o" id="eMV-hu-a7Y">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J9z-cc-Yzu">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="채팅그룹까지 했다" id="HYz-PU-ZOC">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4sS-mA-W8Q">
+                                            <connections>
+                                                <action selector="addButtonTapped:" destination="cO8-bd-fy7" id="mfN-QC-X3i"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="irU-XH-uM5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="VWE-5t-LHf">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VWE-5t-LHf" id="rp7-I7-cdg">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="TfD-5N-tMC" id="ttT-aW-wzi"/>
-                            <outlet property="delegate" destination="TfD-5N-tMC" id="RVT-Bn-m9t"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="dPx-YE-dGC"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h1d-dX-Gvf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="722" y="-19"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Her-82-ECd">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0M5-1i-bvY" sceneMemberID="viewController">
+                        <constraints>
+                            <constraint firstItem="J9z-cc-Yzu" firstAttribute="leading" secondItem="irU-XH-uM5" secondAttribute="leading" id="1yh-Hb-Mrh"/>
+                            <constraint firstItem="J9z-cc-Yzu" firstAttribute="trailing" secondItem="irU-XH-uM5" secondAttribute="trailing" id="DE2-Pm-eiL"/>
+                            <constraint firstItem="irU-XH-uM5" firstAttribute="bottom" secondItem="dqw-dI-Iut" secondAttribute="bottom" id="FER-FR-4iO"/>
+                            <constraint firstItem="J9z-cc-Yzu" firstAttribute="top" secondItem="irU-XH-uM5" secondAttribute="top" id="QzT-tP-xCP"/>
+                            <constraint firstItem="irU-XH-uM5" firstAttribute="trailing" secondItem="dqw-dI-Iut" secondAttribute="trailing" id="ShW-gZ-Oia"/>
+                            <constraint firstItem="dqw-dI-Iut" firstAttribute="leading" secondItem="irU-XH-uM5" secondAttribute="leading" id="Uia-UL-2ly"/>
+                            <constraint firstItem="dqw-dI-Iut" firstAttribute="top" secondItem="J9z-cc-Yzu" secondAttribute="bottom" id="ebO-zL-JHh"/>
+                        </constraints>
+                    </view>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MtD-u9-nSh">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="TfD-5N-tMC" kind="relationship" relationship="rootViewController" id="hgN-iS-Q7r"/>
+                        <outlet property="tableView" destination="dqw-dI-Iut" id="wOe-DH-w37"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hla-Pj-zzK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IDf-4H-Sa8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-191.30434782608697" y="-19.419642857142858"/>
+            <point key="canvasLocation" x="425" y="-11"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="rJG-eb-MSS">
@@ -65,10 +75,11 @@
                         <viewLayoutGuide key="safeArea" id="6hg-sc-Lhw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="qpm-X3-iYL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJz-cb-XPJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1480" y="-19"/>
+            <point key="canvasLocation" x="1372" y="-19"/>
         </scene>
     </scenes>
     <resources>
