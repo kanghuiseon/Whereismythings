@@ -11,9 +11,13 @@
 		201850C725B11E86005FBF3E /* SignLoginSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201850C625B11E86005FBF3E /* SignLoginSelectViewController.swift */; };
 		201850CA25B11F02005FBF3E /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201850C925B11F01005FBF3E /* LogInViewController.swift */; };
 		201850D725B155B0005FBF3E /* Informations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201850D625B155B0005FBF3E /* Informations.swift */; };
-		2035176A25B4223C00F5D528 /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2035176925B4223C00F5D528 /* Setup.swift */; };
 		2042E18825B1769B006DA999 /* completeLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2042E18725B1769B006DA999 /* completeLogInViewController.swift */; };
+		205C165A25B6EFC200585BFE /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205C165925B6EFC200585BFE /* Chat.storyboard */; };
+		205C165F25B6F50700585BFE /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205C165E25B6F50700585BFE /* UserListViewController.swift */; };
 		207ACD9425B410E400FE4BDA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 207ACD9325B410E400FE4BDA /* GoogleService-Info.plist */; };
+		207E15BF25BA869400099AF6 /* FirebaseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207E15BE25BA869400099AF6 /* FirebaseDataService.swift */; };
+		207E15C225BA913600099AF6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207E15C125BA913600099AF6 /* ChatViewController.swift */; };
+		207E15C525BA936E00099AF6 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207E15C425BA936E00099AF6 /* ChatMessageCell.swift */; };
 		253D29DC25973B1700ED0FC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D29DB25973B1700ED0FC6 /* AppDelegate.swift */; };
 		253D29DE25973B1700ED0FC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D29DD25973B1700ED0FC6 /* SceneDelegate.swift */; };
 		253D29E025973B1700ED0FC6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D29DF25973B1700ED0FC6 /* MapViewController.swift */; };
@@ -24,7 +28,7 @@
 		253D29FD259775A400ED0FC6 /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 253D29FC259775A400ED0FC6 /* login.storyboard */; };
 		253D2A00259779DB00ED0FC6 /* FindOrRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 253D29FF259779DB00ED0FC6 /* FindOrRegister.storyboard */; };
 		253D2A0325977B4400ED0FC6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D2A0225977B4400ED0FC6 /* SearchViewController.swift */; };
-		253D2A0625977B4D00ED0FC6 /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D2A0525977B4D00ED0FC6 /* ChattingViewController.swift */; };
+		253D2A0625977B4D00ED0FC6 /* ChatGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D2A0525977B4D00ED0FC6 /* ChatGroupViewController.swift */; };
 		253D2A0925977B5F00ED0FC6 /* FindOrRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D2A0825977B5F00ED0FC6 /* FindOrRegisterViewController.swift */; };
 		F792A8E1E37D771B4D66C60C /* Pods_Whereismythings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1066415A2A49B96AEF83060 /* Pods_Whereismythings.framework */; };
 /* End PBXBuildFile section */
@@ -34,9 +38,13 @@
 		201850C625B11E86005FBF3E /* SignLoginSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignLoginSelectViewController.swift; sourceTree = "<group>"; };
 		201850C925B11F01005FBF3E /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		201850D625B155B0005FBF3E /* Informations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Informations.swift; sourceTree = "<group>"; };
-		2035176925B4223C00F5D528 /* Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setup.swift; sourceTree = "<group>"; };
 		2042E18725B1769B006DA999 /* completeLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = completeLogInViewController.swift; sourceTree = "<group>"; };
+		205C165925B6EFC200585BFE /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		205C165E25B6F50700585BFE /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		207ACD9325B410E400FE4BDA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		207E15BE25BA869400099AF6 /* FirebaseDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseDataService.swift; sourceTree = "<group>"; };
+		207E15C125BA913600099AF6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		207E15C425BA936E00099AF6 /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		253D29D825973B1700ED0FC6 /* Whereismythings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whereismythings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		253D29DB25973B1700ED0FC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		253D29DD25973B1700ED0FC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,7 +57,7 @@
 		253D29FC259775A400ED0FC6 /* login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
 		253D29FF259779DB00ED0FC6 /* FindOrRegister.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FindOrRegister.storyboard; sourceTree = "<group>"; };
 		253D2A0225977B4400ED0FC6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		253D2A0525977B4D00ED0FC6 /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
+		253D2A0525977B4D00ED0FC6 /* ChatGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGroupViewController.swift; sourceTree = "<group>"; };
 		253D2A0825977B5F00ED0FC6 /* FindOrRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindOrRegisterViewController.swift; sourceTree = "<group>"; };
 		9E926ABA202F0007697645E0 /* Pods-Whereismythings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whereismythings.release.xcconfig"; path = "Target Support Files/Pods-Whereismythings/Pods-Whereismythings.release.xcconfig"; sourceTree = "<group>"; };
 		BA758A8250FD97815A7CF79C /* Pods-Whereismythings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whereismythings.debug.xcconfig"; path = "Target Support Files/Pods-Whereismythings/Pods-Whereismythings.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +96,17 @@
 			path = LogInViewController;
 			sourceTree = "<group>";
 		};
+		205C165C25B6F42F00585BFE /* ChattingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				207E15C425BA936E00099AF6 /* ChatMessageCell.swift */,
+				253D2A0525977B4D00ED0FC6 /* ChatGroupViewController.swift */,
+				205C165E25B6F50700585BFE /* UserListViewController.swift */,
+				207E15C125BA913600099AF6 /* ChatViewController.swift */,
+			);
+			path = ChattingViewController;
+			sourceTree = "<group>";
+		};
 		253D29CF25973B1700ED0FC6 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +128,7 @@
 		253D29DA25973B1700ED0FC6 /* Whereismythings */ = {
 			isa = PBXGroup;
 			children = (
+				207E15BE25BA869400099AF6 /* FirebaseDataService.swift */,
 				253D29FA259774D900ED0FC6 /* Views */,
 				253D29DB25973B1700ED0FC6 /* AppDelegate.swift */,
 				253D29DD25973B1700ED0FC6 /* SceneDelegate.swift */,
@@ -118,9 +138,8 @@
 				253D29E925973B1800ED0FC6 /* Info.plist */,
 				253D2A0225977B4400ED0FC6 /* SearchViewController.swift */,
 				253D2A0825977B5F00ED0FC6 /* FindOrRegisterViewController.swift */,
-				253D2A0525977B4D00ED0FC6 /* ChattingViewController.swift */,
 				201850D625B155B0005FBF3E /* Informations.swift */,
-				2035176925B4223C00F5D528 /* Setup.swift */,
+				205C165C25B6F42F00585BFE /* ChattingViewController */,
 				201850D425B11F91005FBF3E /* LogInViewController */,
 			);
 			path = Whereismythings;
@@ -131,6 +150,7 @@
 			children = (
 				207ACD9325B410E400FE4BDA /* GoogleService-Info.plist */,
 				253D29E125973B1700ED0FC6 /* Main.storyboard */,
+				205C165925B6EFC200585BFE /* Chat.storyboard */,
 				253D29F7259774B000ED0FC6 /* Search.storyboard */,
 				253D29FC259775A400ED0FC6 /* login.storyboard */,
 				253D29FF259779DB00ED0FC6 /* FindOrRegister.storyboard */,
@@ -212,6 +232,7 @@
 				253D29E325973B1700ED0FC6 /* Main.storyboard in Resources */,
 				253D29FD259775A400ED0FC6 /* login.storyboard in Resources */,
 				253D2A00259779DB00ED0FC6 /* FindOrRegister.storyboard in Resources */,
+				205C165A25B6EFC200585BFE /* Chat.storyboard in Resources */,
 				207ACD9425B410E400FE4BDA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,12 +306,15 @@
 				253D29E025973B1700ED0FC6 /* MapViewController.swift in Sources */,
 				253D2A0925977B5F00ED0FC6 /* FindOrRegisterViewController.swift in Sources */,
 				201850C425B11E3E005FBF3E /* SignUpViewController.swift in Sources */,
-				253D2A0625977B4D00ED0FC6 /* ChattingViewController.swift in Sources */,
+				253D2A0625977B4D00ED0FC6 /* ChatGroupViewController.swift in Sources */,
 				201850D725B155B0005FBF3E /* Informations.swift in Sources */,
 				253D29DC25973B1700ED0FC6 /* AppDelegate.swift in Sources */,
+				207E15C525BA936E00099AF6 /* ChatMessageCell.swift in Sources */,
+				207E15BF25BA869400099AF6 /* FirebaseDataService.swift in Sources */,
 				201850C725B11E86005FBF3E /* SignLoginSelectViewController.swift in Sources */,
-				2035176A25B4223C00F5D528 /* Setup.swift in Sources */,
+				205C165F25B6F50700585BFE /* UserListViewController.swift in Sources */,
 				253D2A0325977B4400ED0FC6 /* SearchViewController.swift in Sources */,
+				207E15C225BA913600099AF6 /* ChatViewController.swift in Sources */,
 				201850CA25B11F02005FBF3E /* LogInViewController.swift in Sources */,
 				2042E18825B1769B006DA999 /* completeLogInViewController.swift in Sources */,
 				253D29DE25973B1700ED0FC6 /* SceneDelegate.swift in Sources */,

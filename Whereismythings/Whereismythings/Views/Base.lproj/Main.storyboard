@@ -44,6 +44,16 @@
             </objects>
             <point key="canvasLocation" x="1062" y="628"/>
         </scene>
+        <!--ChatGroupViewController-->
+        <scene sceneID="SXM-Ns-ODO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chat" referencedIdentifier="ChatGroupViewController" id="7vS-V7-xCG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="kwk-aP-kqU"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3UR-Ze-Ykh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1586" y="439"/>
+        </scene>
         <!--FindOrRegisterViewController-->
         <scene sceneID="7S9-12-atQ">
             <objects>
