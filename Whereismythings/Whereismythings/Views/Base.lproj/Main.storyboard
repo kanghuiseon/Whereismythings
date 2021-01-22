@@ -29,7 +29,7 @@
                                     <segment title="찾는 사람"/>
                                 </segments>
                                 <connections>
-                                    <action selector="clickedSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="K94-5K-B5o"/>
+                                    <action selector="selectedSegmentEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="cMd-PS-4TM"/>
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qqy-fG-S4G">
@@ -63,32 +63,9 @@
                     <connections>
                         <outlet property="mainMap" destination="CbO-Eb-9Pz" id="Rag-1B-foH"/>
                         <outlet property="segmentedControl" destination="eKS-Q0-m21" id="ToR-mP-ydw"/>
-                        <segue destination="uG8-u8-3s8" kind="show" identifier="DetailSegue" id="bqt-3E-A9q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="8Xn-4E-j8K" customClass="MapPinView" customModule="Whereismythings">
-                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIw-JA-5xE">
-                            <rect key="frame" x="3" y="3" width="94" height="94"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="94" id="Hc1-JM-IPr"/>
-                                <constraint firstAttribute="width" constant="94" id="rFH-eI-PEX"/>
-                            </constraints>
-                            <state key="normal" image="IMG_0256"/>
-                        </button>
-                    </subviews>
-                    <viewLayoutGuide key="safeArea" id="6kR-bT-jiV"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstItem="XIw-JA-5xE" firstAttribute="top" secondItem="8Xn-4E-j8K" secondAttribute="top" constant="3" id="BGe-EG-tZ0"/>
-                        <constraint firstItem="6kR-bT-jiV" firstAttribute="bottom" secondItem="XIw-JA-5xE" secondAttribute="bottom" constant="3" id="Lea-dB-BT4"/>
-                        <constraint firstItem="6kR-bT-jiV" firstAttribute="trailing" secondItem="XIw-JA-5xE" secondAttribute="trailing" constant="3" id="gEA-Go-aoG"/>
-                        <constraint firstItem="XIw-JA-5xE" firstAttribute="leading" secondItem="6kR-bT-jiV" secondAttribute="leading" constant="3" id="hB9-kY-lHH"/>
-                    </constraints>
-                </view>
             </objects>
             <point key="canvasLocation" x="1039.1304347826087" y="102.45535714285714"/>
         </scene>
@@ -97,11 +74,11 @@
             <objects>
                 <viewController storyboardIdentifier="DetailStuffViewController" id="uG8-u8-3s8" customClass="DetailStuffViewController" customModule="Whereismythings" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zKl-jE-6JH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="zJa-Hj-buV">
-                                <rect key="frame" x="40" y="290" width="334" height="378"/>
+                                <rect key="frame" x="40" y="334" width="334" height="388"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주운 사람" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z02-jI-KYJ">
                                         <rect key="frame" x="0.0" y="0.0" width="63" height="20.5"/>
@@ -110,43 +87,43 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqk-C0-QIs">
-                                        <rect key="frame" x="0.0" y="51" width="41.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="52.5" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="물건 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idJ-Bq-K9g">
-                                        <rect key="frame" x="0.0" y="102" width="63" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="105" width="63" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AfO-56-BNY">
-                                        <rect key="frame" x="0.0" y="153" width="41.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="157.5" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주운 위치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRK-Zi-r7o">
-                                        <rect key="frame" x="0.0" y="204.5" width="63" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="210" width="63" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jpt-cp-mJi">
-                                        <rect key="frame" x="0.0" y="255.5" width="41.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="262.5" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주운 시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qq0-v9-6Ds">
-                                        <rect key="frame" x="0.0" y="306.5" width="63" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="315" width="63" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3x-Fg-547">
-                                        <rect key="frame" x="0.0" y="357.5" width="41.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="367.5" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -154,11 +131,11 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McT-Ei-BIH">
-                                <rect key="frame" x="10" y="698" width="394" height="30"/>
+                                <rect key="frame" x="10" y="752" width="394" height="30"/>
                                 <state key="normal" title="쪽지 보내기"/>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0256" translatesAutoresizingMaskIntoConstraints="NO" id="YvR-OU-fEv">
-                                <rect key="frame" x="107" y="50" width="200" height="200"/>
+                                <rect key="frame" x="107" y="94" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="4B8-VL-x4Z"/>
                                 </constraints>
