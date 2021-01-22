@@ -7,13 +7,13 @@
 
 import UIKit
 
-class MapPinView: UIView {
+class MapPinView: UIView{
     @IBOutlet var btnPin: UIButton!
+
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
 }

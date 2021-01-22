@@ -15,13 +15,6 @@ class MapAnnotationView: MKAnnotationView{
         let btnAnnotationView = views.first as! MapPinView
         self.canShowCallout = true
         self.detailCalloutAccessoryView = btnAnnotationView
-//        let anno = annotation as! MapAnnotation
-//        if anno.flag == true{
-//            self.image = UIImage.fontAwesomeIcon(name: .mapPin, style: .solid, textColor: .systemIndigo, size: .init(width: 40, height: 40))
-//        }
-//        else{
-//            self.image = UIImage.fontAwesomeIcon(name: .mapPin, style: .solid, textColor: .systemTeal, size: .init(width: 40, height: 40))
-//        }
     }
     
     enum UserType{
