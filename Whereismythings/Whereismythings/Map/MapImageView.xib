@@ -20,7 +20,7 @@
                         <constraint firstAttribute="width" constant="94" id="0Jg-Oe-8M8"/>
                         <constraint firstAttribute="height" constant="94" id="rla-WX-oNH"/>
                     </constraints>
-                    <state key="normal" image="IMG_0256"/>
+                    <state key="normal" image="unchecked"/>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="TtK-9O-1B9"/>
@@ -41,7 +41,7 @@
         </view>
     </objects>
     <resources>
-        <image name="IMG_0256" width="534" height="425"/>
+        <image name="unchecked" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
