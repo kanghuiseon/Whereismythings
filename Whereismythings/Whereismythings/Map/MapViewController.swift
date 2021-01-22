@@ -8,12 +8,16 @@
 import UIKit
 import MapKit
 import CoreLocation
+protocol StuffInfoDelegate{
+    func stuffInformation(lblPerson: String, imgStuff: UIImage?, lblStuffName: String, lblStuffPosition: String, lblGotTime: String)
+}
 class MapViewController: UIViewController{
     @IBOutlet var mainMap: MKMapView!
     @IBOutlet var segmentedControl: UISegmentedControl!
     var stuffs: [MainMapModel] = []
     // 현재 기기 위치 관련 변수
     let locationManager = CLLocationManager()
+    var delegate: StuffInfoDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,14 +26,12 @@ class MapViewController: UIViewController{
         locationManager.requestWhenInUseAuthorization()
         mainMap.showsUserLocation = true
         
-        stuffs.append(MainMapModel(id: 1, stuffName: "맥미니", stuffCharacteristic: "새제품", stuffLatitudePosition: "37.5630725", stuffLongitudePosition: "127.0366688",stuffKoreanPosition: "성동구청", stuffImage: nil))
-        stuffs.append(MainMapModel(id: 2, stuffName: "맥북프로2020", stuffCharacteristic: nil, stuffLatitudePosition: "37.5112348", stuffLongitudePosition: "127.0980274", stuffKoreanPosition: "롯데월드", stuffImage: nil))
-        stuffs.append(MainMapModel(id: 3, stuffName: "에어팟", stuffCharacteristic: nil, stuffLatitudePosition: "37.5121422", stuffLongitudePosition: "126.9954074", stuffKoreanPosition: "세빛섬", stuffImage: nil))
-        
-        
+        stuffs.append(MainMapModel(id: 1, gotTime: nil, stuffPerson: "익명1", flag: true, stuffName: "인형", stuffCharacteristic: "새제품", stuffLatitudePosition: "37.5630725", stuffLongitudePosition: "127.0366688", stuffKoreanPosition: "성동구청", stuffImage: #imageLiteral(resourceName: "doll")))
+        stuffs.append(MainMapModel(id: 2, gotTime: nil, stuffPerson: "익명2", flag: true, stuffName: "에어팟", stuffCharacteristic: "한쪽", stuffLatitudePosition: "37.5112348", stuffLongitudePosition: "127.0980274", stuffKoreanPosition: "롯데월드", stuffImage: #imageLiteral(resourceName: "IMG_0256")))
+        stuffs.append(MainMapModel(id: 3, gotTime: nil, stuffPerson: "noname", flag: true, stuffName: "립스틱", stuffCharacteristic: "핑크빛", stuffLatitudePosition: "37.5121422", stuffLongitudePosition: "126.9954074", stuffKoreanPosition: "세빛둥둥섬", stuffImage: #imageLiteral(resourceName: "lipstic")))
         for stuff in stuffs{
             let coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(stuff.stuffLatitudePosition)!, longitude: CLLocationDegrees(stuff.stuffLongitudePosition)!)
-            let annotation = MapAnnotation(coordinate)
+            let annotation = MapAnnotation(coordinate, stuff.id, stuff.stuffPerson, true, stuff.gotTime, stuffName: stuff.stuffName, stuff.stuffCharacteristic, stuff.stuffKoreanPosition, stuff.stuffImage)
             mainMap.addAnnotation(annotation)
         }
         
@@ -43,10 +45,13 @@ class MapViewController: UIViewController{
         locationManager.startUpdatingLocation()
         mainMap.setRegion(currentRegion, animated: true)
     }
+
     @objc func btnDetailView(){
         let detailVC = storyboard?.instantiateViewController(identifier: "DetailStuffViewController")
+        let selectedAnnotation = mainMap.selectedAnnotations.first as! MapAnnotation
+        delegate?.stuffInformation(lblPerson: selectedAnnotation.stuffPerson, imgStuff: selectedAnnotation.stuffImage, lblStuffName: selectedAnnotation.stuffName, lblStuffPosition: selectedAnnotation.stuffKoreanPosition, lblGotTime: selectedAnnotation.time!
+        )
         self.present(detailVC!, animated: true, completion: nil)
-        print("tap")
     }
 
 }
@@ -60,8 +65,84 @@ extension MapViewController: MKMapViewDelegate{
         detail.btnPin.addTarget(self, action: #selector(btnDetailView), for: .touchUpInside)
         return mapAnnotationView
     }
+    
+    
 }
 
 extension MapViewController: CLLocationManagerDelegate{
     
 }
+
+//
+//extension MKAnnotation{
+//    public var id: Int{
+//        get{
+//            return self.id
+//        }
+//        set{
+//
+//        }
+//    }
+//    var gotStuffPerson: String{
+//        get{
+//            return self.gotStuffPerson
+//        }
+//        set{
+//        }
+//    }
+//    var gotTime: String?{
+//        get{
+//            return self.gotTime
+//        }
+//        set{
+//
+//        }
+//    }
+//    var stuffName: String{
+//        get{
+//            return self.stuffName
+//        }
+//        set{
+//
+//        }
+//    }
+//    var stuffCharacteristic: String?{
+//        get{
+//            return self.stuffCharacteristic
+//        }
+//        set{
+//
+//        }
+//    }
+//    var stuffLatitudePosition: String{
+//        get{
+//            return self.stuffLatitudePosition
+//        }
+//        set{
+//
+//        }
+//    }
+//    var stuffLongitudePosition: String{
+//        get{
+//            return self.stuffLongitudePosition
+//        }
+//        set{
+//
+//        }
+//    }
+//    var stuffKoreanPosition: String{
+//        get{
+//            return self.stuffKoreanPosition
+//        }
+//        set{
+//
+//        }
+//    }
+//    var stuffImage: UIImage?{
+//        get{
+//            return self.stuffImage
+//        }
+//        set{
+//        }
+//    }
+//}

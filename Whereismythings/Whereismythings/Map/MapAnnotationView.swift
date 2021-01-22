@@ -13,8 +13,6 @@ class MapAnnotationView: MKAnnotationView{
         let imageNib = UINib(nibName: "MapImageView", bundle: nil)
         let views = imageNib.instantiate(withOwner: nil, options: nil)
         let btnAnnotationView = views.first as! MapPinView
-//        let gesture = UITapGestureRecognizer(target: self, action: #selector(MapViewController.btnDetailView))
-//        btnAnnotationView.addGestureRecognizer(gesture)
         self.canShowCallout = true
         self.detailCalloutAccessoryView = btnAnnotationView
         self.image = UIImage.fontAwesomeIcon(name: .mapPin, style: .solid, textColor: .systemIndigo, size: .init(width: 40, height: 40))
