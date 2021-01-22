@@ -121,6 +121,15 @@ extension MapViewController: MKMapViewDelegate{
         detail.btnPin.addTarget(self, action: #selector(btnDetailView), for: .touchUpInside)
         return mapAnnotationView
     }
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        let selectedAnnotation = view.annotation as! MapAnnotation
+//        let annoview = view.detailCalloutAccessoryView as! MapPinView
+//        annoview.btnPin.imageView?.image = selectedAnnotation.stuffImage
+        if let img = selectedAnnotation.stuffImage{
+            (view.detailCalloutAccessoryView as! MapPinView).btnPin.setImage(img, for: .normal)
+
+        }
+    }
 }
 
 extension MapViewController: CLLocationManagerDelegate{
