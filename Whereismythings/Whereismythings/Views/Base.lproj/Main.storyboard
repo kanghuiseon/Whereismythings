@@ -134,8 +134,8 @@
                                 <rect key="frame" x="10" y="752" width="394" height="30"/>
                                 <state key="normal" title="쪽지 보내기"/>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0256" translatesAutoresizingMaskIntoConstraints="NO" id="YvR-OU-fEv">
-                                <rect key="frame" x="107" y="94" width="200" height="200"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YvR-OU-fEv">
+                                <rect key="frame" x="107" y="94.5" width="200" height="198"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="4B8-VL-x4Z"/>
                                 </constraints>
@@ -159,7 +159,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="JbN-NG-00s"/>
                     <connections>
-                        <outlet property="imgStuff" destination="YvR-OU-fEv" id="AhZ-gu-Flg"/>
+                        <outlet property="imgStuff" destination="YvR-OU-fEv" id="sav-9z-Jou"/>
                         <outlet property="lblGotTime" destination="h3x-Fg-547" id="oav-xQ-geM"/>
                         <outlet property="lblPerson" destination="pqk-C0-QIs" id="nJk-Jr-qHN"/>
                         <outlet property="lblStuffName" destination="AfO-56-BNY" id="Hz8-4s-Vec"/>
@@ -223,7 +223,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="IMG_0256" width="534" height="425"/>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
         <image name="iconfinder_gps_position_tracking_positioning_navigation_3994368" width="96" height="96"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <systemColor name="systemBackgroundColor">
