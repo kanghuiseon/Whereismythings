@@ -8,20 +8,21 @@
 import UIKit
 import MapKit
 import CoreLocation
-protocol StuffInfoDelegate{
-    func stuffInformation(lblPerson: String, imgStuff: UIImage?, lblStuffName: String, lblStuffPosition: String, lblGotTime: String)
-}
+//protocol StuffInfoDelegate{
+//    func stuffInformation(lblPerson: String, imgStuff: UIImage?, lblStuffName: String, lblStuffPosition: String, lblGotTime: String?)
+//}
 class MapViewController: UIViewController{
     @IBOutlet var mainMap: MKMapView!
     @IBOutlet var segmentedControl: UISegmentedControl!
     var stuffs: [MainMapModel] = []
     // 현재 기기 위치 관련 변수
     let locationManager = CLLocationManager()
-    var delegate: StuffInfoDelegate?
+//    var delegate: StuffInfoDelegate?
     var lostAnnotation = [MKAnnotation]()
     var getAnnotation = [MKAnnotation]()
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.delegate = DetailStuffViewController()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
@@ -96,11 +97,11 @@ class MapViewController: UIViewController{
     }
 
     @objc func btnDetailView(){
-        let detailVC = storyboard?.instantiateViewController(identifier: "DetailStuffViewController")
+        let detailVC = storyboard?.instantiateViewController(identifier: "DetailStuffViewController") as! DetailStuffViewController
         let selectedAnnotation = mainMap.selectedAnnotations.first as! MapAnnotation
-        delegate?.stuffInformation(lblPerson: selectedAnnotation.stuffPerson, imgStuff: selectedAnnotation.stuffImage, lblStuffName: selectedAnnotation.stuffName, lblStuffPosition: selectedAnnotation.stuffKoreanPosition, lblGotTime: selectedAnnotation.time!
-        )
-        self.present(detailVC!, animated: true, completion: nil)
+        detailVC.stuffInformation(lblPerson: selectedAnnotation.stuffPerson, imgStuff: selectedAnnotation.stuffImage, lblStuffName: selectedAnnotation.stuffName, lblStuffPosition: selectedAnnotation.stuffKoreanPosition, lblGotTime: selectedAnnotation.time)
+        mainMap.deselectAnnotation(selectedAnnotation, animated: false)
+        self.present(detailVC, animated: true, completion: nil)
     }
 }
 

@@ -13,26 +13,37 @@ class DetailStuffViewController: UIViewController {
     @IBOutlet var lblStuffName: UILabel!
     @IBOutlet var lblStuffPosition: UILabel!
     @IBOutlet var lblGotTime: UILabel!
+    var person: String!
+    var img: UIImage?
+    var name: String!
+    var position: String!
+    var time: String?
     override func viewDidLoad() {
         super.viewDidLoad()
-        let vc = (storyboard?.instantiateViewController(identifier: "MapViewController"))! as MapViewController
-        vc.delegate = self
+        self.lblPerson.text = person
+        self.imgStuff = img
+        self.lblStuffName.text = name
+        self.lblStuffPosition.text = position
+        self.lblGotTime.text = time
     }
     
 
    
 
 }
-extension DetailStuffViewController:  StuffInfoDelegate{
-    func stuffInformation(lblPerson: String, imgStuff: UIImage?, lblStuffName: String, lblStuffPosition: String, lblGotTime: String) {
-        self.lblPerson.text = lblPerson
-        if let img = imgStuff{
+//extension DetailStuffViewController:  StuffInfoDelegate{
+extension DetailStuffViewController{
+    func stuffInformation(lblPerson: String, imgStuff: UIImage?, lblStuffName: String, lblStuffPosition: String, lblGotTime: String?) {
+        self.person = lblPerson
+        if let img = self.img{
             self.imgStuff = img
         }
-        self.lblStuffName.text = lblStuffName
-        self.lblStuffPosition.text = lblStuffPosition
-        self.lblGotTime.text = lblGotTime
+        self.name = lblStuffName
+        self.position = lblStuffPosition
+        if let time = lblGotTime{
+            self.time = time
+        }
     }
-    
+
 }
 
