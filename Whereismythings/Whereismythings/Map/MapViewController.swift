@@ -12,6 +12,7 @@ import CoreLocation
 class MapViewController: UIViewController{
     @IBOutlet var mainMap: MKMapView!
     @IBOutlet var segmentedControl: UISegmentedControl!
+    @IBOutlet var btnGPS: UIButton!
     var stuffs: [MainMapModel] = []
     // 현재 기기 위치 관련 변수
     let locationManager = CLLocationManager()
@@ -19,7 +20,7 @@ class MapViewController: UIViewController{
     var getAnnotation = [MapAnnotation]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        addNavigationButton()
+        addNavigationButton("전체 보기")
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
@@ -38,15 +39,15 @@ class MapViewController: UIViewController{
             }
         }
         mainMap.addAnnotations(getAnnotation)
+        let userCurrentPosition = locationManager.location
+        let currentCoordinate = CLLocationCoordinate2DMake(CLLocationDegrees((userCurrentPosition?.coordinate.latitude)!), CLLocationDegrees((userCurrentPosition?.coordinate.longitude)!))
+        let spanValue = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+        let currentRegion = MKCoordinateRegion(center: currentCoordinate, span: spanValue)
+        locationManager.startUpdatingLocation()
+        mainMap.setRegion(currentRegion, animated: true)
+        
     }
-    func addNavigationButton(){
-        let navButton = UIButton(type: .custom)
-        navButton.setTitle("전체 보기", for: .normal)
-        navButton.setTitleColor(.systemBlue, for: .normal)
-        navButton.addTarget(self, action: #selector(showVisibleAnnotations), for: .touchUpInside)
-        let barButtonItem = UIBarButtonItem(customView: navButton)
-        self.navigationItem.rightBarButtonItem = barButtonItem
-    }
+   
     func dataSetting(){
         stuffs.append(MainMapModel(id: 1, gotTime: nil, stuffPerson: "익명1", flag: true, stuffName: "인형", stuffCharacteristic: "새제품", stuffLatitudePosition: "37.5630725", stuffLongitudePosition: "127.0366688", stuffKoreanPosition: "성동구청", stuffImage: #imageLiteral(resourceName: "doll")))
         stuffs.append(MainMapModel(id: 2, gotTime: nil, stuffPerson: "익명2", flag: true, stuffName: "에어팟", stuffCharacteristic: "한쪽", stuffLatitudePosition: "37.5288539", stuffLongitudePosition: "126.9640447", stuffKoreanPosition: "롯데월드", stuffImage: #imageLiteral(resourceName: "IMG_0256")))
@@ -133,9 +134,18 @@ class MapViewController: UIViewController{
             }
         }
         visibleTV.visibleStuffs = visibleStuffs
+        visibleTV.modalPresentationStyle = .fullScreen
         present(visibleTV, animated: true, completion: nil)
     }
     
+    func addNavigationButton(_ title: String){
+        let navButton = UIButton(type: .custom)
+        navButton.setTitle(title, for: .normal)
+        navButton.setTitleColor(.white, for: .normal)
+        navButton.addTarget(self, action: #selector(showVisibleAnnotations), for: .touchUpInside)
+        let barButtonItem = UIBarButtonItem(customView: navButton)
+        self.navigationItem.rightBarButtonItem = barButtonItem
+    }
 }
 
 
@@ -145,10 +155,10 @@ extension MapViewController: MKMapViewDelegate{
         guard !annotation.isKind(of: MKUserLocation.self) else { return nil }
         let mapAnnotationView = MapAnnotationView(annotation: annotation, reuseIdentifier: nil)
         if segmentedControl.selectedSegmentIndex == 0{
-            mapAnnotationView.image = UIImage.fontAwesomeIcon(name: .mapPin, style: .solid, textColor: .systemIndigo, size: CGSize(width: 40, height: 40))
+            mapAnnotationView.image = UIImage.fontAwesomeIcon(name: .mapPin, style: .solid, textColor: UIColor(hexString: "072452"), size: CGSize(width: 40, height: 40))
         }
         else{
-            mapAnnotationView.image = UIImage.fontAwesomeIcon(name: .mapPin, style: .solid, textColor: .systemOrange, size: CGSize(width: 40, height: 40))
+            mapAnnotationView.image = UIImage.fontAwesomeIcon(name: .mapPin, style: .solid, textColor: UIColor(hexString: "EB8942"), size: CGSize(width: 40, height: 40))
         }
         let detail = mapAnnotationView.detailCalloutAccessoryView as! MapPinView
         detail.btnPin.addTarget(self, action: #selector(btnDetailView), for: .touchUpInside)
