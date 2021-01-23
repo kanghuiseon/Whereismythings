@@ -9,11 +9,27 @@ import UIKit
 
 class VisibleStuffViewController: UIViewController {
     @IBOutlet var visibleTableView: UITableView!
+    
+    @IBOutlet var rightBarButton: UIBarButtonItem!
     var visibleStuffs:[MapAnnotation] = []
     let nib = UINib(nibName: "VisibleStuffTableViewCell",bundle: nil)
     override func viewDidLoad() {
         super.viewDidLoad()
         visibleTableView.register(nib, forCellReuseIdentifier: "visibleCell")
+        let navButton = UIButton(type: .custom)
+        navButton.setTitle("취소", for: .normal)
+        navButton.setTitleColor(.white, for: .normal)
+        navButton.addTarget(self, action: #selector(dismissCurrent), for: .touchUpInside)
+        rightBarButton.customView = navButton
+//        rightBarButton = addNavigationButton("취소")
+    }
+//    func addNavigationButton(_ title: String) -> UIBarButtonItem{
+//
+//        let barButton = UIBarButtonItem(customView: navButton)
+//        return barButton
+//    }
+    @objc func dismissCurrent(){
+        dismiss(animated: true, completion: nil)
     }
 }
 extension VisibleStuffViewController: UITableViewDataSource{
