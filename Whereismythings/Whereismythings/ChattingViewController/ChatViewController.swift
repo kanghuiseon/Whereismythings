@@ -129,7 +129,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UICollectionVie
                     self.chatCollectionView.reloadData()
                     if self.messages.count >= 1 {
                         let indexPath = IndexPath(item: self.messages.count - 1, section: 0)
-                        //self.chatCollectionView.scrollToItem(at: indexPath, at: UICollectionViewScrollPosition(), animated: true)
+                        self.chatCollectionView.scrollToItem(at: indexPath, at: UICollectionView.ScrollPosition(), animated: true)
                     }
                     self.chatCollectionView.frame.origin.y = self.height
                 })
