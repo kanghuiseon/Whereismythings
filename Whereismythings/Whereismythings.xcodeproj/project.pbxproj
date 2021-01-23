@@ -20,6 +20,9 @@
 		253D2A0325977B4400ED0FC6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D2A0225977B4400ED0FC6 /* SearchViewController.swift */; };
 		253D2A0625977B4D00ED0FC6 /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D2A0525977B4D00ED0FC6 /* ChattingViewController.swift */; };
 		253D2A0925977B5F00ED0FC6 /* FindOrRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D2A0825977B5F00ED0FC6 /* FindOrRegisterViewController.swift */; };
+		256C0CDA25BC4D1800AD3078 /* VisibleStuffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256C0CD925BC4D1800AD3078 /* VisibleStuffViewController.swift */; };
+		256C0CDF25BC4FB500AD3078 /* VisibleStuffTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256C0CDD25BC4FB500AD3078 /* VisibleStuffTableViewCell.swift */; };
+		256C0CE025BC4FB500AD3078 /* VisibleStuffTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 256C0CDE25BC4FB500AD3078 /* VisibleStuffTableViewCell.xib */; };
 		25967E6025AF2BF900415C1A /* MainMapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25967E5F25AF2BF900415C1A /* MainMapModel.swift */; };
 		25967E6B25AF550600415C1A /* DetailStuffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25967E6A25AF550600415C1A /* DetailStuffViewController.swift */; };
 		25A4514625B73F9A00BC7E28 /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4514525B73F9A00BC7E28 /* MapAnnotation.swift */; };
@@ -59,6 +62,9 @@
 		253D2A0225977B4400ED0FC6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		253D2A0525977B4D00ED0FC6 /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
 		253D2A0825977B5F00ED0FC6 /* FindOrRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindOrRegisterViewController.swift; sourceTree = "<group>"; };
+		256C0CD925BC4D1800AD3078 /* VisibleStuffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisibleStuffViewController.swift; sourceTree = "<group>"; };
+		256C0CDD25BC4FB500AD3078 /* VisibleStuffTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisibleStuffTableViewCell.swift; sourceTree = "<group>"; };
+		256C0CDE25BC4FB500AD3078 /* VisibleStuffTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VisibleStuffTableViewCell.xib; sourceTree = "<group>"; };
 		25967E5F25AF2BF900415C1A /* MainMapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMapModel.swift; sourceTree = "<group>"; };
 		25967E6A25AF550600415C1A /* DetailStuffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStuffViewController.swift; sourceTree = "<group>"; };
 		25A4514525B73F9A00BC7E28 /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
@@ -163,6 +169,9 @@
 				25A4514825B8467600BC7E28 /* MapAnnotationView.swift */,
 				25A4514B25B84A9300BC7E28 /* MapImageView.xib */,
 				25A4518225B8937700BC7E28 /* MapPinView.swift */,
+				256C0CD925BC4D1800AD3078 /* VisibleStuffViewController.swift */,
+				256C0CDE25BC4FB500AD3078 /* VisibleStuffTableViewCell.xib */,
+				256C0CDD25BC4FB500AD3078 /* VisibleStuffTableViewCell.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -290,6 +299,7 @@
 				253D29F8259774B000ED0FC6 /* Search.storyboard in Resources */,
 				253D29E325973B1700ED0FC6 /* Main.storyboard in Resources */,
 				25A4517525B88CF200BC7E28 /* README.md in Resources */,
+				256C0CE025BC4FB500AD3078 /* VisibleStuffTableViewCell.xib in Resources */,
 				25A4514C25B84A9300BC7E28 /* MapImageView.xib in Resources */,
 				253D29FD259775A400ED0FC6 /* Chatting.storyboard in Resources */,
 				25A4516E25B88CF200BC7E28 /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
@@ -359,12 +369,14 @@
 				253D2A0625977B4D00ED0FC6 /* ChattingViewController.swift in Sources */,
 				25967E6B25AF550600415C1A /* DetailStuffViewController.swift in Sources */,
 				25A4517425B88CF200BC7E28 /* Enum.swift in Sources */,
+				256C0CDA25BC4D1800AD3078 /* VisibleStuffViewController.swift in Sources */,
 				253D29DC25973B1700ED0FC6 /* AppDelegate.swift in Sources */,
 				253D2A0325977B4400ED0FC6 /* SearchViewController.swift in Sources */,
 				253D29DE25973B1700ED0FC6 /* SceneDelegate.swift in Sources */,
 				25A4516D25B88CF200BC7E28 /* FontAwesomeImageView.swift in Sources */,
 				25A4518325B8937700BC7E28 /* MapPinView.swift in Sources */,
 				25A4516C25B88CF200BC7E28 /* FontAwesomeImageRepresentable.swift in Sources */,
+				256C0CDF25BC4FB500AD3078 /* VisibleStuffTableViewCell.swift in Sources */,
 				25A4517225B88CF200BC7E28 /* FontAwesome.swift in Sources */,
 				25A4516725B88CF200BC7E28 /* FontAwesomeBarButtonItem.swift in Sources */,
 				25A4517025B88CF200BC7E28 /* FontAwesomeTextRepresentable.swift in Sources */,
