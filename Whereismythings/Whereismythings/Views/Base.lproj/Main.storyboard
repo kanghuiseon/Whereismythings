@@ -72,7 +72,7 @@
         <!--Detail Stuff View Controller-->
         <scene sceneID="DVM-9S-e0K">
             <objects>
-                <viewController storyboardIdentifier="DetailStuffViewController" id="uG8-u8-3s8" customClass="DetailStuffViewController" customModule="Whereismythings" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GetStuffViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uG8-u8-3s8" customClass="DetailStuffViewController" customModule="Whereismythings" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zKl-jE-6JH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,7 +168,106 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EcG-eZ-eiA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1892.753623188406" y="101.78571428571428"/>
+            <point key="canvasLocation" x="1954" y="102"/>
+        </scene>
+        <!--Detail Stuff View Controller-->
+        <scene sceneID="5tX-fD-ZMF">
+            <objects>
+                <viewController storyboardIdentifier="LostStuffViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="A2O-rn-fp1" customClass="DetailStuffViewController" customModule="Whereismythings" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gcv-Nm-UlZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="tKX-Ov-hg4">
+                                <rect key="frame" x="40" y="334" width="334" height="368.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="잃어버린 사람" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHT-Pd-ph6">
+                                        <rect key="frame" x="0.0" y="0.0" width="92.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9G-Xq-uC9">
+                                        <rect key="frame" x="0.0" y="45.5" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="물건 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPo-k0-5Cw">
+                                        <rect key="frame" x="0.0" y="91" width="63" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQt-do-dde">
+                                        <rect key="frame" x="0.0" y="136.5" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="잃어버린 위치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCT-3L-tQV">
+                                        <rect key="frame" x="0.0" y="182" width="92.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYH-LG-slz">
+                                        <rect key="frame" x="0.0" y="227.5" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="잃어버린 시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXp-WI-fVG">
+                                        <rect key="frame" x="0.0" y="273" width="92.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bay-JN-S8t">
+                                        <rect key="frame" x="0.0" y="318.5" width="50" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5M-tA-Sg2">
+                                <rect key="frame" x="10" y="732.5" width="394" height="49.5"/>
+                                <state key="normal" title="쪽지 보내기"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="08u-zi-3Ee">
+                                <rect key="frame" x="107" y="94.5" width="200" height="198"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="BxT-Uc-igV"/>
+                                    <constraint firstAttribute="height" constant="200" id="PG3-F9-bH4"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nwH-pC-drb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="08u-zi-3Ee" firstAttribute="top" relation="lessThanOrEqual" secondItem="nwH-pC-drb" secondAttribute="top" constant="50" id="6vK-ze-4ed"/>
+                            <constraint firstItem="nwH-pC-drb" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="j5M-tA-Sg2" secondAttribute="bottom" constant="80" id="9fB-7A-AuL"/>
+                            <constraint firstItem="08u-zi-3Ee" firstAttribute="leading" secondItem="nwH-pC-drb" secondAttribute="leading" constant="107" id="VQa-Kd-zaX"/>
+                            <constraint firstItem="nwH-pC-drb" firstAttribute="trailing" secondItem="tKX-Ov-hg4" secondAttribute="trailing" constant="40" id="aTW-rX-TJR"/>
+                            <constraint firstItem="j5M-tA-Sg2" firstAttribute="leading" secondItem="nwH-pC-drb" secondAttribute="leading" constant="10" id="aeL-L4-BSd"/>
+                            <constraint firstItem="tKX-Ov-hg4" firstAttribute="top" secondItem="08u-zi-3Ee" secondAttribute="bottom" constant="40" id="hMG-u9-1W4"/>
+                            <constraint firstItem="nwH-pC-drb" firstAttribute="trailing" secondItem="j5M-tA-Sg2" secondAttribute="trailing" constant="10" id="r6R-dE-yjZ"/>
+                            <constraint firstItem="tKX-Ov-hg4" firstAttribute="leading" secondItem="nwH-pC-drb" secondAttribute="leading" constant="40" id="uxo-iM-5rr"/>
+                            <constraint firstItem="j5M-tA-Sg2" firstAttribute="top" secondItem="tKX-Ov-hg4" secondAttribute="bottom" constant="30" id="z88-RL-l5P"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgStuff" destination="08u-zi-3Ee" id="DYd-RS-BHV"/>
+                        <outlet property="lblGotTime" destination="bay-JN-S8t" id="QNA-TW-2Lx"/>
+                        <outlet property="lblPerson" destination="e9G-Xq-uC9" id="3We-vH-KH0"/>
+                        <outlet property="lblStuffName" destination="uQt-do-dde" id="eG0-Bo-Iqr"/>
+                        <outlet property="lblStuffPosition" destination="gYH-LG-slz" id="fbd-va-ScI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lgf-GF-MpM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2712" y="102"/>
         </scene>
         <!--SearchViewController-->
         <scene sceneID="t7W-Wr-gsF">

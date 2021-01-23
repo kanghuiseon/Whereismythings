@@ -22,7 +22,6 @@ class MapViewController: UIViewController{
     var getAnnotation = [MKAnnotation]()
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.delegate = DetailStuffViewController()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
@@ -31,23 +30,23 @@ class MapViewController: UIViewController{
         for stuff in stuffs{
             if stuff.flag == true{
                 let coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(stuff.stuffLatitudePosition)!, longitude: CLLocationDegrees(stuff.stuffLongitudePosition)!)
-                let annotation = MapAnnotation(coordinate, stuff.id, stuff.stuffPerson, true, stuff.gotTime, stuffName: stuff.stuffName, stuff.stuffCharacteristic, stuff.stuffKoreanPosition, stuff.stuffImage)
-                lostAnnotation.append(annotation)
+                let annotation = MapAnnotation(coordinate, stuff.id, stuff.stuffPerson, stuff.flag, stuff.gotTime, stuffName: stuff.stuffName, stuff.stuffCharacteristic, stuff.stuffKoreanPosition, stuff.stuffImage)
+                getAnnotation.append(annotation)
             }
             else if stuff.flag == false{
                 let coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(stuff.stuffLatitudePosition)!, longitude: CLLocationDegrees(stuff.stuffLongitudePosition)!)
-                let annotation = MapAnnotation(coordinate, stuff.id, stuff.stuffPerson, true, stuff.gotTime, stuffName: stuff.stuffName, stuff.stuffCharacteristic, stuff.stuffKoreanPosition, stuff.stuffImage)
-                getAnnotation.append(annotation)
+                let annotation = MapAnnotation(coordinate, stuff.id, stuff.stuffPerson, stuff.flag, stuff.gotTime, stuffName: stuff.stuffName, stuff.stuffCharacteristic, stuff.stuffKoreanPosition, stuff.stuffImage)
+                lostAnnotation.append(annotation)
             }
         }
-        mainMap.addAnnotations(lostAnnotation)
+        mainMap.addAnnotations(getAnnotation)
     }
     
     func dataSetting(){
         stuffs.append(MainMapModel(id: 1, gotTime: nil, stuffPerson: "익명1", flag: true, stuffName: "인형", stuffCharacteristic: "새제품", stuffLatitudePosition: "37.5630725", stuffLongitudePosition: "127.0366688", stuffKoreanPosition: "성동구청", stuffImage: #imageLiteral(resourceName: "doll")))
         stuffs.append(MainMapModel(id: 2, gotTime: nil, stuffPerson: "익명2", flag: true, stuffName: "에어팟", stuffCharacteristic: "한쪽", stuffLatitudePosition: "37.5288539", stuffLongitudePosition: "126.9640447", stuffKoreanPosition: "롯데월드", stuffImage: #imageLiteral(resourceName: "IMG_0256")))
         stuffs.append(MainMapModel(id: 3, gotTime: nil, stuffPerson: "noname", flag: true, stuffName: "립스틱", stuffCharacteristic: "핑크빛", stuffLatitudePosition: "37.5121422", stuffLongitudePosition: "126.9954074", stuffKoreanPosition: "세빛둥둥섬", stuffImage: #imageLiteral(resourceName: "lipstic")))
-        stuffs.append(MainMapModel(id: 4, gotTime: nil, stuffPerson: "dffef", flag: false, stuffName: "가방", stuffCharacteristic: "노란색", stuffLatitudePosition: "37.4786971", stuffLongitudePosition: "127.0104861", stuffKoreanPosition: "예술의 전당", stuffImage: nil))
+        stuffs.append(MainMapModel(id: 4, gotTime: nil, stuffPerson: "dffef", flag: false, stuffName: "가방", stuffCharacteristic: "노란색", stuffLatitudePosition: "37.4786971", stuffLongitudePosition: "127.0104861", stuffKoreanPosition: "예술의 전당", stuffImage: #imageLiteral(resourceName: "bag")))
         stuffs.append(MainMapModel(id: 5, gotTime: nil, stuffPerson: "익명 4", flag: false, stuffName: "핸드폰", stuffCharacteristic: "아이폰 12", stuffLatitudePosition: "37.5112348", stuffLongitudePosition: "127.0980274", stuffKoreanPosition: "롯데월드", stuffImage: #imageLiteral(resourceName: "iphone12")))
         stuffs.append(MainMapModel(id: 6, gotTime: nil, stuffPerson: "익명7", flag: false, stuffName: "애플워치", stuffCharacteristic: "se", stuffLatitudePosition: "37.5444535", stuffLongitudePosition: "126.9511752", stuffKoreanPosition: "공덕역", stuffImage: #imageLiteral(resourceName: "applewatch")))
         stuffs.append(MainMapModel(id: 7, gotTime: nil, stuffPerson: "익명8", flag: true, stuffName: "공책", stuffCharacteristic: "반정도 씀", stuffLatitudePosition: "37.5656229", stuffLongitudePosition: "127.0427489", stuffKoreanPosition: "마장역", stuffImage: #imageLiteral(resourceName: "note")))
@@ -63,28 +62,30 @@ class MapViewController: UIViewController{
     
     
     @IBAction func selectedSegmentEvent(_ sender: Any) {
+        //주운사람
         if segmentedControl.selectedSegmentIndex == 0{
-            mainMap.removeAnnotations(getAnnotation)
+            mainMap.removeAnnotations(lostAnnotation)
                 for stuff in stuffs{
                     if stuff.flag == true{
                         let coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(stuff.stuffLatitudePosition)!, longitude: CLLocationDegrees(stuff.stuffLongitudePosition)!)
-                        let annotation = MapAnnotation(coordinate, stuff.id, stuff.stuffPerson, true, stuff.gotTime, stuffName: stuff.stuffName, stuff.stuffCharacteristic, stuff.stuffKoreanPosition, stuff.stuffImage)
+                        let annotation = MapAnnotation(coordinate, stuff.id, stuff.stuffPerson, stuff.flag, stuff.gotTime, stuffName: stuff.stuffName, stuff.stuffCharacteristic, stuff.stuffKoreanPosition, stuff.stuffImage)
                         lostAnnotation.append(annotation)
                     }
                 }
-            mainMap.addAnnotations(lostAnnotation)
-            }
-            else{
-                for stuff in stuffs{
-                    if stuff.flag == false{
-                        mainMap.removeAnnotations(lostAnnotation)
-                        let coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(stuff.stuffLatitudePosition)!, longitude: CLLocationDegrees(stuff.stuffLongitudePosition)!)
-                        let annotation = MapAnnotation(coordinate, stuff.id, stuff.stuffPerson, true, stuff.gotTime, stuffName: stuff.stuffName, stuff.stuffCharacteristic, stuff.stuffKoreanPosition, stuff.stuffImage)
-                        getAnnotation.append(annotation)
-                    }
+            mainMap.addAnnotations(getAnnotation)
+        }
+        // 잃어버린 사람
+        else{
+            for stuff in stuffs{
+                if stuff.flag == false{
+                    mainMap.removeAnnotations(getAnnotation)
+                    let coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(stuff.stuffLatitudePosition)!, longitude: CLLocationDegrees(stuff.stuffLongitudePosition)!)
+                    let annotation = MapAnnotation(coordinate, stuff.id, stuff.stuffPerson, stuff.flag, stuff.gotTime, stuffName: stuff.stuffName, stuff.stuffCharacteristic, stuff.stuffKoreanPosition, stuff.stuffImage)
+                    lostAnnotation.append(annotation)
                 }
-                mainMap.addAnnotations(getAnnotation)
             }
+            mainMap.addAnnotations(lostAnnotation)
+        }
     }
     // gps, 현재 위치 주변 확대
     @IBAction func btnCurrentPosition(_ sender: UIButton) {
@@ -97,11 +98,27 @@ class MapViewController: UIViewController{
     }
 
     @objc func btnDetailView(){
-        let detailVC = storyboard?.instantiateViewController(identifier: "DetailStuffViewController") as! DetailStuffViewController
+//        let selectedAnnotation = mainMap.selectedAnnotations.first as! MapAnnotation
+//        print("selectedAnnotation: ", selectedAnnotation.flag)
+//        if selectedAnnotation.flag == true{
         let selectedAnnotation = mainMap.selectedAnnotations.first as! MapAnnotation
+        print("selectedAnnotation: ", selectedAnnotation.flag)
+        let identifier = selectedAnnotation.flag ? "GetStuffViewController" : "LostStuffViewController"
+        print("identifier: ", identifier)
+        let detailVC = storyboard?.instantiateViewController(identifier: identifier) as! DetailStuffViewController
         detailVC.stuffInformation(lblPerson: selectedAnnotation.stuffPerson, imgStuff: selectedAnnotation.stuffImage, lblStuffName: selectedAnnotation.stuffName, lblStuffPosition: selectedAnnotation.stuffKoreanPosition, lblGotTime: selectedAnnotation.time)
         mainMap.deselectAnnotation(selectedAnnotation, animated: false)
-        self.present(detailVC, animated: true, completion: nil)
+        self.present(detailVC, animated: true, completion: { () in
+            print("something's wrong")
+        })
+//        }
+//        else if selectedAnnotation.flag == false {
+//            let detailVC = storyboard?.instantiateViewController(identifier: "LostStuffViewController") as! DetailStuffViewController
+//            let selectedAnnotation = mainMap.selectedAnnotations.first as! MapAnnotation
+//            detailVC.stuffInformation(lblPerson: selectedAnnotation.stuffPerson, imgStuff: selectedAnnotation.stuffImage, lblStuffName: selectedAnnotation.stuffName, lblStuffPosition: selectedAnnotation.stuffKoreanPosition, lblGotTime: selectedAnnotation.time)
+//            mainMap.deselectAnnotation(selectedAnnotation, animated: false)
+//            self.present(detailVC, animated: true, completion: nil)
+//        }
     }
 }
 
