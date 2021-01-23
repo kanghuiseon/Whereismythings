@@ -14,7 +14,6 @@ class VisibleStuffViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         visibleTableView.register(nib, forCellReuseIdentifier: "visibleCell")
-        print(visibleStuffs)
     }
 }
 extension VisibleStuffViewController: UITableViewDataSource{
@@ -36,6 +35,10 @@ extension VisibleStuffViewController: UITableViewDataSource{
 }
 extension VisibleStuffViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        let identifier = visibleStuffs[indexPath.row].flag ? "GetStuffViewController" : "LostStuffViewController"
+        let annotation = visibleStuffs[indexPath.row]
+        let detailVC = storyboard?.instantiateViewController(identifier: identifier) as! DetailStuffViewController
+        detailVC.stuffInformation(lblPerson: annotation.stuffPerson, imgStuff: annotation.stuffImage, lblStuffName: annotation.stuffName, lblStuffPosition: annotation.stuffKoreanPosition, lblGotTime: annotation.time)
+        present(detailVC, animated: true, completion: nil)
     }
 }
