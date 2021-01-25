@@ -34,15 +34,25 @@
             </objects>
             <point key="canvasLocation" x="1062" y="496"/>
         </scene>
-        <!--ChattingViewController-->
+        <!--SignLoginSelectViewController-->
         <scene sceneID="AXi-qO-pKF">
             <objects>
-                <viewControllerPlaceholder storyboardName="Chatting" referencedIdentifier="ChattingViewController" id="JhW-jd-dUQ" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="login" referencedIdentifier="SignLoginSelectViewController" id="JhW-jd-dUQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="dxY-r4-iE7"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nuy-cX-LAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1062" y="628"/>
+        </scene>
+        <!--ChatGroupViewController-->
+        <scene sceneID="SXM-Ns-ODO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chat" referencedIdentifier="ChatGroupViewController" id="7vS-V7-xCG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="kwk-aP-kqU"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3UR-Ze-Ykh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1586" y="439"/>
         </scene>
         <!--FindOrRegisterViewController-->
         <scene sceneID="7S9-12-atQ">

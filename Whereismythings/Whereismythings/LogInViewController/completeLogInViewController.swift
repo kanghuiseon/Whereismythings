@@ -1,13 +1,13 @@
 //
-//  ChattingViewController.swift
+//  completeLogInViewController.swift
 //  Whereismythings
 //
-//  Created by 강희선 on 2020/12/26.
+//  Created by 송낙현 on 2021/01/15.
 //
 
 import UIKit
 
-class ChattingViewController: UIViewController {
+class completeLogInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
