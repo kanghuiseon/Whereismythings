@@ -6,7 +6,7 @@ target 'Whereismythings' do
   use_frameworks!
 
   # Pods for Whereismythings
-pod 'FontAwesome.swift'
+
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
