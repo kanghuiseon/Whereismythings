@@ -155,10 +155,10 @@ extension MapViewController: MKMapViewDelegate{
         guard !annotation.isKind(of: MKUserLocation.self) else { return nil }
         let mapAnnotationView = MapAnnotationView(annotation: annotation, reuseIdentifier: nil)
         if segmentedControl.selectedSegmentIndex == 0{
-            mapAnnotationView.image = UIImage.fontAwesomeIcon(name: .mapPin, style: .solid, textColor: UIColor(hexString: "072452"), size: CGSize(width: 40, height: 40))
+            mapAnnotationView.image = UIImage.fontAwesomeIcon(name: .mapPin, style: .solid, textColor: UIColor.blue, size: CGSize(width: 40, height: 40))
         }
         else{
-            mapAnnotationView.image = UIImage.fontAwesomeIcon(name: .mapPin, style: .solid, textColor: UIColor(hexString: "EB8942"), size: CGSize(width: 40, height: 40))
+            mapAnnotationView.image = UIImage.fontAwesomeIcon(name: .mapPin, style: .solid, textColor: UIColor.green, size: CGSize(width: 40, height: 40))
         }
         let detail = mapAnnotationView.detailCalloutAccessoryView as! MapPinView
         detail.btnPin.addTarget(self, action: #selector(btnDetailView), for: .touchUpInside)
