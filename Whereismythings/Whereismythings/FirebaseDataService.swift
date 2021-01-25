@@ -22,10 +22,16 @@ class FirebaseDataService {
     var currentUserUid: String? {
         get {
             guard let uid = Auth.auth().currentUser?.uid else {
+                
                 return nil
             }
+            print(uid + "현재접속아이디")
             return uid
         }
     }
     
 }
+
+
+
+

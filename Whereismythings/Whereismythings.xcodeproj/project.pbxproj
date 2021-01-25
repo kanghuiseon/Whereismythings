@@ -11,6 +11,7 @@
 		201850C725B11E86005FBF3E /* SignLoginSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201850C625B11E86005FBF3E /* SignLoginSelectViewController.swift */; };
 		201850CA25B11F02005FBF3E /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201850C925B11F01005FBF3E /* LogInViewController.swift */; };
 		201850D725B155B0005FBF3E /* Informations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201850D625B155B0005FBF3E /* Informations.swift */; };
+		2040671925BE69A600E7830F /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040671825BE69A600E7830F /* testViewController.swift */; };
 		2042E18825B1769B006DA999 /* completeLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2042E18725B1769B006DA999 /* completeLogInViewController.swift */; };
 		205C165A25B6EFC200585BFE /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205C165925B6EFC200585BFE /* Chat.storyboard */; };
 		205C165F25B6F50700585BFE /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205C165E25B6F50700585BFE /* UserListViewController.swift */; };
@@ -38,6 +39,7 @@
 		201850C625B11E86005FBF3E /* SignLoginSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignLoginSelectViewController.swift; sourceTree = "<group>"; };
 		201850C925B11F01005FBF3E /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		201850D625B155B0005FBF3E /* Informations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Informations.swift; sourceTree = "<group>"; };
+		2040671825BE69A600E7830F /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 		2042E18725B1769B006DA999 /* completeLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = completeLogInViewController.swift; sourceTree = "<group>"; };
 		205C165925B6EFC200585BFE /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		205C165E25B6F50700585BFE /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				207E15C425BA936E00099AF6 /* ChatMessageCell.swift */,
 				205C165E25B6F50700585BFE /* UserListViewController.swift */,
 				207E15C125BA913600099AF6 /* ChatViewController.swift */,
+				2040671825BE69A600E7830F /* testViewController.swift */,
 				20BDBCCC25BACE18002C7C7E /* ChatGroupViewController.swift */,
 			);
 			path = ChattingViewController;
@@ -305,6 +308,7 @@
 			files = (
 				253D29E025973B1700ED0FC6 /* MapViewController.swift in Sources */,
 				253D2A0925977B5F00ED0FC6 /* FindOrRegisterViewController.swift in Sources */,
+				2040671925BE69A600E7830F /* testViewController.swift in Sources */,
 				201850C425B11E3E005FBF3E /* SignUpViewController.swift in Sources */,
 				201850D725B155B0005FBF3E /* Informations.swift in Sources */,
 				253D29DC25973B1700ED0FC6 /* AppDelegate.swift in Sources */,

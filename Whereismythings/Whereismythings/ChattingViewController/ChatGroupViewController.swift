@@ -70,7 +70,7 @@ class ChatGroupViewController: UIViewController,UITableViewDelegate, UITableView
                 let chatGroupVC = sender as! ChatGroupViewController
                 userListVC.chatGroupVC = chatGroupVC
             } else if segue.identifier == "chatting" {
-                let chatVC = segue.destination as! ChatViewController
+                let chatVC = segue.destination as! testViewController
                 chatVC.groupKey = sender as? String
             }
         }

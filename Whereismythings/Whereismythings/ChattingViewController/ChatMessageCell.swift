@@ -3,8 +3,15 @@
 import UIKit
 
 class ChatMessageCell: UICollectionViewCell {
+    
+//    @IBOutlet weak var containerView: UIView!
+//        @IBOutlet weak var textLabel: UILabel!
+
+    
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var textLabel: UILabel!
+    
+    
     
     var containerViewWidthAnchor: NSLayoutConstraint?
     var containerViewRightAnchor: NSLayoutConstraint?

@@ -48,9 +48,12 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
         let ref = FirebaseDataService.instance.groupRef.childByAutoId()
         ref.child("name").setValue(userList[indexPath.row].username as String)
         ref.updateChildValues(["name": userList[indexPath.row].username, "to": userList[indexPath.row].uid])
+        
         dismiss(animated: true) {
             if let chatGroupVC = self.chatGroupVC {
-                chatGroupVC.performSegue(withIdentifier: "chatting", sender: ref.key)
+                chatGroupVC.performSegue(withIdentifier: "chatting", sender: ref.key)//ref.key
+
+          
             }
         }
         return
