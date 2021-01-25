@@ -77,25 +77,31 @@ class testViewController: UIViewController, UITextFieldDelegate, UICollectionVie
     
     // cellForItemAt
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "chatCell", for: indexPath) as! ChatMessageCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "chatCell", for: indexPath) as! NewChatMessageCell
         let message = messages[indexPath.item]
         cell.textLabel.text = message.text
         setupChatCell(cell: cell, message: message)
         if indexPath.row == messages.count - 1 {
-            cell.containerView.backgroundColor = UIColor.white
+            cell.containerView.backgroundColor = UIColor.blue
         }
-        
+
         if message.text.count > 0 {
             cell.containerViewWidthAnchor?.constant = measuredFrameHeightForEachMessage(message: message.text).width + 32
         }
         return cell
+    
+
     }
     
     
     
+   
     
     
-    func setupChatCell(cell: ChatMessageCell, message: ChatMessage) {
+    
+    
+    
+    func setupChatCell(cell: NewChatMessageCell, message: ChatMessage) {
         if message.fromUserId == FirebaseDataService.instance.currentUserUid {
             cell.containerView.backgroundColor = UIColor.magenta
             cell.textLabel.textColor = UIColor.white
@@ -170,10 +176,7 @@ class testViewController: UIViewController, UITextFieldDelegate, UICollectionVie
     
     
     
-    
-    
-    
-    
+  
     
     
     
@@ -187,6 +190,9 @@ class testViewController: UIViewController, UITextFieldDelegate, UICollectionVie
         chatCollectionView.delegate = self
         chatCollectionView.dataSource = self
         chatTextField.delegate = self
+        let layout = chatCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.estimatedItemSize.width = view.frame.width
+        chatCollectionView.alwaysBounceVertical = true
         sendButton.isEnabled = false
 
         // Do any additional setup after loading the view.

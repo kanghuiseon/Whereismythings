@@ -15,9 +15,9 @@
 		2042E18825B1769B006DA999 /* completeLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2042E18725B1769B006DA999 /* completeLogInViewController.swift */; };
 		205C165A25B6EFC200585BFE /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205C165925B6EFC200585BFE /* Chat.storyboard */; };
 		205C165F25B6F50700585BFE /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205C165E25B6F50700585BFE /* UserListViewController.swift */; };
+		20751AAE25BE8BF9002EF213 /* NewChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20751AAD25BE8BF9002EF213 /* NewChatMessageCell.swift */; };
 		207ACD9425B410E400FE4BDA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 207ACD9325B410E400FE4BDA /* GoogleService-Info.plist */; };
 		207E15BF25BA869400099AF6 /* FirebaseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207E15BE25BA869400099AF6 /* FirebaseDataService.swift */; };
-		207E15C225BA913600099AF6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207E15C125BA913600099AF6 /* ChatViewController.swift */; };
 		207E15C525BA936E00099AF6 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207E15C425BA936E00099AF6 /* ChatMessageCell.swift */; };
 		20BDBCCD25BACE18002C7C7E /* ChatGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BDBCCC25BACE18002C7C7E /* ChatGroupViewController.swift */; };
 		253D29DC25973B1700ED0FC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D29DB25973B1700ED0FC6 /* AppDelegate.swift */; };
@@ -43,9 +43,9 @@
 		2042E18725B1769B006DA999 /* completeLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = completeLogInViewController.swift; sourceTree = "<group>"; };
 		205C165925B6EFC200585BFE /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		205C165E25B6F50700585BFE /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		20751AAD25BE8BF9002EF213 /* NewChatMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChatMessageCell.swift; sourceTree = "<group>"; };
 		207ACD9325B410E400FE4BDA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		207E15BE25BA869400099AF6 /* FirebaseDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseDataService.swift; sourceTree = "<group>"; };
-		207E15C125BA913600099AF6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		207E15C425BA936E00099AF6 /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		20BDBCCC25BACE18002C7C7E /* ChatGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGroupViewController.swift; sourceTree = "<group>"; };
 		253D29D825973B1700ED0FC6 /* Whereismythings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whereismythings.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,8 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				207E15C425BA936E00099AF6 /* ChatMessageCell.swift */,
+				20751AAD25BE8BF9002EF213 /* NewChatMessageCell.swift */,
 				205C165E25B6F50700585BFE /* UserListViewController.swift */,
-				207E15C125BA913600099AF6 /* ChatViewController.swift */,
 				2040671825BE69A600E7830F /* testViewController.swift */,
 				20BDBCCC25BACE18002C7C7E /* ChatGroupViewController.swift */,
 			);
@@ -308,6 +308,7 @@
 			files = (
 				253D29E025973B1700ED0FC6 /* MapViewController.swift in Sources */,
 				253D2A0925977B5F00ED0FC6 /* FindOrRegisterViewController.swift in Sources */,
+				20751AAE25BE8BF9002EF213 /* NewChatMessageCell.swift in Sources */,
 				2040671925BE69A600E7830F /* testViewController.swift in Sources */,
 				201850C425B11E3E005FBF3E /* SignUpViewController.swift in Sources */,
 				201850D725B155B0005FBF3E /* Informations.swift in Sources */,
@@ -318,7 +319,6 @@
 				20BDBCCD25BACE18002C7C7E /* ChatGroupViewController.swift in Sources */,
 				205C165F25B6F50700585BFE /* UserListViewController.swift in Sources */,
 				253D2A0325977B4400ED0FC6 /* SearchViewController.swift in Sources */,
-				207E15C225BA913600099AF6 /* ChatViewController.swift in Sources */,
 				201850CA25B11F02005FBF3E /* LogInViewController.swift in Sources */,
 				2042E18825B1769B006DA999 /* completeLogInViewController.swift in Sources */,
 				253D29DE25973B1700ED0FC6 /* SceneDelegate.swift in Sources */,

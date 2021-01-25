@@ -52,7 +52,7 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
         dismiss(animated: true) {
             if let chatGroupVC = self.chatGroupVC {
                 chatGroupVC.performSegue(withIdentifier: "chatting", sender: ref.key)//ref.key
-
+              
           
             }
         }

@@ -5,14 +5,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="jUV-lD-J2T">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dy2-EG-27i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="ChatGroupViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c1U-kz-7FQ" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BPD-f1-f8g">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -22,6 +20,7 @@
                         <segue destination="cO8-bd-fy7" kind="relationship" relationship="rootViewController" id="AIA-6e-aN8"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dy2-EG-27i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-251" y="-42"/>
         </scene>
@@ -50,7 +49,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J9z-cc-Yzu">
                                 <rect key="frame" x="0.0" y="88" width="414" height="44"/>
                                 <items>
-                                    <navigationItem title="채팅그룹까지 했다" id="HYz-PU-ZOC">
+                                    <navigationItem title="채팅그룹" id="HYz-PU-ZOC">
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="4sS-mA-W8Q">
                                             <connections>
                                                 <action selector="addButtonTapped:" destination="cO8-bd-fy7" id="mfN-QC-X3i"/>
@@ -142,101 +141,6 @@
             </objects>
             <point key="canvasLocation" x="854" y="658"/>
         </scene>
-        <!--Chat View Controller-->
-        <scene sceneID="rJG-eb-MSS">
-            <objects>
-                <viewController id="xkW-D1-2JB" customClass="ChatViewController" customModule="Whereismythings" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LHn-Kw-W4D">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XhS-ve-zPp">
-                                <rect key="frame" x="0.0" y="44" width="414" height="764"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zAA-mu-so0">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="39L-be-hen">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fQB-wG-fls">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I2b-de-KV1">
-                                <rect key="frame" x="0.0" y="808" width="414" height="54"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIO-e4-hsT">
-                                        <rect key="frame" x="366" y="12" width="40" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="qB1-kb-376"/>
-                                        </constraints>
-                                        <state key="normal" title="보내기"/>
-                                        <connections>
-                                            <action selector="sendButtonTapped:" destination="xkW-D1-2JB" eventType="touchUpInside" id="UHR-Qc-f3y"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="83H-TU-qkZ">
-                                        <rect key="frame" x="8" y="10" width="330" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="sIO-e4-hsT" firstAttribute="trailing" secondItem="I2b-de-KV1" secondAttribute="trailingMargin" id="4ck-S1-b9Q"/>
-                                    <constraint firstItem="83H-TU-qkZ" firstAttribute="centerY" secondItem="sIO-e4-hsT" secondAttribute="centerY" id="7eg-lF-vP8"/>
-                                    <constraint firstItem="sIO-e4-hsT" firstAttribute="leading" secondItem="83H-TU-qkZ" secondAttribute="trailing" constant="28" id="Ide-Sm-vD8"/>
-                                    <constraint firstItem="83H-TU-qkZ" firstAttribute="top" secondItem="I2b-de-KV1" secondAttribute="top" constant="10" id="SfU-ZI-T4Y"/>
-                                    <constraint firstItem="83H-TU-qkZ" firstAttribute="leading" secondItem="I2b-de-KV1" secondAttribute="leadingMargin" id="gAK-Ay-0c7"/>
-                                    <constraint firstItem="83H-TU-qkZ" firstAttribute="centerY" secondItem="I2b-de-KV1" secondAttribute="centerY" id="wvb-wP-ydU"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6hg-sc-Lhw"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="I2b-de-KV1" firstAttribute="top" secondItem="XhS-ve-zPp" secondAttribute="bottom" id="1Qw-uT-fAg"/>
-                            <constraint firstItem="XhS-ve-zPp" firstAttribute="trailing" secondItem="6hg-sc-Lhw" secondAttribute="trailing" id="CZQ-9g-Ek6"/>
-                            <constraint firstItem="XhS-ve-zPp" firstAttribute="centerX" secondItem="LHn-Kw-W4D" secondAttribute="centerX" id="P9n-bu-sw5"/>
-                            <constraint firstItem="I2b-de-KV1" firstAttribute="top" secondItem="XhS-ve-zPp" secondAttribute="bottom" id="SGq-UY-HIE"/>
-                            <constraint firstItem="XhS-ve-zPp" firstAttribute="top" secondItem="6hg-sc-Lhw" secondAttribute="top" id="SY3-rz-77E"/>
-                            <constraint firstItem="XhS-ve-zPp" firstAttribute="trailing" secondItem="I2b-de-KV1" secondAttribute="trailing" id="WPa-0N-6g2"/>
-                            <constraint firstItem="XhS-ve-zPp" firstAttribute="top" secondItem="6hg-sc-Lhw" secondAttribute="top" id="XV5-lr-atX"/>
-                            <constraint firstItem="XhS-ve-zPp" firstAttribute="leading" secondItem="I2b-de-KV1" secondAttribute="leading" id="eUh-ru-NcI"/>
-                            <constraint firstItem="I2b-de-KV1" firstAttribute="bottom" secondItem="6hg-sc-Lhw" secondAttribute="bottom" id="ko1-dY-eeu"/>
-                            <constraint firstItem="XhS-ve-zPp" firstAttribute="leading" secondItem="6hg-sc-Lhw" secondAttribute="leading" id="pJ3-Ip-uD8"/>
-                            <constraint firstItem="XhS-ve-zPp" firstAttribute="leading" secondItem="6hg-sc-Lhw" secondAttribute="leading" id="vd9-k3-Vrp"/>
-                        </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="83D-xg-Ifr" appends="YES" id="Noo-B9-wrd"/>
-                        </connections>
-                    </view>
-                    <navigationItem key="navigationItem" id="2Mo-Iu-8Ml"/>
-                    <connections>
-                        <outlet property="chatCollectionView" destination="XhS-ve-zPp" id="lOD-fm-D2k"/>
-                        <outlet property="chatTextField" destination="83H-TU-qkZ" id="aA6-tC-87w"/>
-                        <outlet property="item" destination="2Mo-Iu-8Ml" id="vhJ-d2-VpI"/>
-                        <outlet property="sendButton" destination="sIO-e4-hsT" id="pr8-PP-kYj"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UJz-cb-XPJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="83D-xg-Ifr">
-                    <connections>
-                        <action selector="collectionViewTapped:" destination="xkW-D1-2JB" id="Nnq-bQ-8Bb"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="1602.8985507246377" y="-42.1875"/>
-        </scene>
         <!--Test View Controller-->
         <scene sceneID="KwO-7e-doL">
             <objects>
@@ -256,7 +160,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="chatCell" id="U4d-PL-uZi" customClass="ChatMessageCell" customModule="firebaseTest" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="chatCell" id="U4d-PL-uZi" customClass="NewChatMessageCell" customModule="Whereismythings" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -280,8 +184,8 @@
                                             </subviews>
                                         </view>
                                         <connections>
-                                            <outlet property="containerView" destination="ASL-0x-aUY" id="4fH-iu-TNT"/>
-                                            <outlet property="textLabel" destination="VG8-dA-I7d" id="v5a-aN-H9w"/>
+                                            <outlet property="containerView" destination="ASL-0x-aUY" id="YTB-9p-yiF"/>
+                                            <outlet property="textLabel" destination="VG8-dA-I7d" id="LhF-Ub-Eo3"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
