@@ -77,7 +77,7 @@ class testViewController: UIViewController, UITextFieldDelegate, UICollectionVie
     
     // cellForItemAt
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "chatCell", for: indexPath) as! NewChatMessageCell
+        let cell = chatCollectionView.dequeueReusableCell(withReuseIdentifier: "chatCell", for: indexPath) as! NewChatMessageCell
         let message = messages[indexPath.item]
         cell.textLabel.text = message.text
         setupChatCell(cell: cell, message: message)
@@ -89,8 +89,6 @@ class testViewController: UIViewController, UITextFieldDelegate, UICollectionVie
             cell.containerViewWidthAnchor?.constant = measuredFrameHeightForEachMessage(message: message.text).width + 32
         }
         return cell
-    
-
     }
     
     
@@ -161,40 +159,17 @@ class testViewController: UIViewController, UITextFieldDelegate, UICollectionVie
             }
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-        
-        
-        
-        
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        chatCollectionView.delegate = self
-        chatCollectionView.dataSource = self
         chatTextField.delegate = self
         let layout = chatCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.estimatedItemSize.width = view.frame.width
         chatCollectionView.alwaysBounceVertical = true
         sendButton.isEnabled = false
-
+        fetchMessages()
+        
+        
         // Do any additional setup after loading the view.
     }
     
