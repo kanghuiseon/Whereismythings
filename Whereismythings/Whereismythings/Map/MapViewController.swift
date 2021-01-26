@@ -152,7 +152,7 @@ class MapViewController: UIViewController{
     func addNavigationButton(_ title: String){
         let navButton = UIButton(type: .custom)
         navButton.setTitle(title, for: .normal)
-        navButton.setTitleColor(.white, for: .normal)
+        navButton.setTitleColor(.black, for: .normal)
         navButton.addTarget(self, action: #selector(showVisibleAnnotations), for: .touchUpInside)
         let barButtonItem = UIBarButtonItem(customView: navButton)
         self.navigationItem.rightBarButtonItem = barButtonItem

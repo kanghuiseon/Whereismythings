@@ -63,7 +63,6 @@
                     <connections>
                         <outlet property="mainMap" destination="CbO-Eb-9Pz" id="Rag-1B-foH"/>
                         <outlet property="segmentedControl" destination="eKS-Q0-m21" id="ToR-mP-ydw"/>
-                        <segue destination="lor-g8-q5T" kind="show" id="5ju-Oq-Rh0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -79,13 +78,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yyu-Lh-LU9">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="lor-g8-q5T" id="95i-wA-Wse"/>
                                     <outlet property="delegate" destination="lor-g8-q5T" id="mbI-Ho-nrk"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" id="68O-SO-PHZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="V9W-nV-ZfO">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="e0d-Vv-fSh"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="isK-OR-TvF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -93,11 +101,11 @@
                             <constraint firstItem="isK-OR-TvF" firstAttribute="trailing" secondItem="yyu-Lh-LU9" secondAttribute="trailing" id="7t9-C0-cdZ"/>
                             <constraint firstItem="isK-OR-TvF" firstAttribute="bottom" secondItem="yyu-Lh-LU9" secondAttribute="bottom" id="JEE-wl-klP"/>
                             <constraint firstItem="yyu-Lh-LU9" firstAttribute="leading" secondItem="isK-OR-TvF" secondAttribute="leading" id="cAu-hF-LfO"/>
-                            <constraint firstItem="yyu-Lh-LU9" firstAttribute="top" secondItem="isK-OR-TvF" secondAttribute="top" id="ymf-v3-0AT"/>
+                            <constraint firstItem="yyu-Lh-LU9" firstAttribute="top" secondItem="68O-SO-PHZ" secondAttribute="bottom" id="ymf-v3-0AT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="8ar-Cg-YQJ"/>
                     <connections>
+                        <outlet property="rightBarButton" destination="e0d-Vv-fSh" id="InJ-Ed-G89"/>
                         <outlet property="visibleTableView" destination="yyu-Lh-LU9" id="vTg-HZ-mf1"/>
                     </connections>
                 </viewController>

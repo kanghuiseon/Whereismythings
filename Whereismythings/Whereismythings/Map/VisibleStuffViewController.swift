@@ -18,7 +18,7 @@ class VisibleStuffViewController: UIViewController {
         visibleTableView.register(nib, forCellReuseIdentifier: "visibleCell")
         let navButton = UIButton(type: .custom)
         navButton.setTitle("취소", for: .normal)
-        navButton.setTitleColor(.white, for: .normal)
+        navButton.setTitleColor(.black, for: .normal)
         navButton.addTarget(self, action: #selector(dismissCurrent), for: .touchUpInside)
         rightBarButton.customView = navButton
 //        rightBarButton = addNavigationButton("취소")
