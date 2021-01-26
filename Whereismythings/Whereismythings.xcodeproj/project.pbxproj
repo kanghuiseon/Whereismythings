@@ -7,7 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1298B85C25C05004009772C5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298B85B25C05004009772C5 /* MapViewController.swift */; };
+		12E3B7BE25C058BC002AF123 /* MainMapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3B7B225C058BC002AF123 /* MainMapModel.swift */; };
+		12E3B7BF25C058BC002AF123 /* DetailStuffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3B7B325C058BC002AF123 /* DetailStuffViewController.swift */; };
+		12E3B7C025C058BC002AF123 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3B7B425C058BC002AF123 /* UIColor+extension.swift */; };
+		12E3B7C125C058BC002AF123 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3B7B625C058BC002AF123 /* MapViewController.swift */; };
+		12E3B7C225C058BC002AF123 /* MapPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3B7B725C058BC002AF123 /* MapPinView.swift */; };
+		12E3B7C325C058BC002AF123 /* VisibleStuffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3B7B825C058BC002AF123 /* VisibleStuffViewController.swift */; };
+		12E3B7C425C058BC002AF123 /* VisibleStuffTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3B7B925C058BC002AF123 /* VisibleStuffTableViewCell.swift */; };
+		12E3B7C525C058BC002AF123 /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3B7BA25C058BC002AF123 /* MapAnnotation.swift */; };
+		12E3B7C625C058BC002AF123 /* VisibleStuffTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12E3B7BB25C058BC002AF123 /* VisibleStuffTableViewCell.xib */; };
+		12E3B7C725C058BC002AF123 /* MapImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12E3B7BC25C058BC002AF123 /* MapImageView.xib */; };
+		12E3B7C825C058BC002AF123 /* MapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3B7BD25C058BC002AF123 /* MapAnnotationView.swift */; };
 		201850C425B11E3E005FBF3E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201850C325B11E3E005FBF3E /* SignUpViewController.swift */; };
 		201850C725B11E86005FBF3E /* SignLoginSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201850C625B11E86005FBF3E /* SignLoginSelectViewController.swift */; };
 		201850CA25B11F02005FBF3E /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201850C925B11F01005FBF3E /* LogInViewController.swift */; };
@@ -35,7 +45,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1298B85B25C05004009772C5 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Map/MapViewController.swift; sourceTree = "<group>"; };
+		12E3B7B225C058BC002AF123 /* MainMapModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMapModel.swift; sourceTree = "<group>"; };
+		12E3B7B325C058BC002AF123 /* DetailStuffViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailStuffViewController.swift; sourceTree = "<group>"; };
+		12E3B7B425C058BC002AF123 /* UIColor+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
+		12E3B7B625C058BC002AF123 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		12E3B7B725C058BC002AF123 /* MapPinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPinView.swift; sourceTree = "<group>"; };
+		12E3B7B825C058BC002AF123 /* VisibleStuffViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisibleStuffViewController.swift; sourceTree = "<group>"; };
+		12E3B7B925C058BC002AF123 /* VisibleStuffTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisibleStuffTableViewCell.swift; sourceTree = "<group>"; };
+		12E3B7BA25C058BC002AF123 /* MapAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
+		12E3B7BB25C058BC002AF123 /* VisibleStuffTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisibleStuffTableViewCell.xib; sourceTree = "<group>"; };
+		12E3B7BC25C058BC002AF123 /* MapImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapImageView.xib; sourceTree = "<group>"; };
+		12E3B7BD25C058BC002AF123 /* MapAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapAnnotationView.swift; sourceTree = "<group>"; };
 		201850C325B11E3E005FBF3E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		201850C625B11E86005FBF3E /* SignLoginSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignLoginSelectViewController.swift; sourceTree = "<group>"; };
 		201850C925B11F01005FBF3E /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +98,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12E3B7B125C058BC002AF123 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				12E3B7B225C058BC002AF123 /* MainMapModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		12E3B7B525C058BC002AF123 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				12E3B7B625C058BC002AF123 /* MapViewController.swift */,
+				12E3B7B725C058BC002AF123 /* MapPinView.swift */,
+				12E3B7B825C058BC002AF123 /* VisibleStuffViewController.swift */,
+				12E3B7B925C058BC002AF123 /* VisibleStuffTableViewCell.swift */,
+				12E3B7BA25C058BC002AF123 /* MapAnnotation.swift */,
+				12E3B7BB25C058BC002AF123 /* VisibleStuffTableViewCell.xib */,
+				12E3B7BC25C058BC002AF123 /* MapImageView.xib */,
+				12E3B7BD25C058BC002AF123 /* MapAnnotationView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		1339A276FECCB9B47B8DBE00 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,7 +178,10 @@
 				253D29FA259774D900ED0FC6 /* Views */,
 				253D29DB25973B1700ED0FC6 /* AppDelegate.swift */,
 				253D29DD25973B1700ED0FC6 /* SceneDelegate.swift */,
-				1298B85B25C05004009772C5 /* MapViewController.swift */,
+				12E3B7B325C058BC002AF123 /* DetailStuffViewController.swift */,
+				12E3B7B525C058BC002AF123 /* Map */,
+				12E3B7B125C058BC002AF123 /* Model */,
+				12E3B7B425C058BC002AF123 /* UIColor+extension.swift */,
 				253D29E425973B1800ED0FC6 /* Assets.xcassets */,
 				253D29E625973B1800ED0FC6 /* LaunchScreen.storyboard */,
 				253D29E925973B1800ED0FC6 /* Info.plist */,
@@ -235,8 +281,10 @@
 				253D29E325973B1700ED0FC6 /* Main.storyboard in Resources */,
 				253D29FD259775A400ED0FC6 /* login.storyboard in Resources */,
 				253D2A00259779DB00ED0FC6 /* FindOrRegister.storyboard in Resources */,
+				12E3B7C625C058BC002AF123 /* VisibleStuffTableViewCell.xib in Resources */,
 				205C165A25B6EFC200585BFE /* Chat.storyboard in Resources */,
 				207ACD9425B410E400FE4BDA /* GoogleService-Info.plist in Resources */,
+				12E3B7C725C058BC002AF123 /* MapImageView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,21 +355,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				253D2A0925977B5F00ED0FC6 /* FindOrRegisterViewController.swift in Sources */,
+				12E3B7BE25C058BC002AF123 /* MainMapModel.swift in Sources */,
 				20751AAE25BE8BF9002EF213 /* NewChatMessageCell.swift in Sources */,
+				12E3B7C425C058BC002AF123 /* VisibleStuffTableViewCell.swift in Sources */,
+				12E3B7C025C058BC002AF123 /* UIColor+extension.swift in Sources */,
+				12E3B7BF25C058BC002AF123 /* DetailStuffViewController.swift in Sources */,
+				12E3B7C825C058BC002AF123 /* MapAnnotationView.swift in Sources */,
 				2040671925BE69A600E7830F /* testViewController.swift in Sources */,
 				201850C425B11E3E005FBF3E /* SignUpViewController.swift in Sources */,
+				12E3B7C125C058BC002AF123 /* MapViewController.swift in Sources */,
+				12E3B7C525C058BC002AF123 /* MapAnnotation.swift in Sources */,
 				201850D725B155B0005FBF3E /* Informations.swift in Sources */,
 				253D29DC25973B1700ED0FC6 /* AppDelegate.swift in Sources */,
 				207E15C525BA936E00099AF6 /* ChatMessageCell.swift in Sources */,
 				207E15BF25BA869400099AF6 /* FirebaseDataService.swift in Sources */,
 				201850C725B11E86005FBF3E /* SignLoginSelectViewController.swift in Sources */,
 				20BDBCCD25BACE18002C7C7E /* ChatGroupViewController.swift in Sources */,
+				12E3B7C325C058BC002AF123 /* VisibleStuffViewController.swift in Sources */,
 				205C165F25B6F50700585BFE /* UserListViewController.swift in Sources */,
 				253D2A0325977B4400ED0FC6 /* SearchViewController.swift in Sources */,
 				201850CA25B11F02005FBF3E /* LogInViewController.swift in Sources */,
 				2042E18825B1769B006DA999 /* completeLogInViewController.swift in Sources */,
 				253D29DE25973B1700ED0FC6 /* SceneDelegate.swift in Sources */,
-				1298B85C25C05004009772C5 /* MapViewController.swift in Sources */,
+				12E3B7C225C058BC002AF123 /* MapPinView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +527,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Whereismythings/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -490,6 +547,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Whereismythings/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
