@@ -12,5 +12,6 @@ pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'FirebaseUI'
 pod 'Firebase/Firestore'
+pod 'FontAwesome.swift'
 
 end
