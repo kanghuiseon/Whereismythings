@@ -51,7 +51,7 @@ class LogInViewController: UIViewController {
             }
             else {
                 let chatboard = UIStoryboard(name: "Chat", bundle: nil)
-                if let vc = chatboard.instantiateViewController(identifier: "chattingStart")as? ChatGroupViewController {
+                if let vc = chatboard.instantiateInitialViewController() { // .instantiateViewController(identifier: "chattingStart") as? ChatGroupViewController {
                     vc.modalPresentationStyle = .fullScreen
                     self.present(vc, animated: true)
                                        

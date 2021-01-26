@@ -8,6 +8,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import FontAwesome_swift
 
 class MapViewController: UIViewController{
     @IBOutlet var mainMap: MKMapView!
@@ -39,7 +40,17 @@ class MapViewController: UIViewController{
             }
         }
         mainMap.addAnnotations(getAnnotation)
+        
+        if locationManager.authorizationStatus == .notDetermined {
+            return // 일단 스킵.
+        }
+        
         let userCurrentPosition = locationManager.location
+        
+        if userCurrentPosition == nil {
+            return
+        }
+        
         let currentCoordinate = CLLocationCoordinate2DMake(CLLocationDegrees((userCurrentPosition?.coordinate.latitude)!), CLLocationDegrees((userCurrentPosition?.coordinate.longitude)!))
         let spanValue = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
         let currentRegion = MKCoordinateRegion(center: currentCoordinate, span: spanValue)

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c1U-kz-7FQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c1U-kz-7FQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-251" y="-42"/>
         </scene>
-        <!--Chat Group View Controller-->
+        <!--채팅 그룹-->
         <scene sceneID="NE2-Bc-2R0">
             <objects>
                 <viewController storyboardIdentifier="chattingStart" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cO8-bd-fy7" customClass="ChatGroupViewController" customModule="Whereismythings" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dqw-dI-Iut">
-                                <rect key="frame" x="0.0" y="132" width="414" height="681"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="GroupCell" id="3dO-Vt-26o">
@@ -46,33 +46,24 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J9z-cc-Yzu">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="채팅그룹" id="HYz-PU-ZOC">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4sS-mA-W8Q">
-                                            <connections>
-                                                <action selector="addButtonTapped:" destination="cO8-bd-fy7" id="mfN-QC-X3i"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="irU-XH-uM5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="J9z-cc-Yzu" firstAttribute="leading" secondItem="irU-XH-uM5" secondAttribute="leading" id="1yh-Hb-Mrh"/>
-                            <constraint firstItem="J9z-cc-Yzu" firstAttribute="trailing" secondItem="irU-XH-uM5" secondAttribute="trailing" id="DE2-Pm-eiL"/>
+                            <constraint firstItem="dqw-dI-Iut" firstAttribute="top" secondItem="irU-XH-uM5" secondAttribute="top" id="Co1-5q-Sx9"/>
                             <constraint firstItem="irU-XH-uM5" firstAttribute="bottom" secondItem="dqw-dI-Iut" secondAttribute="bottom" id="FER-FR-4iO"/>
-                            <constraint firstItem="J9z-cc-Yzu" firstAttribute="top" secondItem="irU-XH-uM5" secondAttribute="top" id="QzT-tP-xCP"/>
                             <constraint firstItem="irU-XH-uM5" firstAttribute="trailing" secondItem="dqw-dI-Iut" secondAttribute="trailing" id="ShW-gZ-Oia"/>
                             <constraint firstItem="dqw-dI-Iut" firstAttribute="leading" secondItem="irU-XH-uM5" secondAttribute="leading" id="Uia-UL-2ly"/>
-                            <constraint firstItem="dqw-dI-Iut" firstAttribute="top" secondItem="J9z-cc-Yzu" secondAttribute="bottom" id="ebO-zL-JHh"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="7Ix-M0-b4n"/>
+                    <navigationItem key="navigationItem" title="채팅 그룹" id="7Ix-M0-b4n">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4sS-mA-W8Q">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="cO8-bd-fy7" id="mfN-QC-X3i"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="dqw-dI-Iut" id="wOe-DH-w37"/>
