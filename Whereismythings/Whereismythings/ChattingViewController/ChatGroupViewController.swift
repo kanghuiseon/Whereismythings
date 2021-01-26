@@ -70,12 +70,8 @@ class ChatGroupViewController: UIViewController,UITableViewDelegate, UITableView
                 let chatGroupVC = sender as! ChatGroupViewController
                 userListVC.chatGroupVC = chatGroupVC
             } else if segue.identifier == "chatting" {
-//                let chatVC = UIStoryboard(name: "Chat", bundle: nil)
-                let chatVC = storyboard?.instantiateViewController(identifier: "testViewController") as! testViewController
-                chatVC.modalPresentationStyle = .overFullScreen
-                chatVC.navigationController?.isNavigationBarHidden = false
+                let chatVC = segue.destination as! testViewController
                 chatVC.groupKey = sender as? String
-                
             }
         }
     }
