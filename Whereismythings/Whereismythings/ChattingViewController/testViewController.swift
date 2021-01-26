@@ -82,7 +82,7 @@ class testViewController: UIViewController, UITextFieldDelegate, UICollectionVie
         cell.textLabel.text = message.text
         setupChatCell(cell: cell, message: message)
         if indexPath.row == messages.count - 1 {
-            cell.containerView.backgroundColor = UIColor.blue
+            cell.containerView.backgroundColor = UIColor.systemYellow
         }
 
         if message.text.count > 0 {
@@ -155,7 +155,7 @@ class testViewController: UIViewController, UITextFieldDelegate, UICollectionVie
             
             self.chatTextField.text = nil
             if let groupId = self.groupKey, let toId = self.participantId {
-                FirebaseDataService.instance.groupRef.child(groupId).child("messages").updateChildValues([ref.key: 1])
+                FirebaseDataService.instance.groupRef.child(groupId).updateChildValues(["messages": [ref.key:1]])
                 FirebaseDataService.instance.userRef.child(fromUserId).child("groups").updateChildValues([groupId: 1])
                 FirebaseDataService.instance.userRef.child(toId).child("groups").updateChildValues([groupId: 1])
             }
