@@ -36,7 +36,6 @@ class DetailStuffViewController: UIViewController {
             self.lblGotTime.text = time
         }
     }
-
 }
 //extension DetailStuffViewController:  StuffInfoDelegate{
 extension DetailStuffViewController{
