@@ -15,6 +15,8 @@ class SearchViewController: UIViewController {
     var searchController = UISearchController(searchResultsController: nil)
     override func viewDidLoad() {
         super.viewDidLoad()
+        let nib = UINib(nibName: "VisibleStuffTableViewCell", bundle: nil)
+        searchTable.register(nib, forCellReuseIdentifier: "visibleCell")
         stuffs = MainMapModel.dataSetting()
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
@@ -63,15 +65,21 @@ extension SearchViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "visibleCell", for: indexPath) as! VisibleStuffTableViewCell
           let stuff: MainMapModel
           if isFiltering() {
             stuff = filteredStuffs[indexPath.row]
           } else {
             stuff = stuffs[indexPath.row]
           }
-        cell.textLabel!.text = stuff.stuffName
-        cell.detailTextLabel?.text = stuff.stuffKoreanPosition
+        if let img = stuff.stuffImage{
+            cell.stuffImg.image = img
+        }
+        else{
+            cell.stuffImg.image = UIImage(named: "unchecked")
+        }
+        cell.stuffName.text = stuff.stuffName
+        cell.stuffPos.text = stuff.stuffKoreanPosition
         return cell
     }
     
