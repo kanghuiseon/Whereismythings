@@ -37,16 +37,17 @@ class NewChatMessageCell: UICollectionViewCell {
     
     func setAnchors() {
         containerView.translatesAutoresizingMaskIntoConstraints = false
-        containerView.topAnchor.constraint(equalTo: topAnchor, constant: 0).isActive = true
-        containerViewLeftAnchor = containerView.leftAnchor.constraint(equalTo: leftAnchor, constant: 4)
-        containerViewRightAnchor = containerView.rightAnchor.constraint(equalTo: rightAnchor, constant: -4)
+        containerView.topAnchor.constraint(equalTo: topAnchor, constant: 33).isActive = true
+        containerViewLeftAnchor = containerView.leftAnchor.constraint(equalTo: leftAnchor, constant: 20)//4
+        containerViewRightAnchor = containerView.rightAnchor.constraint(equalTo: rightAnchor, constant: -20) //-4
         containerViewWidthAnchor = containerView.widthAnchor.constraint(equalToConstant: 200)
         containerViewHeightAnchor = containerView.heightAnchor.constraint(equalToConstant: frame.height)
         containerViewWidthAnchor?.isActive = true
         containerViewHeightAnchor?.isActive = true
         
         textLabel.translatesAutoresizingMaskIntoConstraints = false
-        textLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
+        textLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true //cons 4
+        textLabel.topAnchor.constraint(equalTo: bottomAnchor, constant: 8).isActive = true //새로추가
         textLabel.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 4).isActive = true
         textLabel.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: 0).isActive = true
         textLabelHeightAnchor = textLabel.heightAnchor.constraint(equalToConstant: frame.height)

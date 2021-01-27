@@ -22,9 +22,9 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
                     if uid != key {
                         if let userData = data as? Dictionary<String, AnyObject> {
                             let toUid = key
-                            let username = userData["name"] as! String
-                            let email = userData["email"] as! String
-                            let user = User(uid: toUid, email: email, username: username)
+                            let username = userData["name"] as? String
+                            let email = userData["email"] as? String
+                            let user = User(uid: toUid, email: email!, username: username!)
                             self.userList.append(user)
                             
                             DispatchQueue.main.async(execute: {
