@@ -39,6 +39,9 @@
                                                         <segment title="Find"/>
                                                         <segment title="Lost"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="lostAndFoundSeg:" destination="HsX-Jw-NWp" eventType="valueChanged" id="Kw9-5t-oba"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                             <constraints>

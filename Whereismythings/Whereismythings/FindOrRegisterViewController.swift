@@ -27,8 +27,35 @@ class FindOrRegisterViewController: UITableViewController {
 
     
     }
+    
+    var flag: Bool = true
+    
+    @IBAction func lostAndFoundSeg(_ sender: UISegmentedControl) {
+        
+        
+    switch lostAndFoundSeg.selectedSegmentIndex {
+      case 0:
+        flag = true
+      case 1:
+        flag = false
+      default:
+          break
+
+    
+        
+        
+    }
+    
+    }
+    
+    
 
     @IBAction func ComButtonTapped(_ sender: UIButton) {
+       
+        
+        
+        
+        
         print("탭은되고있다")
         
         let stuffname = stuffNameTextField.text ?? ""
@@ -37,27 +64,16 @@ class FindOrRegisterViewController: UITableViewController {
         
         print(stuffname)
         
-        MainMapModel.stuffs.append(MainMapModel(id: 16, gotTime: nil, stuffPerson: "익명송낙현", flag: true, stuffName: stuffname, stuffCharacteristic: stuffinfo, stuffLatitudePosition: "37.5613435", stuffLongitudePosition: "127.0408104", stuffKoreanPosition: stuffloca, stuffImage: nil))
+        MainMapModel.stuffs.append(MainMapModel(id: 16, gotTime: nil, stuffPerson: "익명송낙현", flag: flag, stuffName: stuffname, stuffCharacteristic: stuffinfo, stuffLatitudePosition: "37.5613435", stuffLongitudePosition: "127.0408104", stuffKoreanPosition: stuffloca, stuffImage: nil))
 
 
         print(MainMapModel.stuffs)
   
-//
-//        MainMapModel.dataSetting(){ () -> <#Result#> in
-//            var tmpStuffs:[MainMapModel] = []
-//            tmpStuffs.append(MainMapModel(id: 16, gotTime: nil, stuffPerson: "익명송낙현", flag: true, stuffName: stuffname, stuffCharacteristic: stuffinfo, stuffLatitudePosition: "123123123", stuffLongitudePosition: "123123123", stuffKoreanPosition: stuffloca, stuffImage: nil))
-//
-//            MainMapModel.stuffs = tmpStuffs
-//
-//            return tmpStuffs
-//
-//        }
+
+      }
         
-        
-        
-        
-   
-    }
+ 
+    
     
 }
 
