@@ -18,6 +18,7 @@
 		12E3B7C625C058BC002AF123 /* VisibleStuffTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12E3B7BB25C058BC002AF123 /* VisibleStuffTableViewCell.xib */; };
 		12E3B7C725C058BC002AF123 /* MapImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12E3B7BC25C058BC002AF123 /* MapImageView.xib */; };
 		12E3B7C825C058BC002AF123 /* MapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3B7BD25C058BC002AF123 /* MapAnnotationView.swift */; };
+		2008F90B25C2AD9800EA3CAD /* FindOrRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2008F90A25C2AD9800EA3CAD /* FindOrRegisterViewController.swift */; };
 		201850C425B11E3E005FBF3E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201850C325B11E3E005FBF3E /* SignUpViewController.swift */; };
 		201850C725B11E86005FBF3E /* SignLoginSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201850C625B11E86005FBF3E /* SignLoginSelectViewController.swift */; };
 		201850CA25B11F02005FBF3E /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201850C925B11F01005FBF3E /* LogInViewController.swift */; };
@@ -40,7 +41,6 @@
 		253D29FD259775A400ED0FC6 /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 253D29FC259775A400ED0FC6 /* login.storyboard */; };
 		253D2A00259779DB00ED0FC6 /* FindOrRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 253D29FF259779DB00ED0FC6 /* FindOrRegister.storyboard */; };
 		253D2A0325977B4400ED0FC6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D2A0225977B4400ED0FC6 /* SearchViewController.swift */; };
-		253D2A0925977B5F00ED0FC6 /* FindOrRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D2A0825977B5F00ED0FC6 /* FindOrRegisterViewController.swift */; };
 		F792A8E1E37D771B4D66C60C /* Pods_Whereismythings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1066415A2A49B96AEF83060 /* Pods_Whereismythings.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +56,7 @@
 		12E3B7BB25C058BC002AF123 /* VisibleStuffTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisibleStuffTableViewCell.xib; sourceTree = "<group>"; };
 		12E3B7BC25C058BC002AF123 /* MapImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapImageView.xib; sourceTree = "<group>"; };
 		12E3B7BD25C058BC002AF123 /* MapAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapAnnotationView.swift; sourceTree = "<group>"; };
+		2008F90A25C2AD9800EA3CAD /* FindOrRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindOrRegisterViewController.swift; sourceTree = "<group>"; };
 		201850C325B11E3E005FBF3E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		201850C625B11E86005FBF3E /* SignLoginSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignLoginSelectViewController.swift; sourceTree = "<group>"; };
 		201850C925B11F01005FBF3E /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -80,7 +81,6 @@
 		253D29FC259775A400ED0FC6 /* login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
 		253D29FF259779DB00ED0FC6 /* FindOrRegister.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FindOrRegister.storyboard; sourceTree = "<group>"; };
 		253D2A0225977B4400ED0FC6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		253D2A0825977B5F00ED0FC6 /* FindOrRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindOrRegisterViewController.swift; sourceTree = "<group>"; };
 		9E926ABA202F0007697645E0 /* Pods-Whereismythings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whereismythings.release.xcconfig"; path = "Target Support Files/Pods-Whereismythings/Pods-Whereismythings.release.xcconfig"; sourceTree = "<group>"; };
 		BA758A8250FD97815A7CF79C /* Pods-Whereismythings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whereismythings.debug.xcconfig"; path = "Target Support Files/Pods-Whereismythings/Pods-Whereismythings.debug.xcconfig"; sourceTree = "<group>"; };
 		F1066415A2A49B96AEF83060 /* Pods_Whereismythings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whereismythings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,7 +186,7 @@
 				253D29E625973B1800ED0FC6 /* LaunchScreen.storyboard */,
 				253D29E925973B1800ED0FC6 /* Info.plist */,
 				253D2A0225977B4400ED0FC6 /* SearchViewController.swift */,
-				253D2A0825977B5F00ED0FC6 /* FindOrRegisterViewController.swift */,
+				2008F90A25C2AD9800EA3CAD /* FindOrRegisterViewController.swift */,
 				201850D625B155B0005FBF3E /* Informations.swift */,
 				205C165C25B6F42F00585BFE /* ChattingViewController */,
 				201850D425B11F91005FBF3E /* LogInViewController */,
@@ -354,7 +354,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				253D2A0925977B5F00ED0FC6 /* FindOrRegisterViewController.swift in Sources */,
 				12E3B7BE25C058BC002AF123 /* MainMapModel.swift in Sources */,
 				20751AAE25BE8BF9002EF213 /* NewChatMessageCell.swift in Sources */,
 				12E3B7C425C058BC002AF123 /* VisibleStuffTableViewCell.swift in Sources */,
@@ -365,6 +364,7 @@
 				201850C425B11E3E005FBF3E /* SignUpViewController.swift in Sources */,
 				12E3B7C125C058BC002AF123 /* MapViewController.swift in Sources */,
 				12E3B7C525C058BC002AF123 /* MapAnnotation.swift in Sources */,
+				2008F90B25C2AD9800EA3CAD /* FindOrRegisterViewController.swift in Sources */,
 				201850D725B155B0005FBF3E /* Informations.swift in Sources */,
 				253D29DC25973B1700ED0FC6 /* AppDelegate.swift in Sources */,
 				207E15C525BA936E00099AF6 /* ChatMessageCell.swift in Sources */,
