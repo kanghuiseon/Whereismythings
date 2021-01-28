@@ -7,32 +7,73 @@
 
 import UIKit
 
-class FindOrRegistTableViewController: UITableViewController {
+class FindOrRegistTableViewController: UITableViewController, UITextFieldDelegate {
 
     @IBOutlet weak var itemNameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var pictureLabel: UILabel!
-    @IBOutlet weak var itemNameTextField: UITextField!
-    @IBOutlet weak var locationTextField: UITextField!
-    @IBOutlet weak var pictureTextField: UITextField!
+    @IBOutlet weak var stuffNameTextField: UITextField!
+    @IBOutlet weak var stuffCharacteristicTextField: UITextField!
+    @IBOutlet weak var stuffKoreanPositionTextField: UITextField!
+    @IBOutlet weak var FindOrRegistSegmentControl: UISegmentedControl!
+   
+        var FindOrRegistflag = true
     
-    var find: Find? {
-        
-        let findItemname = itemNameTextField.text ?? ""
-        let findLocation = locationTextField.text ?? ""
-        let findPicture = pictureTextField.text ?? ""
-        
-        return Find(findItemname: findItemname, findLocation: findLocation, findPicture: findPicture)
+    @IBAction func FindOrRegistChange(_ sender: Any) {
+
+        switch FindOrRegistSegmentControl.selectedSegmentIndex {
+        case 0:
+            FindOrRegistflag = true
+        case 1:
+            FindOrRegistflag = false
+        default:
+            break
+        }
     }
     
+    
+    @IBAction func okButtonTapped(_ sendder: UIButton){
+        let inPutstuffName = stuffNameTextField.text
+        let inPutstuffCharacteristic = stuffCharacteristicTextField.text
+        let inPutstuffKoreanPosition = stuffKoreanPositionTextField.text
+    
+        MainMapModel.tmpStuffs.append(MainMapModel(id: 1, gotTime: nil, stuffPerson: "익명1", flag: FindOrRegistflag, stuffName: inPutstuffName, stuffCharacteristic: inPutstuffCharacteristic, stuffLatitudePosition: "37.5630725", stuffLongitudePosition: "127.0366688", stuffKoreanPosition: inPutstuffKoreanPosition, stuffImage:  imageLiteral(resourceName: "doll"))))
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        stuffNameTextField.delegate = self
+        stuffCharacteristicTextField.delegate = self
+        stuffCharacteristicTextField.delegate = self
+    }
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        print(stuffNameTextField.text!)
+        stuffNameTextField.endEditing(true)
+        
+        print(stuffCharacteristicTextField.text!)
+        stuffCharacteristicTextField.endEditing(true)
+        
+        print(stuffKoreanPositionTextField.text!)
+        stuffKoreanPositionTextField.endEditing(true)
+        
+        return true
+    }
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool
+    {
+        if textField.text != "" {
+            return true
+        }
+        else{
+            textField.placeholder = "내용을 입력해 주세요!"
+            return false
+        }
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        stuffNameTextField.text = ""
+        stuffCharacteristicTextField.text = ""
+        stuffKoreanPositionTextField.text = ""
     }
 
     // MARK: - Table view data source

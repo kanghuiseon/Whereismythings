@@ -20,7 +20,6 @@
 		253D2A0625977B4D00ED0FC6 /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D2A0525977B4D00ED0FC6 /* ChattingViewController.swift */; };
 		253D2A0925977B5F00ED0FC6 /* FindOrRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D2A0825977B5F00ED0FC6 /* FindOrRegisterViewController.swift */; };
 		647A587425C1883800499583 /* FindOrRegistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647A587325C1883800499583 /* FindOrRegistTableViewController.swift */; };
-		647A587725C1888600499583 /* FindOrRegist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647A587625C1888600499583 /* FindOrRegist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +38,6 @@
 		253D2A0525977B4D00ED0FC6 /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
 		253D2A0825977B5F00ED0FC6 /* FindOrRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindOrRegisterViewController.swift; sourceTree = "<group>"; };
 		647A587325C1883800499583 /* FindOrRegistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindOrRegistTableViewController.swift; sourceTree = "<group>"; };
-		647A587625C1888600499583 /* FindOrRegist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindOrRegist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +81,6 @@
 				253D2A0525977B4D00ED0FC6 /* ChattingViewController.swift */,
 				253D2A0825977B5F00ED0FC6 /* FindOrRegisterViewController.swift */,
 				647A587325C1883800499583 /* FindOrRegistTableViewController.swift */,
-				647A587625C1888600499583 /* FindOrRegist.swift */,
 			);
 			path = Whereismythings;
 			sourceTree = "<group>";
@@ -172,7 +169,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				647A587725C1888600499583 /* FindOrRegist.swift in Sources */,
 				253D29E025973B1700ED0FC6 /* MapViewController.swift in Sources */,
 				253D2A0925977B5F00ED0FC6 /* FindOrRegisterViewController.swift in Sources */,
 				253D2A0625977B4D00ED0FC6 /* ChattingViewController.swift in Sources */,
