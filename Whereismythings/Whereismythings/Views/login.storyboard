@@ -37,6 +37,14 @@
                                     <segue destination="Eej-UO-QWJ" kind="show" id="uag-r3-7Vk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYB-s3-vdk">
+                                <rect key="frame" x="176" y="433" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign OUt"/>
+                                <connections>
+                                    <action selector="signOutButtonTapped:" destination="5Uu-Up-a0g" eventType="touchUpInside" id="o1P-0m-zOn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RfP-TB-Dwh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

@@ -177,6 +177,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McT-Ei-BIH">
                                 <rect key="frame" x="10" y="767.5" width="394" height="30"/>
                                 <state key="normal" title="쪽지 보내기"/>
+                                <connections>
+                                    <action selector="massageButtonTapped:" destination="uG8-u8-3s8" eventType="touchUpInside" id="yvc-RS-cgL"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YvR-OU-fEv">
                                 <rect key="frame" x="107" y="94.5" width="200" height="198"/>

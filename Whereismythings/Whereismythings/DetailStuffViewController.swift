@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class DetailStuffViewController: UIViewController {
     @IBOutlet var lblPerson: UILabel!
@@ -13,6 +14,34 @@ class DetailStuffViewController: UIViewController {
     @IBOutlet var lblStuffName: UILabel!
     @IBOutlet var lblStuffPosition: UILabel!
     @IBOutlet var lblGotTime: UILabel!
+    
+    
+    
+    @IBAction func massageButtonTapped(_ sender: UIButton) {
+        
+       
+        
+        if Auth.auth().currentUser != nil {
+        
+            
+            //상대편 유저 자동추가 되게 이해안되면 카톡
+        
+            let chatboard = UIStoryboard(name: "Chat", bundle: nil)
+            if let vc = chatboard.instantiateInitialViewController() { // .instantiateViewController(identifier: "chattingStart") as? ChatGroupViewController {
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true)
+            }
+        }else{
+            let loginboard = UIStoryboard(name: "login", bundle: nil)
+            if let vc = loginboard.instantiateInitialViewController() { // .instantiateViewController(identifier: "chattingStart") as? ChatGroupViewController {
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true)
+        
+        }
+        }
+    }
+    
+    
     var person: String!
     var img: UIImage?
     var name: String!
@@ -50,6 +79,12 @@ extension DetailStuffViewController{
             self.time = time
         }
     }
+    
+    
+    
+    
+    
+    
 
 }
 
