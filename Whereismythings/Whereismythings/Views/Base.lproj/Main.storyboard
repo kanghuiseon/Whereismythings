@@ -331,7 +331,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nuy-cX-LAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1062" y="628"/>
+            <point key="canvasLocation" x="1367" y="638"/>
         </scene>
         <!--ChatGroupViewController-->
         <scene sceneID="SXM-Ns-ODO">
@@ -342,16 +342,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3UR-Ze-Ykh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1586" y="439"/>
-        </scene>
-        <!--FindOrRegisterViewController-->
-        <scene sceneID="7S9-12-atQ">
-            <objects>
-                <viewControllerPlaceholder storyboardName="FindOrRegister" referencedIdentifier="FindOrRegisterViewController" id="1Ng-ls-wxA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="mRe-hd-PcZ"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EnO-1p-a5C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1045" y="718"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="MZ8-1K-mh2">
@@ -366,8 +356,8 @@
                     <connections>
                         <segue destination="AIe-NI-3Gf" kind="relationship" relationship="viewControllers" id="c7A-Ty-nTS"/>
                         <segue destination="NiX-yg-fPW" kind="relationship" relationship="viewControllers" id="PnJ-RJ-zgQ"/>
-                        <segue destination="1Ng-ls-wxA" kind="relationship" relationship="viewControllers" id="q1i-Ir-d06"/>
                         <segue destination="JhW-jd-dUQ" kind="relationship" relationship="viewControllers" id="9bE-7D-Rd5"/>
+                        <segue destination="gGj-vb-iOT" kind="relationship" relationship="viewControllers" id="IAU-ld-8gc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="guP-SV-Cih" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -392,6 +382,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2X-EU-LMF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1039.1304347826087" y="102.45535714285714"/>
+        </scene>
+        <!--FindOrRegisterViewController-->
+        <scene sceneID="iW3-d9-Rrl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FindOrRegister" referencedIdentifier="FindOrRegisterViewController" id="gGj-vb-iOT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="FSN-Gl-T9T"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c8e-nY-cfq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="354" y="599"/>
         </scene>
     </scenes>
     <resources>
