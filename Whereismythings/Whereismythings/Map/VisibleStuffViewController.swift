@@ -21,13 +21,8 @@ class VisibleStuffViewController: UIViewController {
         navButton.setTitleColor(.black, for: .normal)
         navButton.addTarget(self, action: #selector(dismissCurrent), for: .touchUpInside)
         rightBarButton.customView = navButton
-//        rightBarButton = addNavigationButton("취소")
     }
-//    func addNavigationButton(_ title: String) -> UIBarButtonItem{
-//
-//        let barButton = UIBarButtonItem(customView: navButton)
-//        return barButton
-//    }
+
     @objc func dismissCurrent(){
         dismiss(animated: true, completion: nil)
     }
@@ -54,7 +49,7 @@ extension VisibleStuffViewController: UITableViewDelegate{
         let identifier = visibleStuffs[indexPath.row].flag ? "GetStuffViewController" : "LostStuffViewController"
         let annotation = visibleStuffs[indexPath.row]
         let detailVC = storyboard?.instantiateViewController(identifier: identifier) as! DetailStuffViewController
-        detailVC.stuffInformation(lblPerson: annotation.stuffPerson, imgStuff: annotation.stuffImage, lblStuffName: annotation.stuffName, lblStuffPosition: annotation.stuffKoreanPosition, lblGotTime: annotation.time)
+        detailVC.stuffInformation(uid: annotation.id, lblPerson: annotation.stuffPerson, imgStuff: annotation.stuffImage, lblStuffName: annotation.stuffName, lblStuffPosition: annotation.stuffKoreanPosition, lblGotTime: annotation.time)
         present(detailVC, animated: true, completion: nil)
     }
 }

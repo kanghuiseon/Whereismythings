@@ -48,6 +48,9 @@ class LogInViewController: UIViewController {
                 // Couldn't sign in
                 self.errorLabel.text = error!.localizedDescription
                 self.errorLabel.alpha = 1
+                let alert = UIAlertController(title: "경고", message: error.debugDescription, preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
             else {
 //                let chatboard = UIStoryboard(name: "Chat", bundle: nil)
@@ -57,16 +60,14 @@ class LogInViewController: UIViewController {
                 
                 
                 
-                if let vc = self.storyboard?.instantiateViewController(identifier: "cptLogIn") as? completeLogInViewController {
-                    
-                    self.present(vc, animated: true)
-                    
-                    
-                
-                }
-                
-
-                
+//                if let vc = self.storyboard?.instantiateViewController(identifier: "cptLogIn") as? completeLogInViewController {
+//
+//                    self.present(vc, animated: true)
+//
+//
+//
+//                }
+                self.dismiss(animated: true, completion: nil)
             }
         }
         

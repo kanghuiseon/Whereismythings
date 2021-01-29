@@ -10,7 +10,7 @@ import MapKit
 
 class MapAnnotation: NSObject, MKAnnotation{
     var coordinate: CLLocationCoordinate2D
-    var id: Int
+    var id: String
     var stuffPerson: String
     var flag: Bool
     var time: String? = nil
@@ -18,7 +18,7 @@ class MapAnnotation: NSObject, MKAnnotation{
     var stuffCharacteristic: String? = nil
     var stuffKoreanPosition: String
     var stuffImage: UIImage? = nil
-    init(_ coordinate: CLLocationCoordinate2D, _ id: Int, _ stuffPerson: String, _ flag: Bool, _ time: String?, stuffName: String, _ stuffCharacteristic: String?, _ stuffKoreanPosition: String, _ stuffImage: UIImage?){
+    init(_ coordinate: CLLocationCoordinate2D, _ id: String, _ stuffPerson: String, _ flag: Bool, _ time: String?, stuffName: String, _ stuffCharacteristic: String?, _ stuffKoreanPosition: String, _ stuffImage: UIImage?){
         self.coordinate = coordinate
         self.id = id
         self.stuffPerson = stuffPerson

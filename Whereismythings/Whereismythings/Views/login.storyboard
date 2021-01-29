@@ -61,7 +61,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Eej-UO-QWJ" kind="show" id="uag-r3-7Vk"/>
+                                            <segue destination="Eej-UO-QWJ" kind="presentation" modalPresentationStyle="fullScreen" id="uag-r3-7Vk"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phb-O3-3Up">
@@ -70,7 +70,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="WZg-zo-xNw" kind="show" id="j9d-eO-Ipq"/>
+                                            <segue destination="WZg-zo-xNw" kind="presentation" modalPresentationStyle="fullScreen" id="j9d-eO-Ipq"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -108,7 +108,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="6ib-e8-g7X">
-                                <rect key="frame" x="40" y="128" width="334" height="316.5"/>
+                                <rect key="frame" x="40" y="84" width="334" height="316.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pc6-1D-JIG">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="45"/>
@@ -132,7 +132,7 @@
                                             <constraint firstAttribute="height" constant="45" id="wST-GW-tcg"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ba2-GZ-gJs">
                                         <rect key="frame" x="0.0" y="222" width="334" height="45"/>
@@ -183,7 +183,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="PRU-k8-nvP">
-                                <rect key="frame" x="40" y="128" width="334" height="242.5"/>
+                                <rect key="frame" x="40" y="84" width="334" height="242.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a7S-gZ-C0C">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="45"/>

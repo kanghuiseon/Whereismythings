@@ -9,6 +9,7 @@ import UIKit
 import MapKit
 import CoreLocation
 import FontAwesome_swift
+import Firebase
 
 class MapViewController: UIViewController{
     @IBOutlet var mainMap: MKMapView!
@@ -38,25 +39,20 @@ class MapViewController: UIViewController{
                 lostAnnotation.append(annotation)
             }
         }
+        
         mainMap.addAnnotations(getAnnotation)
-        
-        if locationManager.authorizationStatus == .notDetermined {
-            return // 일단 스킵.
+        let currentCoordinate: CLLocationCoordinate2D?
+        if let userCurrentPosition = locationManager.location{
+            currentCoordinate = CLLocationCoordinate2DMake(CLLocationDegrees((userCurrentPosition.coordinate.latitude)), CLLocationDegrees((userCurrentPosition.coordinate.longitude)))
         }
-        
-        let userCurrentPosition = locationManager.location
-        
-        if userCurrentPosition == nil {
-            return
+        else{
+            currentCoordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(Double("37.5753274")!), longitude: CLLocationDegrees(Double("126.973307")!))
         }
-        
-        let currentCoordinate = CLLocationCoordinate2DMake(CLLocationDegrees((userCurrentPosition?.coordinate.latitude)!), CLLocationDegrees((userCurrentPosition?.coordinate.longitude)!))
         let spanValue = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
-        let currentRegion = MKCoordinateRegion(center: currentCoordinate, span: spanValue)
+        let currentRegion = MKCoordinateRegion(center: currentCoordinate!, span: spanValue)
         locationManager.startUpdatingLocation()
         mainMap.setRegion(currentRegion, animated: true)
-        
-    }
+}
    
     
     
@@ -73,6 +69,7 @@ class MapViewController: UIViewController{
             mainMap.addAnnotations(lostAnnotation)
         }
     }
+    
     // gps, 현재 위치 주변 확대
     @IBAction func btnCurrentPosition(_ sender: UIButton) {
         let userCurrentPosition = locationManager.location
@@ -89,7 +86,7 @@ class MapViewController: UIViewController{
         let identifier = selectedAnnotation.flag ? "GetStuffViewController" : "LostStuffViewController"
         print("identifier: ", identifier)
         let detailVC = storyboard?.instantiateViewController(identifier: identifier) as! DetailStuffViewController
-        detailVC.stuffInformation(lblPerson: selectedAnnotation.stuffPerson, imgStuff: selectedAnnotation.stuffImage, lblStuffName: selectedAnnotation.stuffName, lblStuffPosition: selectedAnnotation.stuffKoreanPosition, lblGotTime: selectedAnnotation.time)
+        detailVC.stuffInformation(uid: selectedAnnotation.id, lblPerson: selectedAnnotation.stuffPerson, imgStuff: selectedAnnotation.stuffImage, lblStuffName: selectedAnnotation.stuffName, lblStuffPosition: selectedAnnotation.stuffKoreanPosition, lblGotTime: selectedAnnotation.time)
         mainMap.deselectAnnotation(selectedAnnotation, animated: false)
         self.present(detailVC, animated: true, completion: nil)
     }

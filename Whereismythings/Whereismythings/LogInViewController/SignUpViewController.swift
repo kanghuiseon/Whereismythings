@@ -60,7 +60,7 @@ class SignUpViewController: UIViewController {
         
         if error != nil {
     
-            showError(error!)
+//            showError(error!)
         }
         else {
             
@@ -72,9 +72,9 @@ class SignUpViewController: UIViewController {
                 
              
                 if err != nil {
-    
-                    self.showError("유저생성에러")
-                    
+                    let alert = UIAlertController(title: "경고", message: err.debugDescription, preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                 }
                 else {
                                     
@@ -82,31 +82,29 @@ class SignUpViewController: UIViewController {
                   
                     db.collection("users").addDocument(data: ["id":id, "uid":result!.user.uid]) { (error) in
                         if error != nil {
-                            self.showError("유저데이터 세이브에러")
-
-                
-                    
+//                            self.showError("유저데이터 세이브에러")
+                        }
+                        else{
+                            let uid = Auth.auth().currentUser?.uid
+                            let value = ["uid" : uid, "email" : email]
+                            Database.database().reference().child("user").child(uid!).setValue(value, withCompletionBlock: {
+                                (err, ref)  in
+                                if err == nil{
+                                    self.dismiss(animated: true, completion: nil)
+                                }
+                            })
                         }
                     }
                     
                     // 로긴화면으로 전환함수
-                    
                 }
           }
+            idTextField.text = ""
+            emailTextField.text = ""
+            passwordTextField.text = ""
             
             
             
      }
   }
-        
-        
-    
-    func showError(_ message:String) {
-        
-        errorLabel.text = message
-        errorLabel.alpha = 1
-    }
-        
-    
-    
 }

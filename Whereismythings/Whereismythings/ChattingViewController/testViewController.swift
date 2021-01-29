@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Firebase
 class testViewController: UIViewController, UITextFieldDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
 //    @IBOutlet weak var item: UINavigationItem!
@@ -24,9 +24,9 @@ class testViewController: UIViewController, UITextFieldDelegate, UICollectionVie
         didSet {
             if let key = groupKey {
                 fetchMessages()
-                FirebaseDataService.instance.groupRef.child(key).observeSingleEvent(of: .value, with: { (snapshot) in
+                FirebaseDataService.instance.groupRef.child(testViewController.toUid!).observeSingleEvent(of: .value, with: { (snapshot) in
                     if let data = snapshot.value as? Dictionary<String, AnyObject> {
-                        if let title = data["name"] as? String{
+                        if let title = data["username"] as? String{
                             self.item.title = title
                         }
                         if let toId = data["to"] as? String {
@@ -38,12 +38,14 @@ class testViewController: UIViewController, UITextFieldDelegate, UICollectionVie
         }
     }
     var participantId: String?
-    
-    
+    static var toUid: String?
+    static func fetchToUid(to toUid: String){
+        self.toUid = toUid
+    }
     
     func fetchMessages() {
-        if let groupId = self.groupKey {
-            let groupMessageRef = FirebaseDataService.instance.groupRef.child(groupId).child("messages")
+//        if let groupId = self.groupKey {
+            let groupMessageRef = FirebaseDataService.instance.groupRef.child(testViewController.toUid!).child("messages")
             groupMessageRef.observe(.childAdded, with: { (snapshot) in
                 let messageId = snapshot.key
                 let messageRef = FirebaseDataService.instance.messageRef.child(messageId)
@@ -65,7 +67,7 @@ class testViewController: UIViewController, UITextFieldDelegate, UICollectionVie
                     self.chatCollectionView.frame.origin.y = self.height
                 })
             })
-        }
+//        }
     }
     
     
@@ -154,11 +156,11 @@ class testViewController: UIViewController, UITextFieldDelegate, UICollectionVie
             }
             
             self.chatTextField.text = nil
-            if let groupId = self.groupKey, let toId = self.participantId {
-                FirebaseDataService.instance.groupRef.child(groupId).updateChildValues(["messages": [ref.key:1]])
-                FirebaseDataService.instance.userRef.child(fromUserId).child("groups").updateChildValues([groupId: 1])
-                FirebaseDataService.instance.userRef.child(toId).child("groups").updateChildValues([groupId: 1])
-            }
+//            if let groupId = self.groupKey, let toId = self.participantId {
+            Database.database().reference().child("group").child(testViewController.toUid!).updateChildValues(["messages": [ref.key:1]])
+//                FirebaseDataService.instance.userRef.child(fromUserId).child("groups").updateChildValues([groupId: 1])
+//                FirebaseDataService.instance.userRef.child(toId).child("groups").updateChildValues([groupId: 1])
+//            }
         }
     }
     
