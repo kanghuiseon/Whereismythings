@@ -3,22 +3,20 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Find Or Register View Controller-->
+        <!--Register-->
         <scene sceneID="MTg-m5-E5k">
             <objects>
                 <tableViewController storyboardIdentifier="FindOrRegisterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HsX-Jw-NWp" customClass="FindOrRegisterViewController" customModule="Whereismythings" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="7QB-5N-ur0">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="7QB-5N-ur0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Lgf-Dt-8rK">
-                            <rect key="frame" x="0.0" y="421.5" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="381.5" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
+                            <state key="normal" title="등록"/>
                             <connections>
                                 <action selector="ComButtonTapped:" destination="HsX-Jw-NWp" eventType="touchUpInside" id="ynX-Qz-og0"/>
                             </connections>
@@ -27,17 +25,17 @@
                             <tableViewSection id="tlE-AZ-gFU">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="F1Z-dt-VgW">
-                                        <rect key="frame" x="0.0" y="18" width="414" height="43.5"/>
+                                        <rect key="frame" x="20" y="18" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F1Z-dt-VgW" id="sQD-E9-F4D">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Od9-YP-9kS">
-                                                    <rect key="frame" x="161.5" y="6.5" width="91" height="32"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
                                                     <segments>
-                                                        <segment title="Find"/>
-                                                        <segment title="Lost"/>
+                                                        <segment title="찾아주는 물건"/>
+                                                        <segment title="잃어버린 물건"/>
                                                     </segments>
                                                     <connections>
                                                         <action selector="lostAndFoundSeg:" destination="HsX-Jw-NWp" eventType="valueChanged" id="Kw9-5t-oba"/>
@@ -45,25 +43,27 @@
                                                 </segmentedControl>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Od9-YP-9kS" firstAttribute="centerY" secondItem="sQD-E9-F4D" secondAttribute="centerY" id="0lc-0T-PHU"/>
-                                                <constraint firstItem="Od9-YP-9kS" firstAttribute="centerX" secondItem="sQD-E9-F4D" secondAttribute="centerX" id="696-hu-xwh"/>
+                                                <constraint firstAttribute="trailing" secondItem="Od9-YP-9kS" secondAttribute="trailing" id="Z5n-UV-Bet"/>
+                                                <constraint firstItem="Od9-YP-9kS" firstAttribute="top" secondItem="sQD-E9-F4D" secondAttribute="top" id="fx6-AT-7T6"/>
+                                                <constraint firstAttribute="bottom" secondItem="Od9-YP-9kS" secondAttribute="bottom" id="qFm-N9-j7p"/>
+                                                <constraint firstItem="Od9-YP-9kS" firstAttribute="leading" secondItem="sQD-E9-F4D" secondAttribute="leading" id="u5H-R5-QL1"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="물건정보" id="vSs-88-Tc8">
+                            <tableViewSection id="vSs-88-Tc8">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="l8r-tg-5Ni">
-                                        <rect key="frame" x="0.0" y="117.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="20" y="97.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l8r-tg-5Ni" id="dRJ-nt-6Hn">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="물건이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kcr-PJ-8PW">
-                                                    <rect key="frame" x="17" y="11.5" width="59" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="17" y="12" width="59" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -83,15 +83,15 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="SrI-XP-CYC">
-                                        <rect key="frame" x="0.0" y="161" width="414" height="43.5"/>
+                                        <rect key="frame" x="20" y="141" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SrI-XP-CYC" id="jsD-EU-VQy">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2P-Uj-7Ia">
-                                                    <rect key="frame" x="17" y="11.5" width="29.5" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="17" y="12" width="29.5" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -112,25 +112,33 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="위치" id="qfS-7P-FNt">
+                            <tableViewSection id="qfS-7P-FNt">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Gmc-V4-3Up">
-                                        <rect key="frame" x="0.0" y="260.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="20" y="220.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gmc-V4-3Up" id="C25-JW-tK9">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sRd-7z-9xT">
-                                                    <rect key="frame" x="100" y="5" width="304" height="34"/>
+                                                    <rect key="frame" x="100" y="5" width="264" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="위치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDj-kK-Dqj">
+                                                    <rect key="frame" x="17" y="11.5" width="30" height="21"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="sRd-7z-9xT" secondAttribute="trailing" constant="10" id="FRn-NI-zDA"/>
                                                 <constraint firstItem="sRd-7z-9xT" firstAttribute="centerY" secondItem="C25-JW-tK9" secondAttribute="centerY" id="HM3-Pe-En0"/>
                                                 <constraint firstItem="sRd-7z-9xT" firstAttribute="leading" secondItem="C25-JW-tK9" secondAttribute="leading" constant="100" id="Pao-K0-fnE"/>
+                                                <constraint firstItem="dDj-kK-Dqj" firstAttribute="leading" secondItem="C25-JW-tK9" secondAttribute="leadingMargin" constant="-3" id="Tch-fI-JaC"/>
+                                                <constraint firstItem="dDj-kK-Dqj" firstAttribute="centerY" secondItem="C25-JW-tK9" secondAttribute="centerY" id="dy5-Kz-sSi"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -139,10 +147,10 @@
                             <tableViewSection headerTitle="사진" id="8fz-ko-3VW">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Eaa-RC-Y2z">
-                                        <rect key="frame" x="0.0" y="360" width="414" height="43.5"/>
+                                        <rect key="frame" x="20" y="320" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Eaa-RC-Y2z" id="XKN-4A-0w6">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -154,7 +162,7 @@
                             <outlet property="delegate" destination="HsX-Jw-NWp" id="FWd-jZ-v52"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="vG4-gY-mhe"/>
+                    <tabBarItem key="tabBarItem" title="Register" image="plus" catalog="system" id="vG4-gY-mhe"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="lostAndFoundSeg" destination="Od9-YP-9kS" id="YSr-Wo-jdE"/>
@@ -169,8 +177,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="plus" catalog="system" width="128" height="113"/>
     </resources>
 </document>

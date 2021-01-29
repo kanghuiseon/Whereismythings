@@ -16,45 +16,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phb-O3-3Up">
-                                <rect key="frame" x="40" y="728" width="334" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="Pek-px-9h5"/>
-                                </constraints>
-                                <state key="normal" title="Sign In"/>
-                                <connections>
-                                    <segue destination="WZg-zo-xNw" kind="show" id="j9d-eO-Ipq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEq-MW-Nml">
-                                <rect key="frame" x="40" y="663" width="334" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="XgR-w3-Q4F"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                <state key="normal" title="SignUp"/>
-                                <connections>
-                                    <segue destination="Eej-UO-QWJ" kind="show" id="uag-r3-7Vk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYB-s3-vdk">
-                                <rect key="frame" x="176" y="433" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign OUt"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="kaZ-aa-xVa">
+                                <rect key="frame" x="147" y="238" width="120" height="164.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4b-He-4q8">
+                                        <rect key="frame" x="38" y="0.0" width="44.5" height="119.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="100"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어디갔지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ek-6G-nkn">
+                                        <rect key="frame" x="30.5" y="121.5" width="59" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lost And Found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="334-SC-dSr">
+                                        <rect key="frame" x="0.0" y="144" width="120" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemGray3Color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYB-s3-vdk">
+                                <rect key="frame" x="161" y="781" width="92" height="30"/>
+                                <state key="normal" title="Sign OUt 임시">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.10026499767177152" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="signOutButtonTapped:" destination="5Uu-Up-a0g" eventType="touchUpInside" id="o1P-0m-zOn"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yKY-rL-KFB">
+                                <rect key="frame" x="0.0" y="726" width="414" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEq-MW-Nml">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="XgR-w3-Q4F"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                        <state key="normal" title="SignUp">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Eej-UO-QWJ" kind="show" id="uag-r3-7Vk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phb-O3-3Up">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="35"/>
+                                        <state key="normal" title="Sign In">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="WZg-zo-xNw" kind="show" id="j9d-eO-Ipq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Obv-Yj-qFH"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RfP-TB-Dwh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Phb-O3-3Up" firstAttribute="leading" secondItem="RfP-TB-Dwh" secondAttribute="leading" constant="40" id="QiJ-DI-xo5"/>
-                            <constraint firstItem="dEq-MW-Nml" firstAttribute="leading" secondItem="RfP-TB-Dwh" secondAttribute="leading" constant="40" id="jLL-wa-8vu"/>
-                            <constraint firstItem="Phb-O3-3Up" firstAttribute="top" secondItem="dEq-MW-Nml" secondAttribute="bottom" constant="20" id="krX-0q-Vww"/>
-                            <constraint firstItem="RfP-TB-Dwh" firstAttribute="trailing" secondItem="dEq-MW-Nml" secondAttribute="trailing" constant="40" id="m3o-zV-zL1"/>
-                            <constraint firstItem="RfP-TB-Dwh" firstAttribute="trailing" secondItem="Phb-O3-3Up" secondAttribute="trailing" constant="40" id="uNV-ie-MSo"/>
-                            <constraint firstItem="RfP-TB-Dwh" firstAttribute="bottom" secondItem="Phb-O3-3Up" secondAttribute="bottom" constant="40" id="vFM-an-KWK"/>
+                            <constraint firstItem="RfP-TB-Dwh" firstAttribute="trailing" secondItem="yKY-rL-KFB" secondAttribute="trailing" id="1eV-mV-4xR"/>
+                            <constraint firstItem="kaZ-aa-xVa" firstAttribute="centerX" secondItem="o6U-DN-WfD" secondAttribute="centerX" id="3XT-CQ-LOy"/>
+                            <constraint firstItem="gYB-s3-vdk" firstAttribute="top" secondItem="yKY-rL-KFB" secondAttribute="bottom" constant="20" id="KTe-D8-X91"/>
+                            <constraint firstItem="yKY-rL-KFB" firstAttribute="leading" secondItem="RfP-TB-Dwh" secondAttribute="leading" id="Loc-hc-nRT"/>
+                            <constraint firstItem="RfP-TB-Dwh" firstAttribute="bottom" secondItem="gYB-s3-vdk" secondAttribute="bottom" constant="2" id="Wkv-gV-33N"/>
+                            <constraint firstItem="kaZ-aa-xVa" firstAttribute="top" secondItem="RfP-TB-Dwh" secondAttribute="top" constant="150" id="k0e-Qd-7vw"/>
+                            <constraint firstItem="gYB-s3-vdk" firstAttribute="centerX" secondItem="o6U-DN-WfD" secondAttribute="centerX" id="r1o-SP-kbE"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="LogIn" image="paperplane" catalog="system" id="0kc-Zh-ddF" userLabel="Login"/>
@@ -256,6 +290,9 @@
         <image name="paperplane" catalog="system" width="128" height="118"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
