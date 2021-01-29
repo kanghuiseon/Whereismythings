@@ -50,18 +50,28 @@ class LogInViewController: UIViewController {
                 self.errorLabel.alpha = 1
             }
             else {
-                let chatboard = UIStoryboard(name: "Chat", bundle: nil)
-                if let vc = chatboard.instantiateInitialViewController() { // .instantiateViewController(identifier: "chattingStart") as? ChatGroupViewController {
-                    vc.modalPresentationStyle = .fullScreen
+//                let chatboard = UIStoryboard(name: "Chat", bundle: nil)
+//                if let vc = chatboard.instantiateInitialViewController() { // .instantiateViewController(identifier: "chattingStart") as? ChatGroupViewController {
+//                    vc.modalPresentationStyle = .fullScreen
+//                    self.present(vc, animated: true)
+                
+                
+                
+                if let vc = self.storyboard?.instantiateViewController(identifier: "cptLogIn") as? completeLogInViewController {
+                    
                     self.present(vc, animated: true)
-                                       
+                    
+                    
+                
                 }
+                
+
+                
             }
         }
         
-    }
+     }   
     
+
+
 }
-
-    
-

@@ -81,8 +81,8 @@ class testViewController: UIViewController, UITextFieldDelegate, UICollectionVie
         let message = messages[indexPath.item]
         cell.textLabel.text = message.text
         setupChatCell(cell: cell, message: message)
-        if indexPath.row == messages.count - 1 {
-            cell.containerView.backgroundColor = UIColor.systemYellow
+        if indexPath.row == messages.count - 1 { //count
+            cell.containerView.backgroundColor = UIColor.white //머스타드쎌 배경 -> 흰색처리
         }
 
         if message.text.count > 0 {
@@ -103,8 +103,8 @@ class testViewController: UIViewController, UITextFieldDelegate, UICollectionVie
     
     func setupChatCell(cell: NewChatMessageCell, message: ChatMessage) {
         if message.fromUserId == FirebaseDataService.instance.currentUserUid {
-            cell.containerView.backgroundColor = UIColor.magenta
-            cell.textLabel.textColor = UIColor.white
+            cell.containerView.backgroundColor = UIColor.systemGray6
+            cell.textLabel.textColor = UIColor.black
             cell.containerViewRightAnchor?.isActive = true
             cell.containerViewLeftAnchor?.isActive = false
         } else {
