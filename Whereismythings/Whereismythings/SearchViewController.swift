@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Firebase
 class SearchViewController: UIViewController {
     @IBOutlet var searchTable: UITableView!
     @IBOutlet var navigationBar: UINavigationBar!
@@ -81,6 +81,15 @@ extension SearchViewController: UITableViewDataSource{
         cell.stuffName.text = stuff.stuffName
         cell.stuffPos.text = stuff.stuffKoreanPosition
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let identifier = filteredStuffs[indexPath.row].flag ? "GetStuffViewController" : "LostStuffViewController"
+        let searchVC = storyboard.instantiateViewController(identifier: identifier) as! DetailStuffViewController
+        searchVC.stuffInformation(uid: filteredStuffs[indexPath.row].id , lblPerson: filteredStuffs[indexPath.row].stuffPerson, imgStuff: filteredStuffs[indexPath.row].stuffImage, lblStuffName: filteredStuffs[indexPath.row].stuffName, lblStuffPosition: filteredStuffs[indexPath.row].stuffKoreanPosition, lblGotTime: nil)
+        present(searchVC, animated: true, completion: nil)
+        
     }
     
     
